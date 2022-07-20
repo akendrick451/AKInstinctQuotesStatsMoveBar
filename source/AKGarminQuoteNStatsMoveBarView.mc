@@ -29,7 +29,8 @@ var gStrBBFontColour=Gfx.COLOR_WHITE;
 class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	
 	// how to build in vs code
-    var strVersion = "v2.8"; 
+    var strVersion = "v2.9"; 
+	// v2.9 just checking git
 				// 2.8 colors for BB? based on hour approximately. Actually based on % day left 
 				// 20 July 2022v 2.7 changed heart rate colours a little bit
 				// 3.0 will be to change from BB to image of small man, and HR to a heart. 
