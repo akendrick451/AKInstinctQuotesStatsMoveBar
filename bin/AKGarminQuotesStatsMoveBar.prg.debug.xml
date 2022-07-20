@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="G:\My Drive\AKProgramming\Garmin\AKGarminQuotesStatsMoveBar\manifest.xml"/>
+<pcToLineNum>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="1" lineNum="5" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268435456" symbol="initialize"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="1" lineNum="6" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268435460" symbol="initialize"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="2" lineNum="10" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268435479" symbol="onStart"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="3" lineNum="14" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268435484" symbol="onStop"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="4" lineNum="18" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268435489" symbol="getInitialView"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="4" lineNum="19" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268435493" symbol="getInitialView"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="5" lineNum="3" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268443659" symbol="&lt;init&gt;"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuotesStatsMoveBar.mc" id="5" lineNum="3" parent="globals/AKGarminQuotesStatsMoveBarApp" pc="268443659" symbol="&lt;init&gt;"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="7" lineNum="63" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435531" symbol="initialize"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="7" lineNum="64" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435535" symbol="initialize"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="69" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435554" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="70" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435558" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="71" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435601" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="72" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435644" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="73" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435660" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="74" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435677" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="75" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435693" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="78" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435729" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="79" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435754" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="80" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435774" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="81" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435795" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="82" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435808" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="87" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435824" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="88" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435834" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="89" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435858" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="90" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435876" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="8" lineNum="91" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435892" symbol="onLayout"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="99" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435917" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="101" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435921" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="102" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435957" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="103" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435969" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="104" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435986" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="105" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268435996" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="106" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436006" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="109" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436016" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="110" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436041" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="111" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436051" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="112" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436062" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="119" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436075" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="120" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436111" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="121" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436186" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="122" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436222" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="128" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436336" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="136" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436402" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="137" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436409" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="138" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436422" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="140" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436433" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="141" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436461" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="142" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436520" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="147" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436559" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="148" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436566" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="150" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436579" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="151" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436590" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="152" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436618" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="153" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436679" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="155" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436718" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="162" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436762" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="171" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436798" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="173" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436851" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="174" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436865" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="178" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436889" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="181" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436899" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="182" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436938" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="185" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436953" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="189" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268436967" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="194" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437003" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="197" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437020" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="199" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437084" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="200" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437091" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="202" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437098" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="203" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437105" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="205" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437112" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="206" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437137" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="207" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437144" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="208" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437151" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="210" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437161" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="211" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437183" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="212" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437193" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="213" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437203" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="214" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437213" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="215" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437226" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="216" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437233" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="217" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437240" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="218" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437247" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="219" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437254" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="221" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437261" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="223" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437275" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="224" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437296" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="225" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437310" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="226" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437324" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="227" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437338" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="228" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437372" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="229" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437386" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="230" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437400" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="231" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437414" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="233" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437431" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="234" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437445" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="235" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437459" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="240" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437473" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="241" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437497" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="242" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437514" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="243" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437531" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="244" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437567" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="248" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437630" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="249" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437646" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="252" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437688" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="253" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437704" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="257" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437735" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="260" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437769" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="266" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437805" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="267" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437822" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="268" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437853" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="269" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437884" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="270" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437884" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="271" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437971" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="273" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437985" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="278" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268437985" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="281" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438048" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="9" lineNum="287" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438093" symbol="onUpdate"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="293" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438108" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="295" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438112" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="296" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438119" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="297" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438122" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="298" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438135" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="299" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438142" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="301" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438158" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="302" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438165" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="303" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438195" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="307" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438208" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="308" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438215" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="310" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438225" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="315" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438238" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="319" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438249" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="320" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438256" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="321" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438263" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="322" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438270" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="324" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438277" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="325" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438308" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="327" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438315" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="328" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438326" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="329" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438346" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="331" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438369" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="332" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438389" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="10" lineNum="337" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438412" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="11" lineNum="340" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438416" symbol="getHourOfDay"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="11" lineNum="342" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438420" symbol="getHourOfDay"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="11" lineNum="343" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438464" symbol="getHourOfDay"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="11" lineNum="355" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438604" symbol="getHourOfDay"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="11" lineNum="356" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438614" symbol="getHourOfDay"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="361" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438618" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="363" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438622" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="365" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438629" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="366" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438654" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="367" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438661" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="368" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438668" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="370" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438692" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="373" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438703" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="374" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438727" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="375" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438735" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="376" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438755" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="377" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438776" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="378" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438789" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="380" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438792" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="381" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438805" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="382" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438812" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="383" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438833" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="384" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438857" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="385" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438878" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="386" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438908" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="392" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438930" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="393" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438941" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="394" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438961" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="395" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438984" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="396" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268438995" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="397" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439015" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="398" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439038" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="399" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439049" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="400" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439069" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="401" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439092" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="402" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439117" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="403" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439137" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="405" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439160" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="406" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439180" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="12" lineNum="411" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439200" symbol="getHeartRateAndSetColours"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="13" lineNum="415" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439204" symbol="SetNewQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="13" lineNum="416" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439208" symbol="SetNewQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="14" lineNum="419" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439228" symbol="getBodyBatteryIterator"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="14" lineNum="420" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439232" symbol="getBodyBatteryIterator"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="14" lineNum="422" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439275" symbol="getBodyBatteryIterator"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="14" lineNum="424" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439308" symbol="getBodyBatteryIterator"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="15" lineNum="428" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439311" symbol="GetQuoteSizeAndDraw"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="15" lineNum="430" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439315" symbol="GetQuoteSizeAndDraw"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="15" lineNum="431" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439328" symbol="GetQuoteSizeAndDraw"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="16" lineNum="435" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439345" symbol="DrawQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="16" lineNum="436" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439349" symbol="DrawQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="445" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439372" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="448" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439376" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="450" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439383" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="455" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439400" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="456" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439444" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="457" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439468" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="460" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439478" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="461" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439513" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="463" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439532" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="464" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439548" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="466" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439564" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="467" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439571" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="468" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439578" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="469" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439585" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="470" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439592" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="471" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439599" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="472" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439606" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="473" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439631" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="474" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439638" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="477" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439660" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="478" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439667" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="480" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439667" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="481" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439691" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="485" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439699" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="486" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439723" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="487" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439747" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="488" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439754" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="489" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439773" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="490" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439783" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="491" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439794" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="492" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439804" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="493" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439815" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="494" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439825" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="495" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439836" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="496" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439846" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="497" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439857" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="498" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439867" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="499" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439878" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="500" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439888" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="501" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439899" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="502" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439909" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="503" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439920" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="504" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439930" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="505" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439941" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="506" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439951" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="507" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439962" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="508" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439972" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="509" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439983" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="510" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268439993" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="511" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440004" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="512" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440014" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="513" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440025" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="517" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440035" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="521" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440042" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="523" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440069" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="525" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440107" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="537" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440161" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="539" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440177" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="540" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440184" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="541" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440195" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="542" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440231" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="543" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440241" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="544" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440252" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="545" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440288" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="546" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440298" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="547" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440309" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="548" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440316" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="549" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440355" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="550" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440366" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="551" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440405" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="552" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440416" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="556" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440455" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="557" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440499" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="562" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440569" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="564" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440615" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="17" lineNum="569" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440647" symbol="DrawWeeksMovementHistory"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="576" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440670" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="580" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440674" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="581" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440685" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="583" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440698" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="584" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440705" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="585" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440716" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="586" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440726" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="587" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440737" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="588" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440747" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="589" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440758" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="590" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440768" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="591" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440779" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="592" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440789" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="593" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440800" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="594" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440810" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="595" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440821" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="596" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440831" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="597" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440842" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="598" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440852" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="599" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440863" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="18" lineNum="601" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440873" symbol="GetShortDayNameFromNumber"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="604" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440877" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="606" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440881" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="607" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440897" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="608" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440916" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="609" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440941" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="611" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440963" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="613" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440970" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="614" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440983" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="615" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268440990" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="616" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441016" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="621" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441042" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="622" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441072" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="627" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441114" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="628" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441144" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="629" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441180" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="630" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441199" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="632" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441269" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="633" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441292" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="634" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441309" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="635" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441339" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="638" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441367" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="639" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441377" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="640" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441398" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="641" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441437" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="642" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441467" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="643" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441488" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="645" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441517" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="19" lineNum="648" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441546" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="654" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441570" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="658" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441574" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="659" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441582" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="660" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441595" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="661" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441608" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="662" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441621" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="663" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441634" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="664" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441647" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="665" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441660" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="667" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441673" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="668" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441717" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="669" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441717" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="20" lineNum="673" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441746" symbol="getRandomQuote"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="677" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441753" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="680" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441757" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="682" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441768" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="685" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441792" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="687" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441809" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="689" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441823" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="690" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441849" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="692" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441871" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="693" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441884" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="696" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441891" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="700" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441925" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="701" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441967" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="702" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268441978" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="707" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442003" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="708" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442028" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="714" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442059" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="715" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442084" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="720" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442115" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="721" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442140" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="726" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442171" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="728" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442188" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="732" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442219" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="733" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442252" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="736" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442252" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="740" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442259" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="744" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442259" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="746" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442276" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="747" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442287" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="749" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442294" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="751" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442314" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="752" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442346" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="753" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442359" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="754" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442397" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="21" lineNum="758" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442418" symbol="drawTextOverMultiLines"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="22" lineNum="763" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442457" symbol="GetTodaysDistanceKMDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="22" lineNum="767" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442461" symbol="GetTodaysDistanceKMDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="22" lineNum="768" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442484" symbol="GetTodaysDistanceKMDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="23" lineNum="771" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442499" symbol="GetTodaysDistanceKMStr"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="23" lineNum="773" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442503" symbol="GetTodaysDistanceKMStr"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="24" lineNum="776" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442530" symbol="convertToThousandsShorthand"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="24" lineNum="778" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442534" symbol="convertToThousandsShorthand"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="24" lineNum="785" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442544" symbol="convertToThousandsShorthand"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="24" lineNum="787" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442562" symbol="convertToThousandsShorthand"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="24" lineNum="788" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442580" symbol="convertToThousandsShorthand"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="792" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442584" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="798" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442588" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="799" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442588" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="801" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442588" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="802" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442605" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="804" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442614" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="806" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442634" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="25" lineNum="808" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442654" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="813" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442658" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="814" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442662" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="815" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442665" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="817" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442685" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="818" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442699" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="819" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442735" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="820" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442755" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="821" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442768" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="822" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442782" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="824" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442818" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="825" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442838" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="826" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442851" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="827" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442865" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="829" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442901" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="830" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442921" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="831" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442934" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="832" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442948" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="834" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268442984" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="835" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443004" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="836" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443017" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="837" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443031" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="838" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443064" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="840" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443085" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="841" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443095" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="842" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443108" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="843" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443144" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="26" lineNum="847" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443165" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="27" lineNum="850" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443169" symbol="GetKMMovedDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="27" lineNum="853" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443173" symbol="GetKMMovedDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="27" lineNum="855" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443180" symbol="GetKMMovedDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="27" lineNum="856" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443187" symbol="GetKMMovedDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="27" lineNum="861" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443200" symbol="GetKMMovedDbl"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="865" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443204" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="867" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443208" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="868" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443215" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="869" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443222" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="870" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443226" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="871" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443226" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="873" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443243" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="875" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443258" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="878" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443265" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="881" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443278" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="884" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443313" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="28" lineNum="889" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443326" symbol="lastIndexOf"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="29" lineNum="29" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443610" symbol="&lt;init&gt;"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="29" lineNum="29" parent="globals/AKGarminQuotesStatsMoveBarView" pc="268443610" symbol="&lt;init&gt;"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="30" lineNum="20" parent="globals" pc="268443529" symbol="&lt;init&gt;"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="30" lineNum="21" parent="globals" pc="268443549" symbol="&lt;init&gt;"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="30" lineNum="22" parent="globals" pc="268443569" symbol="&lt;init&gt;"/>
+<entry filename="G:\\My Drive\\AKProgramming\\Garmin\\AKGarminQuotesStatsMoveBar\\source\\AKGarminQuoteNStatsMoveBarView.mc" id="30" lineNum="23" parent="globals" pc="268443589" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="31" lineNum="2" parent="globals/Rez/Drawables" pc="268443653" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="32" lineNum="6" parent="globals/Rez/Fonts" pc="268443655" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="33" lineNum="11" parent="globals/Rez/JsonData" pc="268443657" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="34" lineNum="20" parent="globals/Rez/Layouts" pc="268443336" symbol="WatchFace"/>
+<entry filename="Rez" id="34" lineNum="22" parent="globals/Rez/Layouts" pc="268443348" symbol="WatchFace"/>
+<entry filename="Rez" id="34" lineNum="24" parent="globals/Rez/Layouts" pc="268443511" symbol="WatchFace"/>
+<entry filename="Rez" id="35" lineNum="13" parent="globals/Rez/Layouts" pc="268443656" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="36" lineNum="29" parent="globals/Rez/Menus" pc="268443654" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="37" lineNum="31" parent="globals/Rez/Strings" pc="268443658" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="38" lineNum="1" parent="globals/Rez" pc="268443629" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="38" lineNum="1" parent="globals/Rez" pc="268443629" symbol="&lt;init&gt;"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry field="true" id="10" symbol="gRowHeight"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="36" method="true" symbol="GetQuoteSizeAndDraw"/>
+<entry id="4" module="true" symbol="globals/Rez/Menus"/>
+<entry field="true" id="26" symbol="gIntFontSize"/>
+<entry id="43" method="true" symbol="GetTodaysDistanceKMDbl"/>
+<entry id="31" method="true" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry field="true" id="20" symbol="gStrBBFontColour"/>
+<entry id="41" method="true" symbol="getRandomQuote"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="8389782" module="true" symbol="StringUtil"/>
+<entry id="8391839" method="true" symbol="getBodyBatteryHistory"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="17" symbol="gStrHRBackColour"/>
+<entry field="true" id="54" symbol="AppName"/>
+<entry id="8388633" module="true" symbol="ActivityMonitor"/>
+<entry id="8" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="35" method="true" symbol="getBodyBatteryIterator"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="32" method="true" symbol="getHourOfDay"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry field="true" id="22" symbol="strVersion"/>
+<entry id="38" method="true" symbol="DrawWeeksMovementHistory"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry field="true" id="29" symbol="gStrPartNumberDevice"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389348" symbol="font"/>
+<entry id="51" module="true" symbol="Menus"/>
+<entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+<entry id="9" object="true" symbol="AKGarminQuotesStatsMoveBarApp"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="34" method="true" symbol="SetNewQuote"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="47" method="true" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry field="true" id="15" symbol="gIntExtraXRequired"/>
+<entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+<entry field="true" id="19" symbol="gStrBBBackColour"/>
+<entry id="49" method="true" symbol="lastIndexOf"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="39" method="true" symbol="GetShortDayNameFromNumber"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="40" method="true" symbol="DrawKMTravelledAndMoveBar"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="28" symbol="gIntNumberOfMovedHours"/>
+<entry id="44" method="true" symbol="GetTodaysDistanceKMStr"/>
+<entry field="true" id="53" symbol="akSmallFont"/>
+<entry id="33" method="true" symbol="getHeartRateAndSetColours"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="42" method="true" symbol="drawTextOverMultiLines"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="52" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8388643" module="true" symbol="Sensor"/>
+<entry field="true" id="14" symbol="gStrDeviceName"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="21" object="true" symbol="AKGarminQuotesStatsMoveBarView"/>
+<entry field="true" id="24" symbol="gNumberOfLinesToPrint"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="48" method="true" symbol="GetKMMovedDbl"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="46" method="true" symbol="findLastSpaceBeforeLineLength"/>
+<entry id="8389347" symbol="color"/>
+<entry id="8389781" module="true" symbol="SensorHistory"/>
+<entry field="true" id="12" symbol="gNumAPIMajorVersion"/>
+<entry id="37" method="true" symbol="DrawQuote"/>
+<entry field="true" id="27" symbol="gIntLastMoveBarLevel"/>
+<entry id="50" module="true" symbol="Layouts"/>
+<entry field="true" id="25" symbol="gXForTextLoc"/>
+<entry id="8389701" object="true" symbol="HeartRateIterator"/>
+<entry field="true" id="18" symbol="gStrHRFontColour"/>
+<entry field="true" id="30" symbol="gTinyFont"/>
+<entry field="true" id="23" symbol="customFontLarge"/>
+<entry field="true" id="13" symbol="gStrCurrentQuote"/>
+<entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+<entry field="true" id="16" symbol="gIntHeartRate"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry id="45" method="true" symbol="convertToThousandsShorthand"/>
+<entry field="true" id="11" symbol="customFontSmall"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435483" name="state" stackId="1" startPc="268435479"/>
+<entry arg="true" endPc="268435488" name="state" stackId="1" startPc="268435484"/>
+<entry endPc="268435915" name="versionString" stackId="4" startPc="268435558"/>
+<entry endPc="268435915" name="version" stackId="3" startPc="268435558"/>
+<entry endPc="268435915" name="mySettings" stackId="2" startPc="268435558"/>
+<entry arg="true" endPc="268435916" name="dc" stackId="1" startPc="268435554"/>
+<entry endPc="268436966" name="hourMod2" stackId="8" startPc="268436889"/>
+<entry endPc="268438106" name="intBatterySevere" stackId="24" startPc="268435921"/>
+<entry endPc="268438106" name="lineColor" stackId="21" startPc="268435921"/>
+<entry endPc="268438106" name="now" stackId="25" startPc="268435921"/>
+<entry endPc="268438106" name="textColor" stackId="20" startPc="268435921"/>
+<entry endPc="268438106" name="batteryWidth" stackId="13" startPc="268435921"/>
+<entry endPc="268438106" name="backColor" stackId="22" startPc="268435921"/>
+<entry endPc="268438106" name="intNippleHeight" stackId="18" startPc="268435921"/>
+<entry endPc="268438106" name="hour" stackId="3" startPc="268435921"/>
+<entry endPc="268438106" name="intBatteryWarning" stackId="23" startPc="268435921"/>
+<entry endPc="268438106" name="dateStr" stackId="28" startPc="268435921"/>
+<entry endPc="268438106" name="myStats" stackId="9" startPc="268435921"/>
+<entry endPc="268438106" name="clockTime" stackId="2" startPc="268435921"/>
+<entry endPc="268438106" name="dateStartYBatteryAndDate" stackId="15" startPc="268435921"/>
+<entry endPc="268438106" name="minute" stackId="4" startPc="268435921"/>
+<entry endPc="268438106" name="dateAndBatteryHeight" stackId="14" startPc="268435921"/>
+<entry endPc="268438106" name="intNippleY" stackId="19" startPc="268435921"/>
+<entry endPc="268438106" name="gTinyFont" stackId="29" startPc="268435921"/>
+<entry endPc="268438106" name="intHeartRate" stackId="6" startPc="268435921"/>
+<entry endPc="268438106" name="strBatteryPercent" stackId="10" startPc="268435921"/>
+<entry endPc="268438106" name="dblBodyBatteryNumber" stackId="7" startPc="268435921"/>
+<entry endPc="268438106" name="info" stackId="26" startPc="268435921"/>
+<entry endPc="268438106" name="batteryY" stackId="16" startPc="268435921"/>
+<entry endPc="268438106" name="infoShort" stackId="27" startPc="268435921"/>
+<entry endPc="268438106" name="second" stackId="5" startPc="268435921"/>
+<entry endPc="268438106" name="batteryX" stackId="11" startPc="268435921"/>
+<entry endPc="268438106" name="intNippleMid" stackId="17" startPc="268435921"/>
+<entry endPc="268438106" name="batteryHeight" stackId="12" startPc="268435921"/>
+<entry arg="true" endPc="268438107" name="dc" stackId="1" startPc="268435917"/>
+<entry endPc="268438408" name="intFinishOfDayHour" stackId="6" startPc="268438249"/>
+<entry endPc="268438408" name="intDiffDayLeftAndBB" stackId="10" startPc="268438249"/>
+<entry endPc="268438408" name="intHoursInDay" stackId="7" startPc="268438249"/>
+<entry endPc="268438408" name="intHoursLeftInDay" stackId="8" startPc="268438249"/>
+<entry endPc="268438408" name="intStartOfDayHour" stackId="5" startPc="268438249"/>
+<entry endPc="268438408" name="dblPercentOfDayLeft" stackId="9" startPc="268438249"/>
+<entry endPc="268438414" name="dblBodyBatteryPercent" stackId="1" startPc="268438112"/>
+<entry endPc="268438414" name="objABodyBattery" stackId="2" startPc="268438112"/>
+<entry endPc="268438414" name="intCurrentHourOfDay" stackId="4" startPc="268438112"/>
+<entry endPc="268438414" name="bbIterator" stackId="3" startPc="268438112"/>
+<entry endPc="268438616" name="intHour" stackId="3" startPc="268438420"/>
+<entry endPc="268438616" name="today" stackId="1" startPc="268438420"/>
+<entry endPc="268438616" name="dateString" stackId="2" startPc="268438420"/>
+<entry endPc="268438923" name="lastSampleTime" stackId="5" startPc="268438735"/>
+<entry endPc="268438923" name="hrIterator" stackId="3" startPc="268438735"/>
+<entry endPc="268438923" name="previous" stackId="4" startPc="268438735"/>
+<entry endPc="268438923" name="heartRateObject" stackId="6" startPc="268438735"/>
+<entry endPc="268438926" name="blHasHR" stackId="2" startPc="268438703"/>
+<entry endPc="268439202" name="intHeartRate" stackId="1" startPc="268438622"/>
+<entry endPc="268439343" name="strQuote" stackId="2" startPc="268439315"/>
+<entry arg="true" endPc="268439344" name="dc" stackId="1" startPc="268439311"/>
+<entry arg="true" endPc="268439371" name="dc" stackId="1" startPc="268439345"/>
+<entry endPc="268440160" name="i" stackId="16" startPc="268439691"/>
+<entry endPc="268440604" name="strPostTotal" stackId="17" startPc="268439667"/>
+<entry endPc="268440668" name="dblTotalKmsForWeek" stackId="13" startPc="268439376"/>
+<entry endPc="268440668" name="strComment" stackId="11" startPc="268439376"/>
+<entry endPc="268440668" name="intNumberOfDaysHistoryToShow" stackId="2" startPc="268439376"/>
+<entry endPc="268440668" name="intYForStats" stackId="6" startPc="268439376"/>
+<entry endPc="268440668" name="dblDistanceInKmsForDay" stackId="10" startPc="268439376"/>
+<entry endPc="268440668" name="intXLocationForDay" stackId="7" startPc="268439376"/>
+<entry endPc="268440668" name="strText" stackId="12" startPc="268439376"/>
+<entry endPc="268440668" name="intDayOfWeekToday" stackId="5" startPc="268439376"/>
+<entry endPc="268440668" name="infoDateTimeNow" stackId="4" startPc="268439376"/>
+<entry endPc="268440668" name="dailyHistoryArr" stackId="3" startPc="268439376"/>
+<entry endPc="268440668" name="strDayOfReading" stackId="9" startPc="268439376"/>
+<entry endPc="268440668" name="intXLocationForKms" stackId="8" startPc="268439376"/>
+<entry endPc="268440668" name="intHeightOfText" stackId="14" startPc="268439376"/>
+<entry endPc="268440668" name="fontSize" stackId="15" startPc="268439376"/>
+<entry arg="true" endPc="268440669" name="dc" stackId="1" startPc="268439372"/>
+<entry endPc="268440875" name="strDayNameShort" stackId="2" startPc="268440674"/>
+<entry arg="true" endPc="268440876" name="intNumber" stackId="1" startPc="268440670"/>
+<entry endPc="268441265" name="startXForMoveBarValue" stackId="7" startPc="268441144"/>
+<entry endPc="268441568" name="strSteps" stackId="5" startPc="268440881"/>
+<entry endPc="268441568" name="xForStepsAndKms" stackId="2" startPc="268440881"/>
+<entry endPc="268441568" name="yForStepsKMAndMoveNumber" stackId="3" startPc="268440881"/>
+<entry endPc="268441568" name="moveBarLength" stackId="9" startPc="268440881"/>
+<entry endPc="268441568" name="intMoveBarLevelCurrent" stackId="8" startPc="268440881"/>
+<entry endPc="268441568" name="strStepsAndKms" stackId="6" startPc="268440881"/>
+<entry endPc="268441568" name="strKMMoved" stackId="4" startPc="268440881"/>
+<entry arg="true" endPc="268441569" name="dc" stackId="1" startPc="268440877"/>
+<entry endPc="268441751" name="today" stackId="2" startPc="268441574"/>
+<entry endPc="268441751" name="arrQuotes" stackId="1" startPc="268441574"/>
+<entry endPc="268441751" name="r" stackId="3" startPc="268441574"/>
+<entry endPc="268442409" name="strPrintThis" stackId="12" startPc="268442259"/>
+<entry endPc="268442455" name="rowHeight" stackId="4" startPc="268441757"/>
+<entry endPc="268442455" name="myFont" stackId="3" startPc="268441757"/>
+<entry endPc="268442455" name="intCharsPerLine" stackId="6" startPc="268441757"/>
+<entry endPc="268442455" name="yStartPosition" stackId="8" startPc="268441757"/>
+<entry endPc="268442455" name="intLocOfLastSpace" stackId="11" startPc="268441757"/>
+<entry endPc="268442455" name="intNumberOfLinesNeeded" stackId="9" startPc="268441757"/>
+<entry endPc="268442455" name="intLastSpaceLoc" stackId="10" startPc="268441757"/>
+<entry endPc="268442455" name="oneCharWidth" stackId="5" startPc="268441757"/>
+<entry endPc="268442455" name="intLenLeftToPrint" stackId="7" startPc="268441757"/>
+<entry arg="true" endPc="268442456" name="strText" stackId="2" startPc="268441753"/>
+<entry arg="true" endPc="268442456" name="dc" stackId="1" startPc="268441753"/>
+<entry endPc="268442497" name="dblCentimetersMoved" stackId="1" startPc="268442461"/>
+<entry endPc="268442582" name="strNumber" stackId="3" startPc="268442534"/>
+<entry endPc="268442582" name="newNumber" stackId="2" startPc="268442534"/>
+<entry arg="true" endPc="268442583" name="aNumber" stackId="1" startPc="268442530"/>
+<entry endPc="268442656" name="intSpacePos" stackId="4" startPc="268442588"/>
+<entry endPc="268442656" name="strLeftOfLineLengthText" stackId="3" startPc="268442588"/>
+<entry arg="true" endPc="268442657" name="strText" stackId="1" startPc="268442584"/>
+<entry arg="true" endPc="268442657" name="intMaxLineLength" stackId="2" startPc="268442584"/>
+<entry endPc="268443167" name="myFont" stackId="3" startPc="268442662"/>
+<entry arg="true" endPc="268443168" name="dc" stackId="2" startPc="268442658"/>
+<entry arg="true" endPc="268443168" name="strQuote" stackId="1" startPc="268442658"/>
+<entry endPc="268443202" name="dblKMMoved" stackId="2" startPc="268443173"/>
+<entry arg="true" endPc="268443203" name="dblDistanceInCentimeters" stackId="1" startPc="268443169"/>
+<entry endPc="268443334" name="intLocOfSpace" stackId="6" startPc="268443208"/>
+<entry endPc="268443334" name="index" stackId="3" startPc="268443208"/>
+<entry endPc="268443334" name="i" stackId="4" startPc="268443208"/>
+<entry endPc="268443334" name="strOriginalSource" stackId="5" startPc="268443208"/>
+<entry arg="true" endPc="268443335" name="charFind" stackId="1" startPc="268443204"/>
+<entry arg="true" endPc="268443335" name="strSource" stackId="2" startPc="268443204"/>
+<entry endPc="268443527" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268443348"/>
+<entry arg="true" endPc="268443528" name="dc" stackId="1" startPc="268443336"/>
+</localVars>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="akSmallFont"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontLarge"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/AKGarminQuotesStatsMoveBarView" offset="238" parentId="globals" symbolId="AKGarminQuotesStatsMoveBarView" type="class"/>
+<dataEntry label="globals/Rez" offset="525" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/Rez/Drawables" offset="604" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="643" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="674" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="721" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="760" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="791" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/AKGarminQuotesStatsMoveBarApp" offset="830" parentId="globals" symbolId="AKGarminQuotesStatsMoveBarApp" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435478" name="initialize" parent="AKGarminQuotesStatsMoveBarApp" startPc="268435456">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435483" name="onStart" parent="AKGarminQuotesStatsMoveBarApp" startPc="268435479">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435488" name="onStop" parent="AKGarminQuotesStatsMoveBarApp" startPc="268435484">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435530" name="getInitialView" parent="AKGarminQuotesStatsMoveBarApp" startPc="268435489">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443677" name="&lt;init&gt;" parent="AKGarminQuotesStatsMoveBarApp" startPc="268443659">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435553" name="initialize" parent="AKGarminQuotesStatsMoveBarView" startPc="268435531">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435916" name="onLayout" parent="AKGarminQuotesStatsMoveBarView" startPc="268435554">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438107" name="onUpdate" parent="AKGarminQuotesStatsMoveBarView" startPc="268435917">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438415" name="getBodyBatteryPercentAndSetColours" parent="AKGarminQuotesStatsMoveBarView" startPc="268438108">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438617" name="getHourOfDay" parent="AKGarminQuotesStatsMoveBarView" startPc="268438416">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439203" name="getHeartRateAndSetColours" parent="AKGarminQuotesStatsMoveBarView" startPc="268438618">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439227" name="SetNewQuote" parent="AKGarminQuotesStatsMoveBarView" startPc="268439204">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439310" name="getBodyBatteryIterator" parent="AKGarminQuotesStatsMoveBarView" startPc="268439228">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439344" name="GetQuoteSizeAndDraw" parent="AKGarminQuotesStatsMoveBarView" startPc="268439311">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439371" name="DrawQuote" parent="AKGarminQuotesStatsMoveBarView" startPc="268439345">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440669" name="DrawWeeksMovementHistory" parent="AKGarminQuotesStatsMoveBarView" startPc="268439372">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440876" name="GetShortDayNameFromNumber" parent="AKGarminQuotesStatsMoveBarView" startPc="268440670">
+<param id="intNumber"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441569" name="DrawKMTravelledAndMoveBar" parent="AKGarminQuotesStatsMoveBarView" startPc="268440877">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441752" name="getRandomQuote" parent="AKGarminQuotesStatsMoveBarView" startPc="268441570">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442456" name="drawTextOverMultiLines" parent="AKGarminQuotesStatsMoveBarView" startPc="268441753">
+<param id="dc"/>
+<param id="strText"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442498" name="GetTodaysDistanceKMDbl" parent="AKGarminQuotesStatsMoveBarView" startPc="268442457">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442529" name="GetTodaysDistanceKMStr" parent="AKGarminQuotesStatsMoveBarView" startPc="268442499">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442583" name="convertToThousandsShorthand" parent="AKGarminQuotesStatsMoveBarView" startPc="268442530">
+<param id="aNumber"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442657" name="findLastSpaceBeforeLineLength" parent="AKGarminQuotesStatsMoveBarView" startPc="268442584">
+<param id="strText"/>
+<param id="intMaxLineLength"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443168" name="ChooseFontBasedOnLengthAndSetColorFenix5" parent="AKGarminQuotesStatsMoveBarView" startPc="268442658">
+<param id="strQuote"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443203" name="GetKMMovedDbl" parent="AKGarminQuotesStatsMoveBarView" startPc="268443169">
+<param id="dblDistanceInCentimeters"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443335" name="lastIndexOf" parent="AKGarminQuotesStatsMoveBarView" startPc="268443204">
+<param id="charFind"/>
+<param id="strSource"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443628" name="&lt;init&gt;" parent="AKGarminQuotesStatsMoveBarView" startPc="268443610">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443653" name="&lt;init&gt;" parent="Drawables" startPc="268443653">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443655" name="&lt;init&gt;" parent="Fonts" startPc="268443655">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443657" name="&lt;init&gt;" parent="JsonData" startPc="268443657">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443528" name="WatchFace" parent="Layouts" startPc="268443336">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443656" name="&lt;init&gt;" parent="Layouts" startPc="268443656">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443654" name="&lt;init&gt;" parent="Menus" startPc="268443654">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443658" name="&lt;init&gt;" parent="Strings" startPc="268443658">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268443652" name="&lt;init&gt;" parent="Rez" startPc="268443629">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>
