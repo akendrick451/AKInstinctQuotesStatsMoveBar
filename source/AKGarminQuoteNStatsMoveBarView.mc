@@ -29,7 +29,8 @@ var gStrBBFontColour=Gfx.COLOR_WHITE;
 class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	
 	// how to build in vs code
-    var strVersion = "v2.9b";// again checking out git; 
+    var strVersion = "v2.9c";// again checking out git; 
+				// 2.9c calcculate diff body battery and day left in minutes not hours. 
 				// 2.9b - add tolerance for body battery of 5... maybe or 10...
 	// v2.9 just checking git
 				// 2.8 colors for BB? based on hour approximately. Actually based on % day left 
@@ -310,9 +311,10 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 			dblBodyBatteryPercent = 0.0;
 		}
 		var intCurrentHourOfDay = getHourOfDay();
+		var intCurrentMinutes = getMinutesOfHour() ;// eg if time is 7:45, return 45 // 1-60
 
 // test - set dblBodyBatteryNumber to various numbers
-	//dblBodyBatteryPercent = 23;
+	dblBodyBatteryPercent =30;
 
 		if(dblBodyBatteryPercent!=0.0){
 
@@ -323,9 +325,14 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 			var intHoursInDay = intFinishOfDayHour - intStartOfDayHour;
 			var intHoursLeftInDay = intFinishOfDayHour-intCurrentHourOfDay;
 			
+			// better to compare minutes than hours 
+			var intMinutesLeftInDay = intHoursLeftInDay*60 -(60- intCurrentMinutes);
+			var intTotalMinutesAwake = intHoursInDay * 60;
+			var dblPercentOfDayLeftByMinutes =  100*(intMinutesLeftInDay.toDouble()/intTotalMinutesAwake.toDouble());
+
 			var dblPercentOfDayLeft =  100*(intHoursLeftInDay.toDouble()/intHoursInDay.toDouble());
 			var intBBTolerance = 10;
-			var intDiffDayLeftAndBB = (dblBodyBatteryPercent)-dblPercentOfDayLeft;
+			var intDiffDayLeftAndBB = (dblBodyBatteryPercent)-dblPercentOfDayLeftByMinutes;
 
 			// lets add a pink if in tolerance
 			
@@ -352,6 +359,15 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		return dblBodyBatteryPercent;
 	} // end function get body battery percent and set colours
 
+
+	function getMinutesOfHour () {
+		// eg given 7:45, return 45. should always return between 0 and 59. 
+		var today = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+		
+		var intMinutes = today.min;
+		return intMinutes;
+		//System.println(dateString); // e.g. "16:28:32 Wed 1 Mar 2017"
+	}
 	function getHourOfDay () {
 
 		var today = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
