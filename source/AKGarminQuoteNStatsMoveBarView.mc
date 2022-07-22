@@ -28,8 +28,10 @@ var gStrBBFontColour=Gfx.COLOR_WHITE;
 
 class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	
-	// how to build in vs code
-    var strVersion = "v2.9c";// again checking out git; 
+	// how to build in vs code - selct View Command and then  Export
+    var strVersion = "v3.0";// 
+				// 3.0 July 22 - redoing how i count lines etc. a bit nicer. 
+				// 2.9d July 22 - Changing from showing 5 lines history to 4 as 5 doesnt fit on 945
 				// 2.9c calcculate diff body battery and day left in minutes not hours. 
 				// 2.9b - add tolerance for body battery of 5... maybe or 10...
 	// v2.9 just checking git
@@ -152,7 +154,7 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		
 		if (dblBodyBatteryNumber!=0.0) {
 			dc.setColor(gStrBBFontColour, gStrBBBackColour);
-			dc.drawText(47,20 , 1, "BB" + dblBodyBatteryNumber.format("%.0f"), Gfx.TEXT_JUSTIFY_LEFT);
+			dc.drawText(47,20 , 1, "B" + dblBodyBatteryNumber.format("%.0f"), Gfx.TEXT_JUSTIFY_LEFT);
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		}	else {
 			dc.drawText(47, 20, 1, "Bnull" , Gfx.TEXT_JUSTIFY_LEFT);
@@ -476,9 +478,12 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	function DrawWeeksMovementHistory(dc) {
 
 			
-			var intNumberOfDaysHistoryToShow = 5;
-	
-		var dailyHistoryArr = ActivityMonitor.getHistory(); //gets 7 days history
+			var intNumberOfDaysHistoryToShow = 4;
+			var intHeightOfText = 21;
+			if (gStrDeviceName.equals("Forerunner235")){
+				intHeightOfText=15;
+			}
+			var dailyHistoryArr = ActivityMonitor.getHistory(); //gets 7 days history
 			/* System.println("Draw previous history") print the previous sample
 			   System.println("history array size is " + dailyHistoryArr.size() );  // print the previous sample
 			  */  
@@ -488,8 +493,11 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 			 var intDayOfWeekToday = infoDateTimeNow.day_of_week; 
 			 // eg 6 = friday
 
-			System.println("Today is " + 			GetShortDayNameFromNumber(intDayOfWeekToday));						
-			var intYForStats = dc.getHeight()-100;
+			System.println("Today is " + 	GetShortDayNameFromNumber(intDayOfWeekToday));
+			var intHeightForStatsForWeek = intHeightOfText*(intNumberOfDaysHistoryToShow+1); // // + 1 for the title fo Week. was 100 22 july 2022						
+			var intYForStats = dc.getHeight() - intHeightForStatsForWeek ; // 
+
+
 
 			var intXLocationForDay = 30 + gIntExtraXRequired;
 			var intXLocationForKms = 80 + gIntExtraXRequired; 
@@ -499,11 +507,8 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 			var strComment = "";
 			var strText = "";
 			var dblTotalKmsForWeek = 0.0;
-			var intHeightOfText = 20;
-			if (gStrDeviceName.equals("Forerunner235")){
-				intHeightOfText=14;
-				intYForStats = dc.getHeight() - 70;
-			}
+			
+		
 			
 			var fontSize = 1; //smallest font size;
 			try {
@@ -584,8 +589,8 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 				}
 				
 
-				dc.drawText(intXLocationForDay, intYForStats-(intHeightOfText*(5)), fontSize, "Week ", Gfx.TEXT_JUSTIFY_LEFT);
-				dc.drawText(intXLocationForKms+ 20, intYForStats-(intHeightOfText*(5)), fontSize,
+				dc.drawText(intXLocationForDay, intYForStats-(intHeightOfText*(intNumberOfDaysHistoryToShow)), fontSize, "Week ", Gfx.TEXT_JUSTIFY_LEFT);
+				dc.drawText(intXLocationForKms+ 20, intYForStats-(intHeightOfText*(intNumberOfDaysHistoryToShow)), fontSize,
 				dblTotalKmsForWeek.format("%d") + " kms" + strPostTotal , Gfx.TEXT_JUSTIFY_LEFT);
 			
 
@@ -678,10 +683,8 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	     // and draw a thiker? bar to highliht 
 	     dc.drawRectangle(xForStepsAndKms, yForStepsKMAndMoveNumber, moveBarLength, 2);
 	    
-	
 	 } // end drawkm travlled
 	
-
 function getRandomQuote() {
 	
 		// I'll change it to get teh quote based on the date. Otherwise it changes waaaay too much. 
@@ -700,14 +703,13 @@ function getRandomQuote() {
 		r = Mt.rand() % arrQuotes.size(); //Random number			
 		//r = today.day_of_week-1; // get based on day of week,n ot random
 		//Sys.println(r); //To check the result
-		//r=0;
+		//r=5;
 		return arrQuotes[r]; 
 			
 	} // Get Random Quote
 
 	function drawTextOverMultiLines( dc, strText ) {
 	
-
 	    if (strText=="") {
 			//just for debug
 			Sys.println("strText is blank for some reason - ! ");
@@ -720,38 +722,45 @@ function getRandomQuote() {
 		var oneCharWidth=dc.getTextWidthInPixels("AbCdEfGhIj",myFont)/10;
 		var intCharsPerLine= dc.getWidth()/oneCharWidth-2; // was -2 to make it look nicer ie not to edge, rmeoved by ak for fenix 5 to fit more
 		
-		var intLenLeftToPrint = strText.length();
+		if (gStrDeviceName.equals("Forerunner235")) {
+			intCharsPerLine = intCharsPerLine +2;
+		}
+		
 		var yStartPosition = 30; // starting y position
 	
-	 	//Sys.println("length is  " + strText.length() + " number which can fit on line =" + intCharsPerLine);
-		var intNumberOfLinesNeeded = (strText.length()*1.00)/(intCharsPerLine-2)*1.00; //-2 is a fudge because God loves me is going on 3 lines but this returns 2~!!!!!
+		if (strText.length() == "God      Loves       Me".length()) {
+
+			Sys.println(strText);
+			// just a line for debug
+		}
+
+	 	Sys.println("length is  " + strText.length() + " .Number of chars which can fit on line =" + intCharsPerLine);
+		var fltNumberOfLinesNeeded = (strText.length()*1.00)/(intCharsPerLine-0)*1.00; //-2 is a fudge because God loves me is going on 3 lines but this returns 2~!!!!!
+		var intNumberOfLinesNeeded = (fltNumberOfLinesNeeded + 0.9).toNumber(); //my strange roundUP function
 		//Sys.println("number of lines needed = " + intNumberOfLinesNeeded);
-		
+		var blPrint = false;
+	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, yStartPosition, myFont, blPrint);
+
 		
 		Sys.println("intNumberOfLinesNeeded= "  + intNumberOfLinesNeeded + " yStartPosition is " + yStartPosition + " rowHeight is " + rowHeight);
 		if (intNumberOfLinesNeeded == 1 ) {
 		       yStartPosition = dc.getHeight()/2-rowHeight; //- put it in the middleish!
 		   //Sys.println("1 lines exactly... put it in the middle!");
 		
-		}
-		
-				if (intNumberOfLinesNeeded > 1 && intNumberOfLinesNeeded<2 ) {
+		} else if (intNumberOfLinesNeeded > 1 && intNumberOfLinesNeeded<2 ) {
 		       yStartPosition = dc.getHeight()/2-rowHeight*1.2; //- put it in the middleish!
 		     //Sys.println("2 lines needed ... put it in the 2iddle!");
 		
-		}
-		
-		
-		if (intNumberOfLinesNeeded > 2 && intNumberOfLinesNeeded < 3) {
+		} else if (intNumberOfLinesNeeded >= 2 && intNumberOfLinesNeeded < 3) {
 		       yStartPosition = dc.getHeight()/2-rowHeight*1.5; //- put it in the middleish!
 		    //Sys.println("three lines... put it in the middle!");
 		
-		}
-		
-		if (intNumberOfLinesNeeded >= 3 && intNumberOfLinesNeeded < 4) {
-		       yStartPosition = dc.getHeight()/2-rowHeight*2.1; //- put it in the middleish!
+		} else if (intNumberOfLinesNeeded >= 3 && intNumberOfLinesNeeded < 4) {
+		       yStartPosition = dc.getHeight()/2-rowHeight*2.3; //- put it in the middleish! was 2.1
 		      //Sys.println("4 lines... put it in the middle!");
 		
+		} else  {
+			yStartPosition = 41;
 		}
 		
 		if (intCharsPerLine > strText.length() ) {
@@ -761,17 +770,26 @@ function getRandomQuote() {
 		}
 		
 		Sys.println("yStartPosition is " + yStartPosition + " rowHeight is " + rowHeight);
+
+		blPrint = true;
+	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, yStartPosition, myFont, blPrint);
+
+		
+		
+	} //drawTextOverMultiLines
+
+	function PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, yStartPosition, myFont, blPrint) {
+		
 		var intLastSpaceLoc;
-		
-		
 		var intLocOfLastSpace=0;
-		
+		var intLinesNeeded=0;
+		var intLenLeftToPrint = strText.length();
 		// print out the words on multiple lines
 		//Sys.println("Starting to get each line...");
 		do {
 		   
 		   // find last " " before the width allowed.
-		   
+		   intLinesNeeded = intLinesNeeded + 1;
 		   intLastSpaceLoc = findLastSpaceBeforeLineLength( strText, intCharsPerLine );
 //Sys.println("Last Space loc = " + intLastSpaceLoc);		   
 		   if (intLastSpaceLoc == -1) {
@@ -781,15 +799,25 @@ function getRandomQuote() {
 		   //intLocOfLastSpace = strPrintThis.find( 
 		   strText = strText.substring(intLastSpaceLoc+1, strText.length());
 		   intLenLeftToPrint = strText.length();
-		   dc.drawText(gXForTextLoc,yStartPosition, myFont, strPrintThis, Gfx.TEXT_JUSTIFY_LEFT);
+		   if (blPrint==true) {
+		   	dc.drawText(gXForTextLoc,yStartPosition, myFont, strPrintThis, Gfx.TEXT_JUSTIFY_LEFT);
+		   }
 		   yStartPosition = yStartPosition + gRowHeight; 
 		} while  (intLenLeftToPrint > intCharsPerLine );
 		
 		// draw anything left 
-		dc.drawText(gXForTextLoc,yStartPosition, myFont, strText, Gfx.TEXT_JUSTIFY_LEFT);
 		
-	} //drawTextOverMultiLines
-
+		if (strText.equals("")) {
+				// what is this is blank.. i'll check
+		} else {
+			if (blPrint==true) {
+				dc.drawText(gXForTextLoc,yStartPosition, myFont, strText, Gfx.TEXT_JUSTIFY_LEFT);
+			}
+			intLinesNeeded = intLinesNeeded + 1;
+			
+		}
+		return intLinesNeeded;
+	} // PrintOrCountNumberOfLinesNeeded
 
 	function GetTodaysDistanceKMDbl() {
 			//note nothing passed in
@@ -843,27 +871,29 @@ function getRandomQuote() {
 
 	 function ChooseFontBasedOnLengthAndSetColorFenix5( strQuote, dc ) { // passed in dc so i can change color!
 	var myFont = null; 
+	//var dblFontSizeFactor = 1;
+	
 	if (strQuote.length() > 250 ) {
 		
 			myFont = Gfx.FONT_XTINY;
 		Sys.println( "font size is xtiny Length is " + strQuote.length());
-		} else if (strQuote.length() > 160 ) {
-			gRowHeight = 5;			
+		} else if (strQuote.length() > 65 ) {
+			gRowHeight = 24;			
 			myFont = Gfx.FONT_TINY;
 			Sys.println( "font size is tiny Length is " + strQuote.length());
 		
-		} else if ( strQuote.length() > 90 )  {
-			gRowHeight = 23;
+		} else if ( strQuote.length() > 50 )  {
+			gRowHeight = 25;
 		   myFont = Gfx.FONT_SMALL;
 		 Sys.println( "font size is small Length is " + strQuote.length());
 		
-		} else if ( strQuote.length() > 50 ) {
-			gRowHeight = 22;	
+		} else if ( strQuote.length() > 30 ) {
+			gRowHeight = 33;	
 			myFont  = Gfx.FONT_MEDIUM;
 		Sys.println( "font size is med  Length is " + strQuote.length());
 					
-		} else if ( strQuote.length() > 31 ){
-		gRowHeight = 30;
+		} else if ( strQuote.length() > 27 ){
+		gRowHeight = 39;
 		  myFont = Gfx.FONT_LARGE;
 		  Sys.println( "font size is large. Length is " + strQuote.length());
 		  Sys.println( strQuote );
