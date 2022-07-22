@@ -29,7 +29,8 @@ var gStrBBFontColour=Gfx.COLOR_WHITE;
 class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	
 	// how to build in vs code
-    var strVersion = "v2.9"; 
+    var strVersion = "v2.9b";// again checking out git; 
+				// 2.9b - add tolerance for body battery of 5... maybe or 10...
 	// v2.9 just checking git
 				// 2.8 colors for BB? based on hour approximately. Actually based on % day left 
 				// 20 July 2022v 2.7 changed heart rate colours a little bit
@@ -311,7 +312,7 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		var intCurrentHourOfDay = getHourOfDay();
 
 // test - set dblBodyBatteryNumber to various numbers
-   //dblBodyBatteryPercent = 20;
+	//dblBodyBatteryPercent = 23;
 
 		if(dblBodyBatteryPercent!=0.0){
 
@@ -323,13 +324,26 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 			var intHoursLeftInDay = intFinishOfDayHour-intCurrentHourOfDay;
 			
 			var dblPercentOfDayLeft =  100*(intHoursLeftInDay.toDouble()/intHoursInDay.toDouble());
-			var intDiffDayLeftAndBB = dblBodyBatteryPercent-dblPercentOfDayLeft;
+			var intBBTolerance = 10;
+			var intDiffDayLeftAndBB = (dblBodyBatteryPercent)-dblPercentOfDayLeft;
+
+			// lets add a pink if in tolerance
 			
+
 			if( intDiffDayLeftAndBB > 0) { // ie body battery % > day left % . Very good
 				 gStrBBBackColour=Gfx.COLOR_BLACK;
 				 gStrBBFontColour=Gfx.COLOR_WHITE;	
-			} else {
+			} else if ((intDiffDayLeftAndBB + intBBTolerance) > 0) {
+				// eg day left=40 and we are 35. 
 				 gStrBBBackColour=Gfx.COLOR_BLACK;
+				 gStrBBFontColour=Gfx.COLOR_PINK; // pink is easier to read than orange. 
+			} else if (intDiffDayLeftAndBB > -20)  {
+				// eg say we are 10-20 below day left, eg day left - 40 we are 25 
+				 gStrBBBackColour=Gfx.COLOR_BLACK;
+				 gStrBBFontColour=Gfx.COLOR_RED;	
+			} else {
+				// really bad here we are more than 20 below!@!!
+				 gStrBBBackColour=Gfx.COLOR_LT_GRAY;
 				 gStrBBFontColour=Gfx.COLOR_RED;	
 
 			} // will add later, if less than say 10% less, then show orange or yellow or blue
