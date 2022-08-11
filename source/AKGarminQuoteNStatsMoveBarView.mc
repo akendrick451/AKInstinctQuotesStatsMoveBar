@@ -29,7 +29,9 @@ var gStrBBFontColour=Gfx.COLOR_WHITE;
 class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	
 	// how to build in vs code - selct View Command and then  Export
-    var strVersion = "v3.0";// 
+    var strVersion = "v3.0b";// 
+	// 3.0b Aug 11 - Change start of day for body battery to 6am
+	// 3.0a fix bug
 				// 3.0 July 22 - redoing how i count lines etc. a bit nicer. 
 				// 2.9d July 22 - Changing from showing 5 lines history to 4 as 5 doesnt fit on 945
 				// 2.9c calcculate diff body battery and day left in minutes not hours. 
@@ -316,13 +318,13 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		var intCurrentMinutes = getMinutesOfHour() ;// eg if time is 7:45, return 45 // 1-60
 
 // test - set dblBodyBatteryNumber to various numbers
-	dblBodyBatteryPercent =30;
+//	dblBodyBatteryPercent =30;
 
 		if(dblBodyBatteryPercent!=0.0){
 
 			// try to get some equation to check if percentage of body battery is > percentage of day left
-			// assume day starts at 8am and finishes at 10pm or 22:00. 
-			var intStartOfDayHour = 8;
+			// assume day starts at 6am and finishes at 10pm or 22:00. 
+			var intStartOfDayHour = 6;
 			var intFinishOfDayHour = 22;
 			var intHoursInDay = intFinishOfDayHour - intStartOfDayHour;
 			var intHoursLeftInDay = intFinishOfDayHour-intCurrentHourOfDay;
