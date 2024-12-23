@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\manifest.xml"/>
+<pcToLineNum>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuotesStatsMoveBar.mc" id="1" lineNum="3" parent="globals/AKInstinctQuotesStatsMoveBarApp" pc="268435457" symbol="&lt;init&gt;"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\gen\\006-B4394-00\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435476" symbol="&lt;init&gt;"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="3" lineNum="59" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435500" symbol="&lt;init&gt;"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="3" lineNum="114" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435518" symbol="&lt;init&gt;"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuotesStatsMoveBar.mc" id="5" lineNum="18" parent="globals/AKInstinctQuotesStatsMoveBarApp" pc="268435549" symbol="getInitialView"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuotesStatsMoveBar.mc" id="5" lineNum="19" parent="globals/AKInstinctQuotesStatsMoveBarApp" pc="268435551" symbol="getInitialView"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuotesStatsMoveBar.mc" id="6" lineNum="5" parent="globals/AKInstinctQuotesStatsMoveBarApp" pc="268435592" symbol="initialize"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuotesStatsMoveBar.mc" id="6" lineNum="6" parent="globals/AKInstinctQuotesStatsMoveBarApp" pc="268435594" symbol="initialize"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="8" lineNum="993" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435613" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="8" lineNum="1002" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435617" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="8" lineNum="1003" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435634" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="8" lineNum="1005" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435640" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="8" lineNum="1007" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435660" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="8" lineNum="1009" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435680" symbol="findLastSpaceBeforeLineLength"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="372" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435683" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="386" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435687" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="387" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435709" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="391" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435752" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="392" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435774" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="397" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435862" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="399" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435869" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="400" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435963" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="401" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435985" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="9" lineNum="407" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435992" symbol="DrawTimeAndVersion"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="773" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436037" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="775" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436041" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="776" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436048" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="778" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436067" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="780" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436074" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="781" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436087" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="782" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436094" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="783" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436120" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="788" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436143" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="790" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436173" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="791" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436192" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="793" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436211" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="803" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436267" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="804" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436297" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="805" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436319" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="806" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436338" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="808" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436391" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="809" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436414" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="810" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436431" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="811" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436461" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="814" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436483" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="815" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436493" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="816" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436514" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="817" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436553" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="818" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436583" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="819" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436604" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="821" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436633" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="10" lineNum="824" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436662" symbol="DrawKMTravelledAndMoveBar"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="411" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436686" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="413" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436690" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="414" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436697" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="415" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436700" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="416" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436713" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="417" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436720" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="419" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436733" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="420" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436740" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="421" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436770" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="423" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436783" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="428" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436804" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="429" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436810" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="431" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436817" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="432" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436830" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="435" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436843" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="436" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436862" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="450" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436872" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="453" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436885" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="454" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436904" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="455" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436935" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="456" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436957" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="458" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436970" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="464" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436983" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="470" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268436994" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="471" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437001" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="476" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437008" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="477" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437019" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="478" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437032" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="479" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437048" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="481" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437062" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="482" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437075" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="483" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437091" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="485" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437102" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="486" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437115" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="489" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437131" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="490" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437144" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="11" lineNum="495" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437157" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="12" lineNum="582" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437160" symbol="SetNewQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="12" lineNum="583" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437162" symbol="SetNewQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="615" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437182" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="618" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437186" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="619" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437193" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="621" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437200" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="626" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437217" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="627" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437254" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="628" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437278" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="631" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437288" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="632" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437323" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="633" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437336" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="637" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437358" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="638" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437365" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="639" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437372" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="640" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437379" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="641" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437386" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="643" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437393" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="644" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437400" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="646" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437407" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="649" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437414" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="650" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437438" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="654" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437446" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="655" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437470" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="656" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437494" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="657" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437501" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="658" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437520" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="659" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437530" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="660" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437541" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="661" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437551" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="662" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437562" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="663" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437572" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="664" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437583" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="665" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437593" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="666" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437604" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="667" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437614" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="668" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437625" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="669" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437635" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="670" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437646" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="671" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437656" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="672" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437667" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="673" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437677" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="674" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437688" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="675" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437698" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="676" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437709" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="677" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437719" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="678" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437730" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="679" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437740" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="680" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437751" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="681" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437761" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="682" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437772" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="686" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437782" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="690" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437789" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="692" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437816" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="694" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437847" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="706" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437891" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="708" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437907" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="709" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437914" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="710" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437925" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="711" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437947" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="712" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437957" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="713" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437968" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="714" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268437990" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="715" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438000" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="716" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438011" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="717" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438018" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="718" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438043" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="719" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438054" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="720" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438079" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="721" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438090" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="725" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438112" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="726" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438146" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="731" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438206" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="732" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438232" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="733" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438236" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="13" lineNum="738" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438266" symbol="DrawWeeksMovementHistory"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="14" lineNum="499" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438289" symbol="getMinutesOfHour"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="14" lineNum="501" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438293" symbol="getMinutesOfHour"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="14" lineNum="503" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438330" symbol="getMinutesOfHour"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="14" lineNum="504" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438340" symbol="getMinutesOfHour"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="15" lineNum="605" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438343" symbol="DrawQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="15" lineNum="606" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438345" symbol="DrawQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="528" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438368" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="530" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438372" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="532" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438379" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="533" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438404" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="534" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438410" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="535" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438417" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="537" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438438" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="540" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438449" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="541" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438473" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="542" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438481" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="543" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438501" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="547" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438522" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="548" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438535" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="549" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438542" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="550" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438563" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="551" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438580" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="552" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438601" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="553" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438631" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="559" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438641" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="560" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438652" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="561" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438665" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="562" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438681" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="563" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438692" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="564" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438705" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="565" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438721" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="566" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438732" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="567" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438745" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="568" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438761" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="569" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438783" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="570" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438796" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="572" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438812" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="573" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438825" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="16" lineNum="578" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438838" symbol="getHeartRateAndSetColours"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="828" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438841" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="832" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438845" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="833" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438853" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="834" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438866" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="835" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438879" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="836" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438892" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="837" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438905" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="838" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438918" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="839" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438931" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="843" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438944" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="846" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438973" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="847" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438987" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="17" lineNum="849" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268438994" symbol="getRandomQuote"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="18" lineNum="977" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439000" symbol="convertToThousandsShorthand"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="18" lineNum="979" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439004" symbol="convertToThousandsShorthand"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="18" lineNum="986" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439014" symbol="convertToThousandsShorthand"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="18" lineNum="988" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439032" symbol="convertToThousandsShorthand"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="18" lineNum="989" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439050" symbol="convertToThousandsShorthand"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="853" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439053" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="855" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439057" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="857" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439068" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="860" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439089" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="862" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439106" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="864" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439120" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="865" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439146" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="867" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439168" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="868" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439193" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="871" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439203" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="873" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439210" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="875" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439239" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="879" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439257" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="880" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439299" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="881" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439333" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="883" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439352" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="884" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439356" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="887" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439381" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="888" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439423" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="889" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439434" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="892" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439459" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="893" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439481" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="896" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439512" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="897" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439534" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="900" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439565" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="901" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439587" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="905" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439618" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="908" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439625" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="910" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439642" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="914" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439670" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="916" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439703" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="19" lineNum="917" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439707" symbol="drawTextOverMultiLines"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="125" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439733" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="126" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439737" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="127" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439784" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="128" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439831" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="129" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439844" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="130" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439861" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="131" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439877" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="138" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439913" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="139" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439923" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="140" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439947" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="141" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439965" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="20" lineNum="142" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268439981" symbol="onLayout"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="21" lineNum="964" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440006" symbol="GetTodaysDistanceKMDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="21" lineNum="968" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440010" symbol="GetTodaysDistanceKMDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="21" lineNum="969" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440033" symbol="GetTodaysDistanceKMDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="298" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440047" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="301" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440051" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="306" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440073" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="309" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440090" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="311" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440154" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="312" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440161" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="314" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440168" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="316" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440175" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="318" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440185" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="319" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440195" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="320" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440208" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="321" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440215" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="322" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440222" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="323" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440229" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="324" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440236" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="326" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440243" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="328" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440257" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="329" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440278" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="330" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440285" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="331" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440292" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="332" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440299" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="333" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440327" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="334" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440341" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="335" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440348" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="336" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440355" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="338" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440365" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="339" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440372" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="340" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440379" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="345" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440386" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="346" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440410" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="348" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440427" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="349" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440439" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="350" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440461" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="355" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440504" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="356" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440520" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="363" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440576" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="364" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440592" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="22" lineNum="368" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440623" symbol="DrawWatchBatteryStats"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="923" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440658" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="927" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440662" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="928" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440669" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="934" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440682" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="935" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440692" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="937" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440709" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="938" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440720" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="940" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440724" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="942" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440744" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="943" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440776" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="944" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440789" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="945" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440797" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="947" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440828" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="948" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440841" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="952" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440849" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="955" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440871" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="956" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440879" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="958" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440910" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="23" lineNum="961" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440920" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="260" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440923" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="264" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440925" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="276" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440947" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="278" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440964" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="279" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268440978" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="286" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441000" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="287" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441033" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="24" lineNum="288" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441045" symbol="DrawWeeksMovementOrQuotes"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="25" lineNum="507" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441060" symbol="getHourOfDay"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="25" lineNum="509" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441064" symbol="getHourOfDay"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="25" lineNum="522" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441101" symbol="getHourOfDay"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="25" lineNum="523" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441111" symbol="getHourOfDay"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="215" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441114" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="220" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441118" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="221" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441125" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="224" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441144" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="225" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441151" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="226" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441164" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="228" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441175" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="229" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441203" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="230" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441237" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="234" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441259" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="235" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441275" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="236" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441279" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="237" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441286" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="241" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441299" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="242" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441316" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="245" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441329" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="246" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441340" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="247" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441368" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="248" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441457" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="26" lineNum="250" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441480" symbol="DrawHeartRateAndBodyBattery"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="27" lineNum="586" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441547" symbol="getBodyBatteryIterator"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="27" lineNum="588" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441549" symbol="getBodyBatteryIterator"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="27" lineNum="590" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441585" symbol="getBodyBatteryIterator"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="27" lineNum="592" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441607" symbol="getBodyBatteryIterator"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="27" lineNum="594" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441628" symbol="getBodyBatteryIterator"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="28" lineNum="598" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441630" symbol="GetQuoteSizeAndDraw"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="28" lineNum="600" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441634" symbol="GetQuoteSizeAndDraw"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="28" lineNum="601" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441647" symbol="GetQuoteSizeAndDraw"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1069" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441664" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1071" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441668" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1072" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441675" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1075" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441682" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1077" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441699" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1079" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441714" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1082" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441721" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1085" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441734" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1088" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441766" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="29" lineNum="1093" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441779" symbol="lastIndexOf"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="745" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441788" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="749" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441792" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="750" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441803" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="752" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441813" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="753" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441820" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="754" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441831" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="755" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441841" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="756" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441852" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="757" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441862" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="758" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441873" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="759" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441883" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="760" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441894" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="761" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441904" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="762" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441915" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="763" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441925" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="764" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441936" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="765" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441946" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="766" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441957" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="767" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441967" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="768" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441978" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="30" lineNum="770" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441985" symbol="GetShortDayNameFromNumber"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1014" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441988" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1015" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441992" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1017" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268441995" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1019" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442008" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1021" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442019" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1022" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442033" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1023" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442069" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1024" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442080" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1025" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442093" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1026" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442100" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1028" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442136" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1029" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442147" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1030" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442160" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1031" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442167" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1033" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442203" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1034" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442214" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1035" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442227" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1036" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442234" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1038" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442270" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1039" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442281" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1040" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442294" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1041" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442301" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1042" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442334" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1044" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442355" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1045" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442365" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1046" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442378" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1047" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442400" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="31" lineNum="1051" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442421" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="32" lineNum="117" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442424" symbol="initialize"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="32" lineNum="118" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442426" symbol="initialize"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="32" lineNum="119" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442444" symbol="initialize"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="33" lineNum="972" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442463" symbol="GetTodaysDistanceKMStr"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="33" lineNum="974" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442465" symbol="GetTodaysDistanceKMStr"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="34" lineNum="1054" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442491" symbol="GetKMMovedDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="34" lineNum="1057" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442495" symbol="GetKMMovedDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="34" lineNum="1059" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442502" symbol="GetKMMovedDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="34" lineNum="1060" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442509" symbol="GetKMMovedDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="34" lineNum="1065" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442519" symbol="GetKMMovedDbl"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="150" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442522" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="152" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442526" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="153" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442548" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="155" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442560" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="156" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442567" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="157" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442592" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="158" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442609" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="159" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442619" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="160" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442629" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="161" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442639" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="162" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442664" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="163" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442674" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="164" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442685" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="168" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442692" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="170" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442718" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="172" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442734" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="174" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442754" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="176" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442773" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="179" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442789" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="185" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442811" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="186" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442828" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="187" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442852" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="189" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442876" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="190" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442963" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="197" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268442970" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="198" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268443022" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="200" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268443026" symbol="onUpdate"/>
+<entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="35" lineNum="206" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268443064" symbol="onUpdate"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\gen\\006-B4394-00\\source\\Rez.mcgen" id="36" lineNum="18" parent="globals/Rez/Layouts" pc="268443079" symbol="WatchFace"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\gen\\006-B4394-00\\source\\Rez.mcgen" id="36" lineNum="19" parent="globals/Rez/Layouts" pc="268443091" symbol="WatchFace"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\gen\\006-B4394-00\\source\\Rez.mcgen" id="36" lineNum="21" parent="globals/Rez/Layouts" pc="268443226" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry field="true" id="11" symbol="gIntFinishOfDayHour"/>
+<entry field="true" id="16" symbol="gRowHeight"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="34" method="true" symbol="GetQuoteSizeAndDraw"/>
+<entry field="true" id="44" symbol="gIntFontSize"/>
+<entry id="8" object="true" symbol="AKInstinctQuotesStatsMoveBarView"/>
+<entry id="36" method="true" symbol="GetTodaysDistanceKMDbl"/>
+<entry id="52" method="true" symbol="getBodyBatteryPercentAndSetColours"/>
+<entry field="true" id="59" symbol="myInputDelegate"/>
+<entry field="true" id="18" symbol="gStrBBFontColour"/>
+<entry id="56" method="true" symbol="getRandomQuote"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="8389782" module="true" symbol="StringUtil"/>
+<entry id="8391839" method="true" symbol="getBodyBatteryHistory"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry field="true" id="10" symbol="gBlDebug"/>
+<entry field="true" id="23" symbol="gintDesiredBodyBattery"/>
+<entry field="true" id="21" symbol="gStrHRBackColour"/>
+<entry field="true" id="63" symbol="AppName"/>
+<entry id="8388633" module="true" symbol="ActivityMonitor"/>
+<entry id="26" method="true" symbol="DrawHeartRateAndBodyBattery"/>
+<entry id="6" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="51" method="true" symbol="getBodyBatteryIterator"/>
+<entry id="7" object="true" symbol="AKInstinctQuotesStatsMoveBarApp"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="32" method="true" symbol="DrawWeeksMovementOrQuotes"/>
+<entry id="54" method="true" symbol="getHourOfDay"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry field="true" id="60" symbol="strVersion"/>
+<entry id="31" method="true" symbol="DrawWeeksMovementHistory"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry field="true" id="48" symbol="gStrPartNumberDevice"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389348" symbol="font"/>
+<entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="38" method="true" symbol="PrintOrCountNumberOfLinesNeeded"/>
+<entry id="39" method="true" symbol="SetNewQuote"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="25" method="true" symbol="ChooseFontBasedOnLengthAndSetColorFenix5"/>
+<entry id="29" method="true" symbol="DrawTimeAndVersion"/>
+<entry field="true" id="17" symbol="gStrBBBackColour"/>
+<entry id="58" method="true" symbol="lastIndexOf"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="35" method="true" symbol="GetShortDayNameFromNumber"/>
+<entry field="true" id="57" symbol="intChangeWordsToStatsIntervalMin"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="27" method="true" symbol="DrawKMTravelledAndMoveBar"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry field="true" id="46" symbol="gIntNumberOfMovedHours"/>
+<entry id="37" method="true" symbol="GetTodaysDistanceKMStr"/>
+<entry field="true" id="62" symbol="akSmallFont"/>
+<entry id="53" method="true" symbol="getHeartRateAndSetColours"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="42" method="true" symbol="drawTextOverMultiLines"/>
+<entry field="true" id="61" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8388643" module="true" symbol="Sensor"/>
+<entry field="true" id="13" symbol="gIntStartOfDayHour"/>
+<entry field="true" id="20" symbol="gStrDeviceName"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="47" symbol="gNumberOfLinesToPrint"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="33" method="true" symbol="GetKMMovedDbl"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="43" method="true" symbol="findLastSpaceBeforeLineLength"/>
+<entry id="8389347" symbol="color"/>
+<entry id="8389781" module="true" symbol="SensorHistory"/>
+<entry field="true" id="15" symbol="gNumAPIMajorVersion"/>
+<entry id="28" method="true" symbol="DrawQuote"/>
+<entry field="true" id="45" symbol="gIntLastMoveBarLevel"/>
+<entry id="30" method="true" symbol="DrawWatchBatteryStats"/>
+<entry id="24" module="true" symbol="Layouts"/>
+<entry field="true" id="50" symbol="gXForTextLoc"/>
+<entry id="8389701" object="true" symbol="HeartRateIterator"/>
+<entry field="true" id="22" symbol="gStrHRFontColour"/>
+<entry field="true" id="14" symbol="gIntYForBodyBattery"/>
+<entry field="true" id="49" symbol="gTinyFont"/>
+<entry field="true" id="41" symbol="customFontLarge"/>
+<entry field="true" id="19" symbol="gStrCurrentQuote"/>
+<entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+<entry field="true" id="12" symbol="gIntHeartRate"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry id="55" method="true" symbol="getMinutesOfHour"/>
+<entry id="40" method="true" symbol="convertToThousandsShorthand"/>
+<entry field="true" id="9" symbol="customFontSmall"/>
+</symbolTable>
+<localVars>
+<entry arg="true" endPc="268435682" name="strText" stackId="1" startPc="268435613"/>
+<entry arg="true" endPc="268435682" name="intMaxLineLength" stackId="2" startPc="268435613"/>
+<entry arg="true" endPc="268436036" name="dc" stackId="1" startPc="268435683"/>
+<entry arg="true" endPc="268436036" name="intXForTime" stackId="2" startPc="268435683"/>
+<entry arg="true" endPc="268436036" name="intYForTime" stackId="3" startPc="268435683"/>
+<entry arg="true" endPc="268436036" name="clockTime" stackId="4" startPc="268435683"/>
+<entry arg="true" endPc="268436036" name="hour" stackId="5" startPc="268435683"/>
+<entry arg="true" endPc="268436036" name="minute" stackId="6" startPc="268435683"/>
+<entry arg="true" endPc="268436036" name="second" stackId="7" startPc="268435683"/>
+<entry endPc="268436035" name="intYForVersion" stackId="8" startPc="268435687"/>
+<entry arg="true" endPc="268436685" name="dc" stackId="1" startPc="268436037"/>
+<entry endPc="268436684" name="xForStepsAndKms" stackId="2" startPc="268436041"/>
+<entry endPc="268436684" name="yForStepsKMAndMoveNumber" stackId="3" startPc="268436041"/>
+<entry endPc="268436684" name="strKMMoved" stackId="4" startPc="268436041"/>
+<entry endPc="268436684" name="strSteps" stackId="5" startPc="268436041"/>
+<entry endPc="268436684" name="strStepsAndKms" stackId="6" startPc="268436041"/>
+<entry endPc="268436684" name="intWidthForTotals" stackId="7" startPc="268436041"/>
+<entry endPc="268436684" name="intHeightForTotals" stackId="8" startPc="268436041"/>
+<entry endPc="268436390" name="startXForMoveBarValue" stackId="9" startPc="268436297"/>
+<entry endPc="268436684" name="intMoveBarLevelCurrent" stackId="10" startPc="268436041"/>
+<entry endPc="268436684" name="moveBarLength" stackId="11" startPc="268436041"/>
+<entry endPc="268437156" name="intBBTolerance" stackId="11" startPc="268436994"/>
+<entry endPc="268437156" name="intDiffDayLeftAndBB" stackId="12" startPc="268436994"/>
+<entry arg="true" endPc="268438288" name="dc" stackId="1" startPc="268437182"/>
+<entry endPc="268438287" name="intNumberOfDaysHistoryToShow" stackId="2" startPc="268437186"/>
+<entry endPc="268438287" name="intHeightOfText" stackId="3" startPc="268437186"/>
+<entry endPc="268438287" name="dailyHistoryArr" stackId="4" startPc="268437186"/>
+<entry endPc="268438287" name="infoDateTimeNow" stackId="5" startPc="268437186"/>
+<entry endPc="268438287" name="intDayOfWeekToday" stackId="6" startPc="268437186"/>
+<entry endPc="268438287" name="intHeightForStatsForWeek" stackId="7" startPc="268437186"/>
+<entry endPc="268438287" name="intYForStats" stackId="8" startPc="268437186"/>
+<entry endPc="268438287" name="strDayOfReading" stackId="9" startPc="268437186"/>
+<entry endPc="268438287" name="dblDistanceInKmsForDay" stackId="10" startPc="268437186"/>
+<entry endPc="268438287" name="strComment" stackId="11" startPc="268437186"/>
+<entry endPc="268438287" name="strText" stackId="12" startPc="268437186"/>
+<entry endPc="268438287" name="dblTotalKmsForWeek" stackId="13" startPc="268437186"/>
+<entry endPc="268438287" name="intXLocationForDay" stackId="14" startPc="268437186"/>
+<entry endPc="268438287" name="intXLocationForKms" stackId="15" startPc="268437186"/>
+<entry endPc="268438287" name="fontSize" stackId="16" startPc="268437186"/>
+<entry endPc="268437890" name="i" stackId="17" startPc="268437438"/>
+<entry endPc="268438227" name="strPostTotal" stackId="18" startPc="268437414"/>
+<entry endPc="268438261" name="exception" stackId="19" startPc="268438232"/>
+<entry arg="true" endPc="268438367" name="dc" stackId="1" startPc="268438343"/>
+<entry endPc="268438640" name="blHasHR" stackId="2" startPc="268438449"/>
+<entry endPc="268438640" name="hrIterator" stackId="3" startPc="268438481"/>
+<entry endPc="268438640" name="heartRateObject" stackId="4" startPc="268438481"/>
+<entry arg="true" endPc="268439052" name="aNumber" stackId="1" startPc="268439000"/>
+<entry arg="true" endPc="268439732" name="dc" stackId="1" startPc="268439053"/>
+<entry arg="true" endPc="268439732" name="strText" stackId="2" startPc="268439053"/>
+<entry endPc="268439731" name="myFont" stackId="3" startPc="268439057"/>
+<entry endPc="268439731" name="rowHeight" stackId="4" startPc="268439057"/>
+<entry endPc="268439731" name="oneCharWidth" stackId="5" startPc="268439057"/>
+<entry endPc="268439731" name="intCharsPerLine" stackId="6" startPc="268439057"/>
+<entry endPc="268439731" name="gYStartPositionForQuotes" stackId="7" startPc="268439057"/>
+<entry endPc="268439731" name="fltNumberOfLinesNeeded" stackId="8" startPc="268439057"/>
+<entry endPc="268439731" name="intNumberOfLinesNeeded" stackId="9" startPc="268439057"/>
+<entry endPc="268439731" name="blPrint" stackId="10" startPc="268439057"/>
+<entry arg="true" endPc="268440005" name="dc" stackId="1" startPc="268439733"/>
+<entry endPc="268440004" name="mySettings" stackId="2" startPc="268439737"/>
+<entry endPc="268440004" name="version" stackId="3" startPc="268439737"/>
+<entry endPc="268440004" name="versionString" stackId="4" startPc="268439737"/>
+<entry arg="true" endPc="268440657" name="dc" stackId="1" startPc="268440047"/>
+<entry arg="true" endPc="268440657" name="intDateStartYBatteryAndDate" stackId="2" startPc="268440047"/>
+<entry endPc="268440656" name="myStats" stackId="3" startPc="268440051"/>
+<entry endPc="268440656" name="strBatteryPercent" stackId="4" startPc="268440051"/>
+<entry endPc="268440656" name="batteryX" stackId="5" startPc="268440051"/>
+<entry endPc="268440656" name="batteryHeight" stackId="6" startPc="268440051"/>
+<entry endPc="268440656" name="batteryWidth" stackId="7" startPc="268440051"/>
+<entry endPc="268440656" name="batteryY" stackId="8" startPc="268440051"/>
+<entry endPc="268440656" name="intNippleHeight" stackId="9" startPc="268440051"/>
+<entry endPc="268440656" name="intNippleY" stackId="10" startPc="268440051"/>
+<entry endPc="268440656" name="textColor" stackId="11" startPc="268440051"/>
+<entry endPc="268440656" name="lineColor" stackId="12" startPc="268440051"/>
+<entry endPc="268440656" name="backColor" stackId="13" startPc="268440051"/>
+<entry endPc="268440656" name="intBatteryWarning" stackId="14" startPc="268440051"/>
+<entry endPc="268440656" name="intBatterySevere" stackId="15" startPc="268440051"/>
+<entry arg="true" endPc="268440922" name="dc" stackId="1" startPc="268440658"/>
+<entry arg="true" endPc="268440922" name="strText" stackId="2" startPc="268440658"/>
+<entry arg="true" endPc="268440922" name="intCharsPerLine" stackId="3" startPc="268440658"/>
+<entry arg="true" endPc="268440922" name="yStartPosition" stackId="4" startPc="268440658"/>
+<entry arg="true" endPc="268440922" name="myFont" stackId="5" startPc="268440658"/>
+<entry arg="true" endPc="268440922" name="blPrint" stackId="6" startPc="268440658"/>
+<entry endPc="268440840" name="strPrintThis" stackId="10" startPc="268440682"/>
+<entry arg="true" endPc="268441059" name="dc" stackId="1" startPc="268440923"/>
+<entry arg="true" endPc="268441059" name="hour" stackId="2" startPc="268440923"/>
+<entry arg="true" endPc="268441059" name="minute" stackId="3" startPc="268440923"/>
+<entry arg="true" endPc="268441059" name="second" stackId="4" startPc="268440923"/>
+<entry arg="true" endPc="268441546" name="dc" stackId="1" startPc="268441114"/>
+<entry arg="true" endPc="268441546" name="intYForTime" stackId="2" startPc="268441114"/>
+<entry endPc="268441545" name="gIntYForHR" stackId="3" startPc="268441118"/>
+<entry endPc="268441545" name="gIntXForHR" stackId="4" startPc="268441118"/>
+<entry endPc="268441545" name="intHeartRate" stackId="5" startPc="268441118"/>
+<entry endPc="268441545" name="gIntXForBodyBattery" stackId="6" startPc="268441118"/>
+<entry endPc="268441545" name="dblBodyBatteryNumber" stackId="7" startPc="268441118"/>
+<entry arg="true" endPc="268441663" name="dc" stackId="1" startPc="268441630"/>
+<entry endPc="268441662" name="strQuote" stackId="2" startPc="268441634"/>
+<entry arg="true" endPc="268441787" name="charFind" stackId="1" startPc="268441664"/>
+<entry arg="true" endPc="268441787" name="strSource" stackId="2" startPc="268441664"/>
+<entry arg="true" endPc="268441987" name="intNumber" stackId="1" startPc="268441788"/>
+<entry arg="true" endPc="268442423" name="strQuote" stackId="1" startPc="268441988"/>
+<entry arg="true" endPc="268442423" name="dc" stackId="2" startPc="268441988"/>
+<entry arg="true" endPc="268442521" name="dblDistanceInCentimeters" stackId="1" startPc="268442491"/>
+<entry arg="true" endPc="268443078" name="dc" stackId="1" startPc="268442522"/>
+<entry endPc="268443077" name="intYForTime" stackId="2" startPc="268442526"/>
+<entry endPc="268443077" name="intXForTime" stackId="3" startPc="268442526"/>
+<entry endPc="268443077" name="clockTime" stackId="4" startPc="268442526"/>
+<entry endPc="268443077" name="hour" stackId="5" startPc="268442526"/>
+<entry endPc="268443077" name="minute" stackId="6" startPc="268442526"/>
+<entry endPc="268443077" name="second" stackId="7" startPc="268442526"/>
+<entry endPc="268443077" name="intDateStartYBatteryAndDate" stackId="8" startPc="268442526"/>
+<entry endPc="268443077" name="now" stackId="9" startPc="268442526"/>
+<entry endPc="268443077" name="info" stackId="10" startPc="268442526"/>
+<entry endPc="268443077" name="infoShort" stackId="11" startPc="268442526"/>
+<entry endPc="268443077" name="dateStr" stackId="12" startPc="268442526"/>
+<entry endPc="268443077" name="gTinyFont" stackId="13" startPc="268442526"/>
+<entry endPc="268443062" name="ex" stackId="14" startPc="268443022"/>
+<entry arg="true" endPc="268443242" name="dc" stackId="1" startPc="268443079"/>
+</localVars>
+<deviceInfo deviceVersion="e7d237e00493f9381c1ba5c2204e06b5a3051145" partNumber="006-B4394-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="akSmallFont"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="customFontLarge"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="71" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/AKInstinctQuotesStatsMoveBarApp" offset="331" parentId="globals" symbolId="AKInstinctQuotesStatsMoveBarApp" type="class"/>
+<dataEntry label="globals/Rez" offset="402" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/AKInstinctQuotesStatsMoveBarView" offset="465" parentId="globals" symbolId="AKInstinctQuotesStatsMoveBarView" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="816" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="855" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="894" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="941" parentId="Rez" symbolId="Strings" type="module"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435475" name="&lt;init&gt;" parent="AKInstinctQuotesStatsMoveBarApp" startPc="268435457">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435499" name="&lt;init&gt;" parent="Rez" startPc="268435476">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="AKInstinctQuotesStatsMoveBarView" startPc="268435500">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStart" parent="AKInstinctQuotesStatsMoveBarApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435591" name="getInitialView" parent="AKInstinctQuotesStatsMoveBarApp" startPc="268435549">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435612" name="initialize" parent="AKInstinctQuotesStatsMoveBarApp" startPc="268435592">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStop" parent="AKInstinctQuotesStatsMoveBarApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435682" name="findLastSpaceBeforeLineLength" parent="AKInstinctQuotesStatsMoveBarView" startPc="268435613">
+<param id="strText"/>
+<param id="intMaxLineLength"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436036" name="DrawTimeAndVersion" parent="AKInstinctQuotesStatsMoveBarView" startPc="268435683">
+<param id="dc"/>
+<param id="intXForTime"/>
+<param id="intYForTime"/>
+<param id="clockTime"/>
+<param id="hour"/>
+<param id="minute"/>
+<param id="second"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436685" name="DrawKMTravelledAndMoveBar" parent="AKInstinctQuotesStatsMoveBarView" startPc="268436037">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437159" name="getBodyBatteryPercentAndSetColours" parent="AKInstinctQuotesStatsMoveBarView" startPc="268436686">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437181" name="SetNewQuote" parent="AKInstinctQuotesStatsMoveBarView" startPc="268437160">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438288" name="DrawWeeksMovementHistory" parent="AKInstinctQuotesStatsMoveBarView" startPc="268437182">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438342" name="getMinutesOfHour" parent="AKInstinctQuotesStatsMoveBarView" startPc="268438289">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438367" name="DrawQuote" parent="AKInstinctQuotesStatsMoveBarView" startPc="268438343">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438840" name="getHeartRateAndSetColours" parent="AKInstinctQuotesStatsMoveBarView" startPc="268438368">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438999" name="getRandomQuote" parent="AKInstinctQuotesStatsMoveBarView" startPc="268438841">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439052" name="convertToThousandsShorthand" parent="AKInstinctQuotesStatsMoveBarView" startPc="268439000">
+<param id="aNumber"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439732" name="drawTextOverMultiLines" parent="AKInstinctQuotesStatsMoveBarView" startPc="268439053">
+<param id="dc"/>
+<param id="strText"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440005" name="onLayout" parent="AKInstinctQuotesStatsMoveBarView" startPc="268439733">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440046" name="GetTodaysDistanceKMDbl" parent="AKInstinctQuotesStatsMoveBarView" startPc="268440006">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440657" name="DrawWatchBatteryStats" parent="AKInstinctQuotesStatsMoveBarView" startPc="268440047">
+<param id="dc"/>
+<param id="intDateStartYBatteryAndDate"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440922" name="PrintOrCountNumberOfLinesNeeded" parent="AKInstinctQuotesStatsMoveBarView" startPc="268440658">
+<param id="dc"/>
+<param id="strText"/>
+<param id="intCharsPerLine"/>
+<param id="yStartPosition"/>
+<param id="myFont"/>
+<param id="blPrint"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441059" name="DrawWeeksMovementOrQuotes" parent="AKInstinctQuotesStatsMoveBarView" startPc="268440923">
+<param id="dc"/>
+<param id="hour"/>
+<param id="minute"/>
+<param id="second"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441113" name="getHourOfDay" parent="AKInstinctQuotesStatsMoveBarView" startPc="268441060">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441546" name="DrawHeartRateAndBodyBattery" parent="AKInstinctQuotesStatsMoveBarView" startPc="268441114">
+<param id="dc"/>
+<param id="intYForTime"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441629" name="getBodyBatteryIterator" parent="AKInstinctQuotesStatsMoveBarView" startPc="268441547">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441663" name="GetQuoteSizeAndDraw" parent="AKInstinctQuotesStatsMoveBarView" startPc="268441630">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441787" name="lastIndexOf" parent="AKInstinctQuotesStatsMoveBarView" startPc="268441664">
+<param id="charFind"/>
+<param id="strSource"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268441987" name="GetShortDayNameFromNumber" parent="AKInstinctQuotesStatsMoveBarView" startPc="268441788">
+<param id="intNumber"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442423" name="ChooseFontBasedOnLengthAndSetColorFenix5" parent="AKInstinctQuotesStatsMoveBarView" startPc="268441988">
+<param id="strQuote"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442462" name="initialize" parent="AKInstinctQuotesStatsMoveBarView" startPc="268442424">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442490" name="GetTodaysDistanceKMStr" parent="AKInstinctQuotesStatsMoveBarView" startPc="268442463">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442521" name="GetKMMovedDbl" parent="AKInstinctQuotesStatsMoveBarView" startPc="268442491">
+<param id="dblDistanceInCentimeters"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443078" name="onUpdate" parent="AKInstinctQuotesStatsMoveBarView" startPc="268442522">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268443242" name="WatchFace" parent="Layouts" startPc="268443079">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

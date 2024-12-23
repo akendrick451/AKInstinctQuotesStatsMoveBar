@@ -1,6 +1,6 @@
 using Toybox.Application;
 
-class AKGarminQuotesStatsMoveBarApp extends Application.AppBase {
+class AKInstinctQuotesStatsMoveBarApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -16,7 +16,7 @@ class AKGarminQuotesStatsMoveBarApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new AKGarminQuotesStatsMoveBarView() ];
+        return [ new AKInstinctQuotesStatsMoveBarView() ];
     }
 
 }

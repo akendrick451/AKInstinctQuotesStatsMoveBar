@@ -9,27 +9,72 @@ using Toybox.System;
 using Toybox.StringUtil;
 using Toybox.ActivityMonitor;
 using Toybox.Sensor;
+using Toybox.SensorHistory;
+using Toybox.System;
+using Toybox;
 
+var gIntStartOfDayHour = 6; //6am start of day
+var gIntFinishOfDayHour = 23; //10pm finish day
+	
 var gRowHeight = 35; 
+var gIntYForBodyBattery = 31; //20
 var customFontSmall = null; // esp for fenix style watches.
-var gNumAPIMajorVersion = 0; // will be major version, usual 1, 2, or 3. 1 cannot have battery stats. 
-var gStrCurrentQuote ="Run the race to the finish!";
+var gNumAPIMajorVersion = 0; // will be major version, usual 1, 2, or 3. 1 cannot have battery stats.
+var gStrCurrentQuote = "I'll be happy if running and I can grow old together. Haruki Murakami";
 var gStrDeviceName = ""; //default to blank - set to 235 later
-var gIntExtraXRequired=0;
+
 var gIntHeartRate=0;
+var gintDesiredBodyBattery; // eg 70
 var gStrHRBackColour=Gfx.COLOR_BLACK;
 var gStrHRFontColour=Gfx.COLOR_WHITE;
 var gStrBBBackColour=Gfx.COLOR_BLACK;
 var gStrBBFontColour=Gfx.COLOR_WHITE;		
 
+//========================================================================
+      var       gBlDebug   =       false;
+//=========================================================================
+
+//======================================================================
+// notes by ATK
 // to run this file in vs code
 // you can just go to run \ debug
 // to build for a different device, select View Command Pallette and then build for device
+// to upload to website, I think export via View, Command Menu
+// then go to https://apps.garmin.com/en-US/developer/dashboard
 
-class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
+/*
+class InputDelegate extends Ui.BehaviorDelegate {
+		 public function initialize() {
+			BehaviorDelegate.initialize();
+		 }
+		
+    	function onKey(keyEvent) {
+			System.println(keyEvent.getKey());  // e.g. KEY_MENU = 7
+			System.println(keyEvent.getType()); // e.g. PRESS_TYPE_DOWN = 0
+			return true;
+   	 }
+}// end class
+*/
+
+class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
+
+
+	// how to build in vs code - select View Command and then  Export
+    var strVersion = "v3.i5"; // i for instinct version;// 
 	
-	// how to build in vs code - selct View Command and then  Export
-    var strVersion = "v3.0b";// 
+	
+	// 3.3g minor fixes to minutes etc. 
+    // 25/7/2023 ATK -  v3.3a made seconds larger as I cant even see them on my watch
+	// v3.3 change time internval between stats and words to 1 minute     var intChangeWordsToStatsIntervalMin = 1;
+	// v3.2a added seconds - changed color and size of minutes 
+	// 3.1f fix for negative vlues in body battery desired/ amount of day left
+	// 3.1g change end of day to 11pm
+	// 3.1a March 4 2023 - moved intStartOfDayHour and end to global for easier change and
+	// visibility - slightly changed colours of body battery also color. 
+	// may move down by a few pixels also
+	// 3.1 March 2023 -function getBodyBatteryPercentAndSetColours() {
+		//trying to change this to minutes.. but failing9:09am 28 March 2023
+		//also addeing difference from ideal if red or purple colour
 	// 3.0b Aug 11 - Change start of day for body battery to 6am
 	// 3.0a fix bug
 				// 3.0 July 22 - redoing how i count lines etc. a bit nicer. 
@@ -55,7 +100,7 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
     			// added battery yellow colour and red and background color for battery AND BIG BATTERY -- move battery up and left
 	
 	var customFontLarge = null;
-
+    var intChangeWordsToStatsIntervalMin = 2; // do a mod 3 on the time to change... 
     var gNumberOfLinesToPrint=5;
     var gXForTextLoc = 30;
     var gIntFontSize=10;
@@ -66,9 +111,13 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
     
     var gTinyFont = null;
 	
+	var myInputDelegate = new InputDelegate();
+
 
  public function initialize() {
         WatchFace.initialize();
+		myInputDelegate.initialize();
+        
 		//Session.start();
 		}
 
@@ -76,18 +125,13 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
     function onLayout(dc) {
      customFontSmall = Ui.loadResource(Rez.Fonts.akSmallFont);
      customFontLarge = Ui.loadResource(Rez.Fonts.customFontLarge);
-     gTinyFont = customFontSmall;
+     gTinyFont = Gfx.FONT_XTINY; //customFontSmall;
      var mySettings = System.getDeviceSettings();
 		gStrPartNumberDevice = mySettings.partNumber;
 		Sys.println("Part number is '" + gStrPartNumberDevice + "'");
 		// fenix 5 =006-B3110-00, fs = 006-B2544-00
 		// forerunner 235 = 006-B2431-00
-		if (gStrPartNumberDevice.equals("006-B2431-00")) {
-			gTinyFont = Gfx.FONT_XTINY;
-			Sys.println("Assuming forerunner 235...Setting font to by system");
-			gStrDeviceName="Forerunner235";
-			gIntExtraXRequired = 10;
-		}
+	
 		
 
 		// check which api/sdk version this device supports
@@ -107,37 +151,74 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
+		
+		var intYForTime = 1;
+		var intXForTime=dc.getWidth()/2-25;
         var clockTime = System.getClockTime();
         var hour = clockTime.hour;
 		var minute = clockTime.min;
 		var second = clockTime.sec;
-        // Get and show the current time
-        
         if (!Sys.getDeviceSettings().is24Hour) {
         	hour = hour % 12;
         	if (hour==0) {
         		hour = 12;
         	}
         } // end if
-	
-		// =====================================================================            
-		// Draw the clock / time     , version and heart rate and body battery
-		// =====================================================================
-	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
-	    dc.drawText(dc.getWidth()/2, 1, Gfx.FONT_LARGE, hour.toString()+ " ", Gfx.TEXT_JUSTIFY_RIGHT);
-	    dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
-	    dc.drawText(dc.getWidth()/2, 1, Gfx.FONT_MEDIUM, Lang.format("$1$", [clockTime.min.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
-	    
-	     // and the version	     
-	     //dc.drawText(dc.getWidth()-50, 1, Gfx.FONT_SYSTEM_XTINY, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
-	     // draw multiple versions to see what size we want
-	     //dc.drawText(dc.getWidth()-50, 50, Gfx.FONT_SYSTEM_NUMBER_MILD, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
-	    dc.drawText(dc.getWidth()-50, 20, $.customFontSmall, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
+
+       DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
 		
-		//  ==================================================
+	   DrawHeartRateAndBodyBattery(dc, intYForTime);
+
+	   DrawWeeksMovementOrQuotes(dc, hour, minute, second);
+	    
+	   var intDateStartYBatteryAndDate=dc.getHeight()-50;
+
+	   DrawWatchBatteryStats(dc, intDateStartYBatteryAndDate);
+
+		// reset color
+	     dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
+	    
+	   	// =====================================================================	    
+	    // Put the date	    
+		// =====================================================================	
+
+		var now = Time.now();
+		var info = Gregorian.info(now, Time.FORMAT_LONG);
+		var infoShort = Gregorian.info(now, Time.FORMAT_SHORT); // for a shorter day, eg Thu instead of Thurs
+		var dateStr;
+		dateStr = Lang.format("$1$ $2$$3$", [GetShortDayNameFromNumber(infoShort.day_of_week), info.month, info.day]);
+		var gTinyFont = Gfx.FONT_XTINY; // will make the date bigger than battery stats
+		//	dateStartYBatteryAndDate = 200;
+		try {
+			// Code to execute
+		//	if(gStrDeviceName.equals("Forerunner235")) {
+		//		dateStartYBatteryAndDate = dateStartYBatteryAndDate + 4;
+		//	}
+			dc.drawText(dc.getWidth()-48, intDateStartYBatteryAndDate+30, Gfx.FONT_AUX1, dateStr , Gfx.TEXT_JUSTIFY_RIGHT);
+		} catch( ex ) {
+		// Code to catch all execeptions
+			System.println("exception is 76 : " + ex.getErrorMessage());
+		}
+		
+	    // =====================================================================
+	    // show kms travelled
+	    // =====================================================================
+	    DrawKMTravelledAndMoveBar(dc);
+	    	  //  drawTextOverMultiLines( dc, "Let us run the race that is set before us.");	    	    	    
+	} // end onUpdate
+
+	
+    // ==================================================================
+	// can we also return the difference from ideal eg 70% (-10)
+	// ==================================================================
+
+	function DrawHeartRateAndBodyBattery(dc, intYForTime) {
+			//  ==================================================
 		//  draw  heart rate
 		//  ==================================================
 		// just beneath version, print heart rate
+		var gIntYForHR = 33;
+		var gIntXForHR = dc.getWidth()-11;
 		
 		// get a HeartRateIterator object; oldest sample first
 		var intHeartRate = 0; 
@@ -145,26 +226,40 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		if (intHeartRate != 0){
 		
 			dc.setColor(gStrHRFontColour,gStrHRBackColour);
-			dc.drawText(dc.getWidth()-40, 32, 1, "HR:" + intHeartRate, Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(gIntXForHR, gIntYForHR, Gfx.FONT_TINY, "HR:" + intHeartRate, Gfx.TEXT_JUSTIFY_RIGHT);
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 		} //  print  heart  rate if not zerro
 
 	// get body battery if available
-	
+	     gIntYForBodyBattery = intYForTime+5;
+		 var gIntXForBodyBattery = gIntXForHR;
 		var dblBodyBatteryNumber = 0.0;
 		dblBodyBatteryNumber = getBodyBatteryPercentAndSetColours();
+		//var intDiffDesiredAndActualBodyBattery = gintDesiredBodyBattery - dblBodyBatteryNumber;
+		//var strDiffInBodyBattery = intDiffDesiredAndActualBodyBattery;
+
+		if(gintDesiredBodyBattery<0 ) {
+			gintDesiredBodyBattery= 0;
+		}
 		
 		if (dblBodyBatteryNumber!=0.0) {
 			dc.setColor(gStrBBFontColour, gStrBBBackColour);
-			dc.drawText(47,20 , 1, "B" + dblBodyBatteryNumber.format("%.0f"), Gfx.TEXT_JUSTIFY_LEFT);
+			dc.drawText(gIntXForBodyBattery,gIntYForBodyBattery , Gfx.FONT_TINY, "B" + dblBodyBatteryNumber.format("%.0f") + "(" + gintDesiredBodyBattery.format("%.0f") + ")", Gfx.TEXT_JUSTIFY_RIGHT);
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		}	else {
-			dc.drawText(47, 20, 1, "Bnull" , Gfx.TEXT_JUSTIFY_LEFT);
+			dc.drawText(gIntXForBodyBattery, gIntYForBodyBattery, Gfx.FONT_TINY, "B? (" + gintDesiredBodyBattery.format("%.0f") + ")" , Gfx.TEXT_JUSTIFY_RIGHT);
 		}
+		// also print the expected body battery at this time
+		
+		
+		
 		// ====================end draw bb ===============================
 
+	} // end function drawHeartRateAndBodyBattery
 
-	    // dc.drawText(dc.getWidth()-50, 150, Gfx.FONT_TINY, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
+	function DrawWeeksMovementOrQuotes(dc, hour, minute, second ) {
+
+			  // dc.drawText(dc.getWidth()-50, 150, Gfx.FONT_TINY, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
 	    // dc.drawText(dc.getWidth()-50, 200, Gfx.FONT_MEDIUM, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
 	     dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 		// =====================================================================	     
@@ -175,24 +270,34 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		//System.println("hour is : " + hour); 
 		//System.println("min is : " + minute); 
 		// 24/2 removed hour criteria here ((hour == 7)||(hour == 12) || (hour ==16) ||
-		if (  (minute > 10 && minute < 20)|| ( minute > 40 && minute < 50) ) {
+
+
+		//if (  (minute > 10 && minute < 20)|| ( minute > 40 && minute < 45) ) {
+		if (minute % 2 == 0) {
 			// show weeks movement history
-			DrawWeeksMovementHistory(dc);
+			 DrawWeeksMovementHistory(dc);
 			System.println("do weeks movement");
 		
 		} else {
 			// only want to redraw quote every hour or so???? Dn't want to change every second
-			var hourMod2 = hour % 2;
+			//var hourMod2 = hour % 2;
 			// only change quote every odd hour and if the minute is 0 
 			// so change quote every 2 hours!
 			if (  ((minute == 31) || (minute == 0)) && (second <= 10)) {
 				SetNewQuote();
-			//	GetQuoteSizeAndDraw(dc);
+				GetQuoteSizeAndDraw(dc);
 			}
-			DrawQuote(dc);
+			//akDec24 temp remove DrawQuote(dc);
 		
 				
-		} // end if hour - 7	    
+		} // end if hour - 7	  
+
+	} // end functin draw weeks movement or quotest
+
+
+	function DrawWatchBatteryStats(dc, intDateStartYBatteryAndDate) {
+
+
 	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK); // just in case we changed it 
 	
 		// =====================================================================	    
@@ -203,20 +308,13 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		//System.println(myStats.totalMemory);
 		var strBatteryPercent = Lang.format("$1$",[myStats.battery.format("%02d")])+ "%";	    
 		
-		var batteryX = 59;
-		var batteryHeight = 28; // was 14
+		var batteryX = 10;
+		var batteryHeight = 9; // was 14
 		
-		var batteryWidth = 38;
-		var dateAndBatteryHeight = 46;
-		// put battery lower for 235
-		if (gStrDeviceName.equals("Forerunner235")) {
-			batteryHeight = 20;
-			dateAndBatteryHeight = 26;
-			batteryWidth = 30;
-		}
-		var dateStartYBatteryAndDate = dc.getHeight()-dateAndBatteryHeight-5;
-		var batteryY = dateStartYBatteryAndDate+8; //+4
-		var intNippleMid = batteryHeight/2;
+		var batteryWidth = 18;
+	
+		var batteryY = intDateStartYBatteryAndDate+8; //+4
+		//var intNippleMid = batteryHeight/2;
 		var intNippleHeight = batteryHeight/2;
 		var intNippleY = batteryY + intNippleHeight/2;
  		var textColor="";
@@ -231,7 +329,7 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		 	textColor = Gfx.COLOR_WHITE;
 		 	lineColor = Gfx.COLOR_RED;
 		 	backColor = Gfx.COLOR_RED;
-		 	dc.drawRoundedRectangle(batteryX-4, batteryY, batteryWidth, batteryHeight,1 );
+		 	dc.drawRoundedRectangle(batteryX, batteryY, batteryWidth, batteryHeight,1 );
 		 } else if ( myStats.battery < intBatteryWarning  ) {		
 		 	textColor = Gfx.COLOR_WHITE;
 		 	lineColor = Gfx.COLOR_WHITE; //should be yello
@@ -246,14 +344,20 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		// battery charging stas only availabe after?  version 3
 		System.println(gNumAPIMajorVersion); //e.g. 2 or 1)
 		if (gNumAPIMajorVersion>= 3) {
-			if (myStats.charging!=0) {
+		
+			if (!myStats.charging) {
 			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_BLACK);
-			dc.drawText(batteryX-18, batteryY-2 ,  Gfx.FONT_TINY, "z" , Gfx.TEXT_JUSTIFY_LEFT);
+			dc.drawText(batteryX-4, batteryY-2 ,  Gfx.FONT_XTINY, "z" , Gfx.TEXT_JUSTIFY_LEFT);
 			} // end if chargin
 		} // if version > 3
 		 
+// Gfx.getVectorFont("#BionicBold:12,Roboto");
          dc.setColor(textColor,backColor);		 	
-	     dc.drawText(batteryX, batteryY ,  Gfx.FONT_TINY,strBatteryPercent , Gfx.TEXT_JUSTIFY_LEFT);
+	     dc.drawText(batteryX, 
+		 batteryY ,
+		   Gfx.FONT_XTINY,
+		 Graphics.fitTextToArea(strBatteryPercent, Gfx.FONT_SYSTEM_XTINY, batteryWidth, batteryHeight, true), 
+		  Gfx.TEXT_JUSTIFY_LEFT);
 	     //draw a box around the battery that looks like a battery?	     
 	     
 	     dc.setColor(lineColor,textColor); 	
@@ -263,42 +367,49 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	   //  dc.drawRoundedRectangle(batteryX-5, batteryY+9, 4, 12, 2);
 		   dc.drawRoundedRectangle(batteryX-5, intNippleY, 4, intNippleHeight, 2);
 		 
-		// reset color
-	     dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
-	    
-	   	// =====================================================================	    
-	    // Put the date	    
-		// =====================================================================	
+	}  // end function DrawWatchBatteryStats
 
-		var now = Time.now();
-		var info = Gregorian.info(now, Time.FORMAT_LONG);
-		var infoShort = Gregorian.info(now, Time.FORMAT_SHORT); // for a shorter day, eg Thu instead of Thurs
-		var dateStr;
-		dateStr = Lang.format("$1$ $2$$3$", [GetShortDayNameFromNumber(infoShort.day_of_week), info.month, info.day]);
-		var gTinyFont = Gfx.FONT_TINY; // will make the date bigger than battery stats
-		//	dateStartYBatteryAndDate = 200;
-		try {
-			// Code to execute
-		//	if(gStrDeviceName.equals("Forerunner235")) {
-		//		dateStartYBatteryAndDate = dateStartYBatteryAndDate + 4;
-		//	}
-			dc.drawText(dc.getWidth()-48, dateStartYBatteryAndDate+8, gTinyFont, dateStr , Gfx.TEXT_JUSTIFY_RIGHT);
-		} catch( ex ) {
-		// Code to catch all execeptions
-			System.println("exception is 76 : " + ex.getErrorMessage());
-		}
+	function DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second) {
+
 		
-	    // =====================================================================
-	    // show kms travelled
-	    // =====================================================================
-	    DrawKMTravelledAndMoveBar(dc);
-	    	  //  drawTextOverMultiLines( dc, "Let us run the race that is set before us.");	    	    	    
-	} // end onUpdate
-
+        // Get and show the current time
+        
+       
 	
+		// =====================================================================            
+		// Draw the clock / time     , version and heart rate and body battery
+		// =====================================================================
+
+		//draw hour in the middle left justified
+		
+		
+	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
+	    dc.drawText(intXForTime, intYForTime, Gfx.FONT_SMALL, hour.toString()+ ": ", Gfx.TEXT_JUSTIFY_RIGHT);
+	    //was intX + 10
+
+		// draw minutes a bit darker from middle, right justified
+		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+	    dc.drawText(intXForTime-5, intYForTime, Gfx.FONT_SMALL, Lang.format("$1$", [clockTime.min.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
+	    
+		// ======================================================================================
+		// draw seconds
+		// draw seconds in a smaller font from middle plus two chars size text justify left
+		intYForTime = 1+5;
+	
+		dc.drawText(intXForTime+15, intYForTime-4, Gfx.FONT_XTINY, Lang.format("$1$", [clockTime.sec.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
+		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+		var intYForVersion = 20;
+
+	     // and the version	     
+	     //dc.drawText(dc.getWidth()-50, 1, Gfx.FONT_SYSTEM_XTINY, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
+	     // draw multiple versions to see what size we want
+	     //dc.drawText(dc.getWidth()-50, 50, Gfx.FONT_SYSTEM_NUMBER_MILD, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
+	    dc.drawText(10, intYForVersion, $.customFontSmall, strVersion, Gfx.TEXT_JUSTIFY_LEFT);
+
+	}
 
 	function getBodyBatteryPercentAndSetColours() {
-		
+		//trying to change this to minutes.. but failing9:09am 28 March 2023
 		var dblBodyBatteryPercent = 0.0;
 		var objABodyBattery=null;
 		var bbIterator = getBodyBatteryIterator();
@@ -308,6 +419,9 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		if (objABodyBattery != null) {
 			System.println("Sample: " + objABodyBattery.data);           // print the current sample
 			dblBodyBatteryPercent = objABodyBattery.data;
+		} else {
+						System.println("getBodyBatteryPercentAndSetColours: objABodyBattery is NULL!!!!");           // print the current sample
+
 		}
 
 		//========set colors based on time of day AND Percent ================
@@ -317,6 +431,33 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 		var intCurrentHourOfDay = getHourOfDay();
 		var intCurrentMinutes = getMinutesOfHour() ;// eg if time is 7:45, return 45 // 1-60
 
+		
+		var dblAwakeHours = gIntFinishOfDayHour - gIntStartOfDayHour;
+		var intTotalMinutesAwake = dblAwakeHours *60;
+			//var intMinutesExpended = // (intFinishTime - intCurrentTime) 
+			//var intMinutesLefInDay = //intMinutesInDay - intMinutesExpended   //intMinutesLeftInDay - 
+
+		//var momentNow = new Time.Moment(Time.today().value());
+		//var timeForSecondsAwake = new Time.Duration(Gregorian.SECONDS_PER_HOUR*dblAwakeHours);
+			//var tomorrow = today.add(oneDay);
+
+			//var duration1 = momentNow.subtract(tomorrow);
+			//var duration2 = tomorrow.subtract(today);
+
+			//System.println(duration1.value()); // 86400, or one day
+			//System.println(duration2.value()); // 86400, or one day
+
+		var intHoursLeftInDay = gIntFinishOfDayHour-intCurrentHourOfDay;
+			
+			// better to compare minutes than hours YAY
+		var intMinutesLeftInDay = intHoursLeftInDay*60 -(60- intCurrentMinutes);
+		var dblPercentOfDayLeftByMinutes =  100*(intMinutesLeftInDay.toDouble()/intTotalMinutesAwake.toDouble());
+		if (intCurrentHourOfDay>5 && intCurrentHourOfDay <= 22) {
+		   gintDesiredBodyBattery = dblPercentOfDayLeftByMinutes;
+		} else {
+			gintDesiredBodyBattery = 0;
+
+		}
 // test - set dblBodyBatteryNumber to various numbers
 //	dblBodyBatteryPercent =30;
 
@@ -324,17 +465,8 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 
 			// try to get some equation to check if percentage of body battery is > percentage of day left
 			// assume day starts at 6am and finishes at 10pm or 22:00. 
-			var intStartOfDayHour = 6;
-			var intFinishOfDayHour = 22;
-			var intHoursInDay = intFinishOfDayHour - intStartOfDayHour;
-			var intHoursLeftInDay = intFinishOfDayHour-intCurrentHourOfDay;
-			
-			// better to compare minutes than hours 
-			var intMinutesLeftInDay = intHoursLeftInDay*60 -(60- intCurrentMinutes);
-			var intTotalMinutesAwake = intHoursInDay * 60;
-			var dblPercentOfDayLeftByMinutes =  100*(intMinutesLeftInDay.toDouble()/intTotalMinutesAwake.toDouble());
-
-			var dblPercentOfDayLeft =  100*(intHoursLeftInDay.toDouble()/intHoursInDay.toDouble());
+	
+			//var dblPercentOfDayLeft =  100*(intHoursLeftInDay.toDouble()/dblAwakeHours.toDouble());
 			var intBBTolerance = 10;
 			var intDiffDayLeftAndBB = (dblBodyBatteryPercent)-dblPercentOfDayLeftByMinutes;
 
@@ -343,15 +475,15 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 
 			if( intDiffDayLeftAndBB > 0) { // ie body battery % > day left % . Very good
 				 gStrBBBackColour=Gfx.COLOR_BLACK;
-				 gStrBBFontColour=Gfx.COLOR_WHITE;	
+				 gStrBBFontColour=Gfx.COLOR_GREEN;	
 			} else if ((intDiffDayLeftAndBB + intBBTolerance) > 0) {
 				// eg day left=40 and we are 35. 
 				 gStrBBBackColour=Gfx.COLOR_BLACK;
-				 gStrBBFontColour=Gfx.COLOR_PINK; // pink is easier to read than orange. 
+				 gStrBBFontColour=Gfx.COLOR_YELLOW; // pink is easier to read than orange. 
 			} else if (intDiffDayLeftAndBB > -20)  {
 				// eg say we are 10-20 below day left, eg day left - 40 we are 25 
 				 gStrBBBackColour=Gfx.COLOR_BLACK;
-				 gStrBBFontColour=Gfx.COLOR_RED;	
+				 gStrBBFontColour=Gfx.COLOR_PINK;	
 			} else {
 				// really bad here we are more than 20 below!@!!
 				 gStrBBBackColour=Gfx.COLOR_LT_GRAY;
@@ -375,7 +507,7 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	function getHourOfDay () {
 
 		var today = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
-		var dateString = Lang.format(
+		/*var dateString = Lang.format(
  		   "$1$:$2$:$3$ $4$ $5$ $6$ $7$",
 			[
 				today.hour,
@@ -386,7 +518,7 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 				today.month,
 				today.year
 			]
-		);
+		);*/
 		var intHour = today.hour;
 		return intHour;
 		//System.println(dateString); // e.g. "16:28:32 Wed 1 Mar 2017"
@@ -409,8 +541,8 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 			if (blHasHR==true) {
 				var hrIterator = ActivityMonitor.getHeartRateHistory(null, true);
 				System.println("getHeartRate: we have a heart rate iterator" );      
-				var previous = hrIterator.next();                                   // get the previous HR
-				var lastSampleTime = null;        
+			//	var previous = hrIterator.next();                                   // get the previous HR
+			//	var lastSampleTime = null;        
 												// get the last
 				var heartRateObject = hrIterator.next();
 				if (null != heartRateObject) { 
@@ -452,10 +584,13 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	}
 	
 	function getBodyBatteryIterator() {
+
 	if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getBodyBatteryHistory)) {
           // Set up the method with parameters
           return Toybox.SensorHistory.getBodyBatteryHistory({});
-      }
+      } else {
+		System.print("getBodyBatteryIterator: Looks like we coudn't get body battery history from toybox. NOT GOOD. ");
+	  }
       return null;
   }
 	
@@ -481,10 +616,8 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 
 			
 			var intNumberOfDaysHistoryToShow = 4;
-			var intHeightOfText = 21;
-			if (gStrDeviceName.equals("Forerunner235")){
-				intHeightOfText=15;
-			}
+			var intHeightOfText = 17; //was 21
+			
 			var dailyHistoryArr = ActivityMonitor.getHistory(); //gets 7 days history
 			/* System.println("Draw previous history") print the previous sample
 			   System.println("history array size is " + dailyHistoryArr.size() );  // print the previous sample
@@ -497,12 +630,9 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 
 			System.println("Today is " + 	GetShortDayNameFromNumber(intDayOfWeekToday));
 			var intHeightForStatsForWeek = intHeightOfText*(intNumberOfDaysHistoryToShow+1); // // + 1 for the title fo Week. was 100 22 july 2022						
-			var intYForStats = dc.getHeight() - intHeightForStatsForWeek ; // 
+			var intYForStats = dc.getHeight() - intHeightForStatsForWeek  +20 ; //  added 2 cause it was too high
 
-
-
-			var intXLocationForDay = 30 + gIntExtraXRequired;
-			var intXLocationForKms = 80 + gIntExtraXRequired; 
+			
 			// dc.getWidth()/2;
 			var strDayOfReading = "";
 			var dblDistanceInKmsForDay = 0.0;			    
@@ -510,9 +640,10 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 			var strText = "";
 			var dblTotalKmsForWeek = 0.0;
 			
-		
+	    	var intXLocationForDay = 5 ;
+			var intXLocationForKms = 50 ; 
 			
-			var fontSize = 1; //smallest font size;
+			var fontSize = Gfx.FONT_XTINY; //smallest font size;
 			try {
 			// loop through the 7 day history on the watch			    
 			for( var i = 0; i < dailyHistoryArr.size(); i++ ) { 
@@ -592,7 +723,7 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 				
 
 				dc.drawText(intXLocationForDay, intYForStats-(intHeightOfText*(intNumberOfDaysHistoryToShow)), fontSize, "Week ", Gfx.TEXT_JUSTIFY_LEFT);
-				dc.drawText(intXLocationForKms+ 20, intYForStats-(intHeightOfText*(intNumberOfDaysHistoryToShow)), fontSize,
+				dc.drawText(intXLocationForKms+ 15, intYForStats-(intHeightOfText*(intNumberOfDaysHistoryToShow)), fontSize,
 				dblTotalKmsForWeek.format("%d") + " kms" + strPostTotal , Gfx.TEXT_JUSTIFY_LEFT);
 			
 
@@ -641,11 +772,9 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 
 	function DrawKMTravelledAndMoveBar(dc) {
 	// draw how far we have gone today and show move bar if we haven[t moved much
-		var xForStepsAndKms = 40 + gIntExtraXRequired;
-	    var yForStepsKMAndMoveNumber = dc.getHeight()-73; // was 69
-		if (gStrDeviceName.equals("Forerunner235")) {
-			yForStepsKMAndMoveNumber = dc.getHeight()-43; 
-		}
+		var xForStepsAndKms = 30 ;
+	    var yForStepsKMAndMoveNumber = dc.getHeight()-43; // was 69
+		
 	    var strKMMoved = 0;
 		//var dblKMMoved = GetTodaysDistanceKMDbl();
 	    strKMMoved = GetTodaysDistanceKMStr();
@@ -657,7 +786,16 @@ class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 	   // does not work on forerunner 235! it's not a cq2 device! var strActiveMinutes = ActivityMonitor.getInfo().activeMinutesDay; 
 	    
 	    var strStepsAndKms = convertToThousandsShorthand(strSteps) + "k stps/" + strKMMoved + " kms";
-	    dc.drawText(xForStepsAndKms, yForStepsKMAndMoveNumber, Gfx.FONT_SMALL, strStepsAndKms , Gfx.TEXT_JUSTIFY_LEFT);
+
+		var intWidthForTotals = dc.getWidth()-10;
+		var intHeightForTotals = dc.getHeight()/5;
+
+	    dc.drawText(
+				xForStepsAndKms, 
+				yForStepsKMAndMoveNumber, 
+				Gfx.FONT_XTINY, 
+				Graphics.fitTextToArea(strStepsAndKms, Gfx.FONT_SYSTEM_XTINY, intWidthForTotals, intHeightForTotals, true), 
+				Gfx.TEXT_JUSTIFY_LEFT);
 	    
    	    // =====================================================================
 	    // add move bar - red
@@ -700,12 +838,14 @@ function getRandomQuote() {
 		arrQuotes[5]=  "Running (and God) is my therapy.";
 		arrQuotes[6]=  "Fitness starts now!";	
 		
-		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+	//	var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var r;	
 		r = Mt.rand() % arrQuotes.size(); //Random number			
 		//r = today.day_of_week-1; // get based on day of week,n ot random
 		//Sys.println(r); //To check the result
-		//r=5;
+		if(gBlDebug == true) {
+		  r=4; // debug retun the long one to see what's going on. 
+		}
 		return arrQuotes[r]; 
 			
 	} // Get Random Quote
@@ -728,7 +868,7 @@ function getRandomQuote() {
 			intCharsPerLine = intCharsPerLine +2;
 		}
 		
-		var yStartPosition = 30; // starting y position
+		var gYStartPositionForQuotes = 30; // starting y position
 	
 		if (strText.length() == "God      Loves       Me".length()) {
 
@@ -741,40 +881,40 @@ function getRandomQuote() {
 		var intNumberOfLinesNeeded = (fltNumberOfLinesNeeded + 0.9).toNumber(); //my strange roundUP function
 		//Sys.println("number of lines needed = " + intNumberOfLinesNeeded);
 		var blPrint = false;
-	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, yStartPosition, myFont, blPrint);
+	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, gYStartPositionForQuotes, myFont, blPrint);
 
 		
-		Sys.println("intNumberOfLinesNeeded= "  + intNumberOfLinesNeeded + " yStartPosition is " + yStartPosition + " rowHeight is " + rowHeight);
+		Sys.println("intNumberOfLinesNeeded= "  + intNumberOfLinesNeeded + " yStartPosition is " + gYStartPositionForQuotes + " rowHeight is " + rowHeight);
 		if (intNumberOfLinesNeeded == 1 ) {
-		       yStartPosition = dc.getHeight()/2-rowHeight; //- put it in the middleish!
+		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight; //- put it in the middleish!
 		   //Sys.println("1 lines exactly... put it in the middle!");
 		
 		} else if (intNumberOfLinesNeeded > 1 && intNumberOfLinesNeeded<2 ) {
-		       yStartPosition = dc.getHeight()/2-rowHeight*1.2; //- put it in the middleish!
+		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*1.2; //- put it in the middleish!
 		     //Sys.println("2 lines needed ... put it in the 2iddle!");
 		
 		} else if (intNumberOfLinesNeeded >= 2 && intNumberOfLinesNeeded < 3) {
-		       yStartPosition = dc.getHeight()/2-rowHeight*1.5; //- put it in the middleish!
+		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*1.5; //- put it in the middleish!
 		    //Sys.println("three lines... put it in the middle!");
 		
 		} else if (intNumberOfLinesNeeded >= 3 && intNumberOfLinesNeeded < 4) {
-		       yStartPosition = dc.getHeight()/2-rowHeight*2.3; //- put it in the middleish! was 2.1
+		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*2.2; //- put it in the middleish! was 2.1
 		      //Sys.println("4 lines... put it in the middle!");
 		
 		} else  {
-			yStartPosition = 41;
+			gYStartPositionForQuotes = 55;
 		}
 		
 		if (intCharsPerLine > strText.length() ) {
 				// if we all fit on one line... 
-		 yStartPosition = dc.getHeight()/2-rowHeight*0.8; //- put it in the middle!
+		 gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*0.8; //- put it in the middle!
 		     //Sys.println("Only 1 line.. try to put it in themiddle");
 		}
 		
-		Sys.println("yStartPosition is " + yStartPosition + " rowHeight is " + rowHeight);
+		Sys.println("gYStartPositionForQuotes is " + gYStartPositionForQuotes + " rowHeight is " + rowHeight);
 
 		blPrint = true;
-	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, yStartPosition, myFont, blPrint);
+	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, gYStartPositionForQuotes, myFont, blPrint);
 
 		
 		
@@ -783,7 +923,7 @@ function getRandomQuote() {
 	function PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, yStartPosition, myFont, blPrint) {
 		
 		var intLastSpaceLoc;
-		var intLocOfLastSpace=0;
+		//var intLocOfLastSpace=0;
 		var intLinesNeeded=0;
 		var intLenLeftToPrint = strText.length();
 		// print out the words on multiple lines
@@ -874,27 +1014,28 @@ function getRandomQuote() {
 	 function ChooseFontBasedOnLengthAndSetColorFenix5( strQuote, dc ) { // passed in dc so i can change color!
 	var myFont = null; 
 	//var dblFontSizeFactor = 1;
-	
-	if (strQuote.length() > 250 ) {
+	var intQuoteLength = strQuote.length();
+
+	if (intQuoteLength > 250 ) {
 		
-			myFont = Gfx.FONT_XTINY;
+			myFont = $.customFontSmall;
 		Sys.println( "font size is xtiny Length is " + strQuote.length());
-		} else if (strQuote.length() > 65 ) {
+		} else if (intQuoteLength > 65 ) {
 			gRowHeight = 24;			
 			myFont = Gfx.FONT_TINY;
 			Sys.println( "font size is tiny Length is " + strQuote.length());
 		
-		} else if ( strQuote.length() > 50 )  {
+		} else if ( intQuoteLength > 50 )  {
 			gRowHeight = 25;
 		   myFont = Gfx.FONT_SMALL;
 		 Sys.println( "font size is small Length is " + strQuote.length());
 		
-		} else if ( strQuote.length() > 30 ) {
-			gRowHeight = 33;	
+		} else if ( intQuoteLength > 30 ) {
+			gRowHeight = 30;//33	
 			myFont  = Gfx.FONT_MEDIUM;
 		Sys.println( "font size is med  Length is " + strQuote.length());
 					
-		} else if ( strQuote.length() > 27 ){
+		} else if ( intQuoteLength > 27 ){
 		gRowHeight = 39;
 		  myFont = Gfx.FONT_LARGE;
 		  Sys.println( "font size is large. Length is " + strQuote.length());
@@ -929,7 +1070,7 @@ function getRandomQuote() {
 	{
 		var index = 0;
 		var i = 0;
-		var strOriginalSource = strSource;
+		//var strOriginalSource = strSource;
 		var intLocOfSpace;
 		while(i<strSource.length())
 		{

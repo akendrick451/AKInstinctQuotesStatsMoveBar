@@ -1,0 +1,42 @@
+[ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 3; ]
+class AKInstinctQuotesStatsMoveBarApp extends Application.AppBase{
+    [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 5; ]
+    function initialize() as Void {
+D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuotesStatsMoveBar_mc_5_26_7_4_start:
+[ "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc" 6 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuotesStatsMoveBar_mc_5_26_7_4_stop:
+    }
+    [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 10; ]
+    function onStart(state) {
+    }
+    [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 14; ]
+    function onStop(state) {
+    }
+    [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 18; ]
+    function getInitialView() {
+D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuotesStatsMoveBar_mc_18_30_20_4_start:
+[ "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc" 19 8 ]
+        %tmp.1 = newa 1;
+        %tmp.5 = getv ? :AKInstinctQuotesStatsMoveBarView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuotesStatsMoveBar_mc_18_30_20_4_stop:
+    }
+}
+[ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuotesStatsMoveBar.mc"; @line = 1; ]
+<init> {
+}
