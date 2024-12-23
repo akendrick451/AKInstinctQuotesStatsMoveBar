@@ -102,7 +102,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	var customFontLarge = null;
     var intChangeWordsToStatsIntervalMin = 2; // do a mod 3 on the time to change... 
     var gNumberOfLinesToPrint=5;
-    var gXForTextLoc = 30;
+    var gXForTextLoc = 5;
     var gIntFontSize=10;
     var gIntLastMoveBarLevel=0;
     var gIntNumberOfMovedHours= 0;
@@ -164,18 +164,31 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
         		hour = 12;
         	}
         } // end if
-
-       DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
+  	 	var intDateStartYBatteryAndDate=dc.getHeight()-50;
+    	DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
 		
-	   DrawHeartRateAndBodyBattery(dc, intYForTime);
+		DrawHeartRateAndBodyBattery(dc, intYForTime);
 
-	   DrawWeeksMovementOrQuotes(dc, hour, minute, second);
+		DrawWeeksMovementOrQuotes(dc, hour, minute, second);
 	    
-	   var intDateStartYBatteryAndDate=dc.getHeight()-50;
+		DrawWatchBatteryStats(dc, intDateStartYBatteryAndDate);
 
-	   DrawWatchBatteryStats(dc, intDateStartYBatteryAndDate);
+		DrawCurrentDate(dc, intDateStartYBatteryAndDate);
+	 
+	    // =====================================================================
+	    // show kms travelled
+	    // =====================================================================
+	    DrawKMTravelledAndMoveBar(dc);
+	    	  //  drawTextOverMultiLines( dc, "Let us run the race that is set before us.");	    	    	    
+	} // end onUpdate
 
-		// reset color
+	
+    // ==================================================================
+	// can we also return the difference from ideal eg 70% (-10)
+	// ==================================================================
+
+	function DrawCurrentDate(dc, intDateStartYBatteryAndDate) {
+	// reset color
 	     dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
 	    
 	   	// =====================================================================	    
@@ -200,17 +213,9 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			System.println("exception is 76 : " + ex.getErrorMessage());
 		}
 		
-	    // =====================================================================
-	    // show kms travelled
-	    // =====================================================================
-	    DrawKMTravelledAndMoveBar(dc);
-	    	  //  drawTextOverMultiLines( dc, "Let us run the race that is set before us.");	    	    	    
-	} // end onUpdate
 
-	
-    // ==================================================================
-	// can we also return the difference from ideal eg 70% (-10)
-	// ==================================================================
+	} // end function DrawCurrentDate
+
 
 	function DrawHeartRateAndBodyBattery(dc, intYForTime) {
 			//  ==================================================
@@ -286,8 +291,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			if (  ((minute == 31) || (minute == 0)) && (second <= 10)) {
 				SetNewQuote();
 				GetQuoteSizeAndDraw(dc);
-			}
-			//akDec24 temp remove DrawQuote(dc);
+		}
+			DrawQuote(dc);
 		
 				
 		} // end if hour - 7	  
@@ -384,19 +389,19 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
 		
 	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
-	    dc.drawText(intXForTime, intYForTime, Gfx.FONT_SMALL, hour.toString()+ ": ", Gfx.TEXT_JUSTIFY_RIGHT);
+	    dc.drawText(intXForTime, intYForTime, Gfx.FONT_LARGE, hour.toString()+ ": ", Gfx.TEXT_JUSTIFY_RIGHT);
 	    //was intX + 10
 
 		// draw minutes a bit darker from middle, right justified
 		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
-	    dc.drawText(intXForTime-5, intYForTime, Gfx.FONT_SMALL, Lang.format("$1$", [clockTime.min.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
+	    dc.drawText(intXForTime-5, intYForTime, Gfx.FONT_LARGE, Lang.format("$1$", [clockTime.min.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
 	    
 		// ======================================================================================
 		// draw seconds
 		// draw seconds in a smaller font from middle plus two chars size text justify left
 		intYForTime = 1+5;
 	
-		dc.drawText(intXForTime+15, intYForTime-4, Gfx.FONT_XTINY, Lang.format("$1$", [clockTime.sec.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
+		dc.drawText(intXForTime+20, intYForTime, Gfx.FONT_XTINY, Lang.format("$1$", [clockTime.sec.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
 		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		var intYForVersion = 20;
 
@@ -884,25 +889,27 @@ function getRandomQuote() {
 	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, gYStartPositionForQuotes, myFont, blPrint);
 
 		
-		Sys.println("intNumberOfLinesNeeded= "  + intNumberOfLinesNeeded + " yStartPosition is " + gYStartPositionForQuotes + " rowHeight is " + rowHeight);
+		//Sys.println("intNumberOfLinesNeeded= "  + intNumberOfLinesNeeded + " yStartPosition is " + gYStartPositionForQuotes + " rowHeight is " + rowHeight);
 		if (intNumberOfLinesNeeded == 1 ) {
 		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight; //- put it in the middleish!
 		   //Sys.println("1 lines exactly... put it in the middle!");
 		
 		} else if (intNumberOfLinesNeeded > 1 && intNumberOfLinesNeeded<2 ) {
 		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*1.2; //- put it in the middleish!
-		     //Sys.println("2 lines needed ... put it in the 2iddle!");
+		   //  Sys.println("1 lines needed ... put it in the 2iddle!");
 		
 		} else if (intNumberOfLinesNeeded >= 2 && intNumberOfLinesNeeded < 3) {
 		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*1.5; //- put it in the middleish!
-		    //Sys.println("three lines... put it in the middle!");
+		   // Sys.println("2 lines... put it in the middle!");
 		
 		} else if (intNumberOfLinesNeeded >= 3 && intNumberOfLinesNeeded < 4) {
-		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*2.2; //- put it in the middleish! was 2.1
-		      //Sys.println("4 lines... put it in the middle!");
+		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*2.3; //- put it in the middleish! was 2.1
+		      gYStartPositionForQuotes = dc.getHeight()/2-(rowHeight*intNumberOfLinesNeeded)*0.6;
+			 // Sys.println("3 lines... put it in the middle!");
 		
 		} else  {
-			gYStartPositionForQuotes = 55;
+			gYStartPositionForQuotes = dc.getHeight()/2-(rowHeight*intNumberOfLinesNeeded)*0.6;
+			//Sys.println("more than 3 lines and not less than 4 lines... put it in the middle!");
 		}
 		
 		if (intCharsPerLine > strText.length() ) {
@@ -911,7 +918,11 @@ function getRandomQuote() {
 		     //Sys.println("Only 1 line.. try to put it in themiddle");
 		}
 		
-		Sys.println("gYStartPositionForQuotes is " + gYStartPositionForQuotes + " rowHeight is " + rowHeight);
+		Sys.println("gYStartPositionForQuotes is " + gYStartPositionForQuotes + " rowHeightXXX is " + rowHeight);
+
+		if (gYStartPositionForQuotes < 25 ) { //we don't want to overwrite time
+			gYStartPositionForQuotes = 25;
+		}
 
 		blPrint = true;
 	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, gYStartPositionForQuotes, myFont, blPrint);
@@ -1021,12 +1032,12 @@ function getRandomQuote() {
 			myFont = $.customFontSmall;
 		Sys.println( "font size is xtiny Length is " + strQuote.length());
 		} else if (intQuoteLength > 65 ) {
-			gRowHeight = 24;			
+			gRowHeight = 20;			
 			myFont = Gfx.FONT_TINY;
 			Sys.println( "font size is tiny Length is " + strQuote.length());
 		
 		} else if ( intQuoteLength > 50 )  {
-			gRowHeight = 25;
+			gRowHeight = 21;
 		   myFont = Gfx.FONT_SMALL;
 		 Sys.println( "font size is small Length is " + strQuote.length());
 		
@@ -1036,7 +1047,7 @@ function getRandomQuote() {
 		Sys.println( "font size is med  Length is " + strQuote.length());
 					
 		} else if ( intQuoteLength > 27 ){
-		gRowHeight = 39;
+		gRowHeight = 30;
 		  myFont = Gfx.FONT_LARGE;
 		  Sys.println( "font size is large. Length is " + strQuote.length());
 		  Sys.println( strQuote );
