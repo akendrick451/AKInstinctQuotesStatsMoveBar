@@ -200,14 +200,14 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		var infoShort = Gregorian.info(now, Time.FORMAT_SHORT); // for a shorter day, eg Thu instead of Thurs
 		var dateStr;
 		dateStr = Lang.format("$1$ $2$$3$", [GetShortDayNameFromNumber(infoShort.day_of_week), info.month, info.day]);
-		var gTinyFont = Gfx.FONT_XTINY; // will make the date bigger than battery stats
+		
 		//	dateStartYBatteryAndDate = 200;
 		try {
 			// Code to execute
 		//	if(gStrDeviceName.equals("Forerunner235")) {
 		//		dateStartYBatteryAndDate = dateStartYBatteryAndDate + 4;
 		//	}
-			dc.drawText(dc.getWidth()-48, intDateStartYBatteryAndDate+30, Gfx.FONT_AUX1, dateStr , Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(dc.getWidth()-48, intDateStartYBatteryAndDate+27, Gfx.FONT_AUX1, dateStr , Gfx.TEXT_JUSTIFY_RIGHT);
 		} catch( ex ) {
 		// Code to catch all execeptions
 			System.println("exception is 76 : " + ex.getErrorMessage());
@@ -332,17 +332,17 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		 	// make the battery bolder, ie thicker 
 		 	System.println("Drawing red and thicker");
 		 	textColor = Gfx.COLOR_WHITE;
-		 	lineColor = Gfx.COLOR_RED;
-		 	backColor = Gfx.COLOR_RED;
-		 	dc.drawRoundedRectangle(batteryX, batteryY, batteryWidth, batteryHeight,1 );
+		 	lineColor = Gfx.COLOR_WHITE;
+		 	backColor = Gfx.COLOR_WHITE;
+		 	//dc.drawRoundedRectangle(batteryX, batteryY, batteryWidth, batteryHeight,1 );
 		 } else if ( myStats.battery < intBatteryWarning  ) {		
 		 	textColor = Gfx.COLOR_WHITE;
-		 	lineColor = Gfx.COLOR_WHITE; //should be yello
-		 	backColor = Gfx.COLOR_YELLOW;
+		 	lineColor = Gfx.COLOR_LT_GRAY; //should be yello
+		 	backColor = Gfx.COLOR_DK_GRAY;
 		 } else {
 			textColor = Gfx.COLOR_WHITE;
 		 	lineColor = Gfx.COLOR_WHITE;
-		 	backColor = Gfx.COLOR_DK_GREEN;
+		 	backColor = Gfx.COLOR_WHITE;
 		 }
 
 		//if battery is charging, set an orange dot or something - a z
@@ -358,15 +358,20 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		 
 // Gfx.getVectorFont("#BionicBold:12,Roboto");
          dc.setColor(textColor,backColor);		 	
-	     dc.drawText(batteryX, 
-		 batteryY ,
-		   Gfx.FONT_XTINY,
-		 Graphics.fitTextToArea(strBatteryPercent, Gfx.FONT_SYSTEM_XTINY, batteryWidth, batteryHeight, true), 
-		  Gfx.TEXT_JUSTIFY_LEFT);
+	    // dc.drawText(batteryX, 
+		// batteryY ,
+		 //  Gfx.FONT_XTINY,
+		 //strBatteryPercent,
+		//  Gfx.TEXT_JUSTIFY_LEFT);
 	     //draw a box around the battery that looks like a battery?	     
 	     
 	     dc.setColor(lineColor,textColor); 	
-	     dc.drawRoundedRectangle(batteryX-2, batteryY, batteryWidth, batteryHeight,1 );	       	
+	     dc.drawRoundedRectangle(batteryX-2, batteryY, batteryWidth, batteryHeight,1 );	 
+		 var i =0;
+		 var intBatteryPercent = strBatteryPercent.toNumber();		 
+		 for (i=1;i<intBatteryPercent/5;i++) {
+			dc.fillRectangle(batteryX+i, batteryY, 1, batteryHeight );	 
+		 }      	
 	     // draw the battery nipple - just the nipple     
 		 //dc.drawRoundedRectangle(x, y, width, height, radius)
 	   //  dc.drawRoundedRectangle(batteryX-5, batteryY+9, 4, 12, 2);
@@ -805,11 +810,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
    	    // =====================================================================
 	    // add move bar - red
 	    // =====================================================================
-	    if (ActivityMonitor.getInfo().moveBarLevel > 0) {
-		    dc.setColor(Gfx.COLOR_RED,Gfx.COLOR_BLACK); // just in case we changed it 	     
-		    var startXForMoveBarValue = dc.getWidth()-20;
-		    dc.drawText(startXForMoveBarValue, yForStepsKMAndMoveNumber-10, Gfx.FONT_SMALL,ActivityMonitor.getInfo().moveBarLevel , Gfx.TEXT_JUSTIFY_RIGHT);	    	    
-	   }
+	   
 	    var intMoveBarLevelCurrent = ActivityMonitor.getInfo().moveBarLevel;	    	     
 	     if (gIntLastMoveBarLevel > 0) {
 		     if (ActivityMonitor.getInfo().moveBarLevel==0) {
@@ -818,15 +819,42 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		   }
 	      gIntLastMoveBarLevel=intMoveBarLevelCurrent;
 	      Sys.println("-------------------- Move bar level ------------------------------");
-	      Sys.println("Last level = " + gIntLastMoveBarLevel + ", current level = " + intMoveBarLevelCurrent);
-	      Sys.println("Number of hours moved = " + gIntNumberOfMovedHours);
+	      Sys.println("Move bar Last level = " + gIntLastMoveBarLevel + ", current level = " + intMoveBarLevelCurrent);
+	      Sys.println("Move bar - Number of hours moved = " + gIntNumberOfMovedHours);
 	      Sys.println("-------------------- Move bar level ------------------------------");
 	    var moveBarLength = ActivityMonitor.getInfo().moveBarLevel*25;	    	    
 	   // dc.drawLine(40, startY, 40+moveBarLength, startY);
-	    dc.drawRectangle(xForStepsAndKms, yForStepsKMAndMoveNumber-2, moveBarLength, 2);
+	   yForStepsKMAndMoveNumber = yForStepsKMAndMoveNumber+10;
+	   var myMoveBarLevel = moveBarLength/25;
+	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_WHITE); // just in case we changed it 	 
+		var intRectangleX = 10;
+		var intRectangleY = 0;
+		var intRectangleLength = 0;
+		var intRectangleHeight = 0;
+		var i=0;
+		for ( i=1; i< myMoveBarLevel*10; i++) 
+		{
+			intRectangleX = 3 + i*3;
+			intRectangleY = yForStepsKMAndMoveNumber-i*1;
+			intRectangleLength = 1;
+			intRectangleHeight = 1+i*1;
+			 Sys.println("- Rectangle x=" + intRectangleX + ", y=" + intRectangleY + " l=" + 
+			 intRectangleLength + " height=" + intRectangleHeight);
+
+	      //dc.fillRectangle(intRectangleX, intRectangleY-1, intRectangleLength, intRectangleHeight);
 	    // dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK); // just in case we changed it 
 	     // and draw a thiker? bar to highliht 
-	     dc.drawRectangle(xForStepsAndKms, yForStepsKMAndMoveNumber, moveBarLength, 2);
+	       dc.fillRectangle(intRectangleX, intRectangleY, intRectangleLength, intRectangleHeight);
+		   
+		}// end for 	
+		
+
+		 if (ActivityMonitor.getInfo().moveBarLevel > 0) {
+		    dc.setColor(Gfx.COLOR_BLACK,Gfx.COLOR_WHITE); // just in case we changed it 	     
+		    var startXForMoveBarValue = dc.getWidth()/2;
+		   // not enough room for the number! dc.drawText(startXForMoveBarValue-40+myMoveBarLevel*10, yForStepsKMAndMoveNumber-10- myMoveBarLevel*2, Gfx.FONT_SMALL,ActivityMonitor.getInfo().moveBarLevel , Gfx.TEXT_JUSTIFY_RIGHT);	    	    
+	   }
+
 	    
 	 } // end drawkm travlled
 	
