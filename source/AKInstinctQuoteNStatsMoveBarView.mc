@@ -394,12 +394,12 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
 		
 	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
-	    dc.drawText(intXForTime, intYForTime, Gfx.FONT_LARGE, hour.toString()+ ": ", Gfx.TEXT_JUSTIFY_RIGHT);
+	    dc.drawText(intXForTime, intYForTime, Gfx.FONT_NUMBER_MILD, hour.toString()+ ": ", Gfx.TEXT_JUSTIFY_RIGHT);
 	    //was intX + 10
 
 		// draw minutes a bit darker from middle, right justified
 		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
-	    dc.drawText(intXForTime-5, intYForTime, Gfx.FONT_LARGE, Lang.format("$1$", [clockTime.min.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
+	    dc.drawText(intXForTime-5, intYForTime, Gfx.FONT_NUMBER_MILD, Lang.format("$1$", [clockTime.min.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
 	    
 		// ======================================================================================
 		// draw seconds
@@ -803,8 +803,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	    dc.drawText(
 				xForStepsAndKms, 
 				yForStepsKMAndMoveNumber, 
-				Gfx.FONT_XTINY, 
-				Graphics.fitTextToArea(strStepsAndKms, Gfx.FONT_SYSTEM_XTINY, intWidthForTotals, intHeightForTotals, true), 
+				Gfx.FONT_SMALL, 
+				Graphics.fitTextToArea(strStepsAndKms, Gfx.FONT_SMALL, intWidthForTotals, intHeightForTotals, true), 
 				Gfx.TEXT_JUSTIFY_LEFT);
 	    
    	    // =====================================================================

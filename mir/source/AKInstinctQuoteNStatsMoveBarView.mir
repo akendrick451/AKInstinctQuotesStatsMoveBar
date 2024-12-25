@@ -1009,7 +1009,7 @@ D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStats
         %tmp.10 = lgetv %intXForTime;
         %tmp.12 = lgetv %intYForTime;
         %tmp.13 = getm $.Toybox.Graphics;
-        %tmp.14 = getv %tmp.13 :FONT_LARGE;
+        %tmp.14 = getv %tmp.13 :FONT_NUMBER_MILD;
         %tmp.15 = lgetv %hour;
         %tmp.16 = getv function %tmp.15 :toString;
         %tmp.17 = invoke %tmp.15 %tmp.16();
@@ -1034,7 +1034,7 @@ D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStats
         %tmp.33 = sub %tmp.31 %tmp.32;
         %tmp.35 = lgetv %intYForTime;
         %tmp.36 = getm $.Toybox.Graphics;
-        %tmp.37 = getv %tmp.36 :FONT_LARGE;
+        %tmp.37 = getv %tmp.36 :FONT_NUMBER_MILD;
         %tmp.38 = getm $.Toybox.Lang;
         %tmp.39 = getv function %tmp.38 :format;
         %tmp.40 = "$1$";
@@ -2616,12 +2616,12 @@ D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStats
         %tmp.47 = lgetv %xForStepsAndKms.1;
         %tmp.49 = lgetv %yForStepsKMAndMoveNumber.2;
         %tmp.50 = getm $.Toybox.Graphics;
-        %tmp.51 = getv %tmp.50 :FONT_XTINY;
+        %tmp.51 = getv %tmp.50 :FONT_SMALL;
         %tmp.53 = getv ? :Graphics;
         %tmp.54 = getv function %tmp.53 :fitTextToArea;
         %tmp.56 = lgetv %strStepsAndKms.5;
         %tmp.57 = getm $.Toybox.Graphics;
-        %tmp.58 = getv %tmp.57 :FONT_SYSTEM_XTINY;
+        %tmp.58 = getv %tmp.57 :FONT_SMALL;
         %tmp.60 = lgetv %intWidthForTotals.6;
         %tmp.62 = lgetv %intHeightForTotals.7;
         %tmp.63 = true;

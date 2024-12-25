@@ -3,7 +3,7 @@
 <manifest filename="D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\manifest.xml"/>
 <pcToLineNum>
 <entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuotesStatsMoveBar.mc" id="1" lineNum="3" parent="globals/AKInstinctQuotesStatsMoveBarApp" pc="268435460" symbol="&lt;init&gt;"/>
-<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B3888-00\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435479" symbol="&lt;init&gt;"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B4394-00\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435479" symbol="&lt;init&gt;"/>
 <entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="3" lineNum="59" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435503" symbol="&lt;init&gt;"/>
 <entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="3" lineNum="114" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268435521" symbol="&lt;init&gt;"/>
 <entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuotesStatsMoveBar.mc" id="4" lineNum="10" parent="globals/AKInstinctQuotesStatsMoveBarApp" pc="268435552" symbol="onStart"/>
@@ -485,9 +485,9 @@
 <entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="36" lineNum="210" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268443290" symbol="DrawCurrentDate"/>
 <entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="36" lineNum="211" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268443345" symbol="DrawCurrentDate"/>
 <entry filename="D:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\source\\AKInstinctQuoteNStatsMoveBarView.mc" id="36" lineNum="213" parent="globals/AKInstinctQuotesStatsMoveBarView" pc="268443349" symbol="DrawCurrentDate"/>
-<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B3888-00\\source\\Rez.mcgen" id="37" lineNum="18" parent="globals/Rez/Layouts" pc="268443395" symbol="WatchFace"/>
-<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B3888-00\\source\\Rez.mcgen" id="37" lineNum="19" parent="globals/Rez/Layouts" pc="268443407" symbol="WatchFace"/>
-<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B3888-00\\source\\Rez.mcgen" id="37" lineNum="21" parent="globals/Rez/Layouts" pc="268443542" symbol="WatchFace"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B4394-00\\source\\Rez.mcgen" id="37" lineNum="18" parent="globals/Rez/Layouts" pc="268443395" symbol="WatchFace"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B4394-00\\source\\Rez.mcgen" id="37" lineNum="19" parent="globals/Rez/Layouts" pc="268443407" symbol="WatchFace"/>
+<entry filename="d:\\AKProgramming\\GitHub\\AKInstinctQuotesStatsMoveBar\\bin\\gen\\006-B4394-00\\source\\Rez.mcgen" id="37" lineNum="21" parent="globals/Rez/Layouts" pc="268443542" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388639" module="true" symbol="Graphics"/>
@@ -749,7 +749,7 @@
 <entry arg="true" endPc="268443558" name="dc" stackId="1" startPc="268443395"/>
 <entry endPc="268443558" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268443407"/>
 </localVars>
-<deviceInfo partNumber="006-B3888-00"/>
+<deviceInfo deviceVersion="e7d237e00493f9381c1ba5c2204e06b5a3051145" partNumber="006-B4394-00"/>
 <annotations>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
 <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="akSmallFont"/>
