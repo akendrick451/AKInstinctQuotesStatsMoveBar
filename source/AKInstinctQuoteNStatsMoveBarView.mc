@@ -152,8 +152,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 		
-		var intYForTime = 1;
-		var intXForTime=dc.getWidth()/2-25;
+		var intYForTime = -2;
+		var intXForTime=dc.getWidth()/2-21;
         var clockTime = System.getClockTime();
         var hour = clockTime.hour;
 		var minute = clockTime.min;
@@ -164,22 +164,20 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
         		hour = 12;
         	}
         } // end if
-  	 	var intDateStartYBatteryAndDate=dc.getHeight()-50;
+  	 	var intStartDateLocationY=dc.getHeight()-50;
+		var intXForHR = dc.getWidth()-11;
     	DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
-		
-		DrawHeartRateAndBodyBattery(dc, intYForTime);
+
+        DrawWatchBatteryStats(dc, intXForHR, intYForTime);
+
+		DrawHeartRateAndBodyBattery(dc,intXForHR, intYForTime);
 
 		DrawWeeksMovementOrQuotes(dc, hour, minute, second);
-	    
-		DrawWatchBatteryStats(dc, intDateStartYBatteryAndDate);
 
-		DrawCurrentDate(dc, intDateStartYBatteryAndDate);
+		DrawCurrentDate(dc, intStartDateLocationY);
 	 
-	    // =====================================================================
-	    // show kms travelled
-	    // =====================================================================
 	    DrawKMTravelledAndMoveBar(dc);
-	    	  //  drawTextOverMultiLines( dc, "Let us run the race that is set before us.");	    	    	    
+	    	      	    	    
 	} // end onUpdate
 
 	
@@ -217,13 +215,13 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	} // end function DrawCurrentDate
 
 
-	function DrawHeartRateAndBodyBattery(dc, intYForTime) {
+	function DrawHeartRateAndBodyBattery(dc, intXForHR, intYForTime) {
 			//  ==================================================
 		//  draw  heart rate
 		//  ==================================================
 		// just beneath version, print heart rate
-		var gIntYForHR = 33;
-		var gIntXForHR = dc.getWidth()-11;
+		var gIntYForHR = intYForTime+26;// 33;
+		
 		
 		// get a HeartRateIterator object; oldest sample first
 		var intHeartRate = 0; 
@@ -231,13 +229,13 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		if (intHeartRate != 0){
 		
 			dc.setColor(gStrHRFontColour,gStrHRBackColour);
-			dc.drawText(gIntXForHR, gIntYForHR, Gfx.FONT_TINY, "HR:" + intHeartRate, Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(intXForHR, gIntYForHR, Gfx.FONT_TINY, "HR:" + intHeartRate, Gfx.TEXT_JUSTIFY_RIGHT);
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 		} //  print  heart  rate if not zerro
 
 	// get body battery if available
-	     gIntYForBodyBattery = intYForTime+5;
-		 var gIntXForBodyBattery = gIntXForHR;
+	     gIntYForBodyBattery = intYForTime-5;
+		 var gIntXForBodyBattery = intXForHR-20;
 		var dblBodyBatteryNumber = 0.0;
 		dblBodyBatteryNumber = getBodyBatteryPercentAndSetColours();
 		//var intDiffDesiredAndActualBodyBattery = gintDesiredBodyBattery - dblBodyBatteryNumber;
@@ -249,7 +247,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
 		if (dblBodyBatteryNumber!=0.0) {
 			dc.setColor(gStrBBFontColour, gStrBBBackColour);
-			dc.drawText(gIntXForBodyBattery,gIntYForBodyBattery , Gfx.FONT_TINY, "B" + dblBodyBatteryNumber.format("%.0f") + "(" + gintDesiredBodyBattery.format("%.0f") + ")", Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(gIntXForBodyBattery,gIntYForBodyBattery , Gfx.FONT_SYSTEM_NUMBER_MILD, "B" + dblBodyBatteryNumber.format("%.0f") , Gfx.TEXT_JUSTIFY_CENTER); //+ "(" + gintDesiredBodyBattery.format("%.0f") + ")"
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		}	else {
 			dc.drawText(gIntXForBodyBattery, gIntYForBodyBattery, Gfx.FONT_TINY, "B? (" + gintDesiredBodyBattery.format("%.0f") + ")" , Gfx.TEXT_JUSTIFY_RIGHT);
@@ -300,7 +298,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	} // end functin draw weeks movement or quotest
 
 
-	function DrawWatchBatteryStats(dc, intDateStartYBatteryAndDate) {
+	function DrawWatchBatteryStats(dc, intXBodyBattery, intTimeY) {
 
 
 	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK); // just in case we changed it 
@@ -313,12 +311,12 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//System.println(myStats.totalMemory);
 		var strBatteryPercent = Lang.format("$1$",[myStats.battery.format("%02d")])+ "%";	    
 		
-		var batteryX = 10;
+		var batteryX = intXBodyBattery-28;
 		var batteryHeight = 9; // was 14
 		
 		var batteryWidth = 18;
 	
-		var batteryY = intDateStartYBatteryAndDate+8; //+4
+		var batteryY = intTimeY+50; //+4
 		//var intNippleMid = batteryHeight/2;
 		var intNippleHeight = batteryHeight/2;
 		var intNippleY = batteryY + intNippleHeight/2;
@@ -352,7 +350,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
 			if (!myStats.charging) {
 			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_BLACK);
-			dc.drawText(batteryX-4, batteryY-2 ,  Gfx.FONT_XTINY, "z" , Gfx.TEXT_JUSTIFY_LEFT);
+			dc.drawText(batteryX+3, batteryY-9 ,  Gfx.FONT_XTINY, "z" , Gfx.TEXT_JUSTIFY_LEFT);
 			} // end if chargin
 		} // if version > 3
 		 
@@ -404,7 +402,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		// ======================================================================================
 		// draw seconds
 		// draw seconds in a smaller font from middle plus two chars size text justify left
-		intYForTime = 1+5;
+		intYForTime = intYForTime;
 	
 		dc.drawText(intXForTime+20, intYForTime, Gfx.FONT_XTINY, Lang.format("$1$", [clockTime.sec.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);	    
 		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
@@ -625,8 +623,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	function DrawWeeksMovementHistory(dc) {
 
 			
-			var intNumberOfDaysHistoryToShow = 4;
-			var intHeightOfText = 17; //was 21
+			var intNumberOfDaysHistoryToShow = 3; // does this also change the total count? ie only use this nyumber of days?
+			var intHeightOfText = 17; //was 21 // is this the height of the font?
 			
 			var dailyHistoryArr = ActivityMonitor.getHistory(); //gets 7 days history
 			/* System.println("Draw previous history") print the previous sample
@@ -639,8 +637,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			 // eg 6 = friday
 
 			System.println("Today is " + 	GetShortDayNameFromNumber(intDayOfWeekToday));
-			var intHeightForStatsForWeek = intHeightOfText*(intNumberOfDaysHistoryToShow+1); // // + 1 for the title fo Week. was 100 22 july 2022						
-			var intYForStats = dc.getHeight() - intHeightForStatsForWeek  +20 ; //  added 2 cause it was too high
+			var intHeightForStatsForWeek = intHeightOfText*(intNumberOfDaysHistoryToShow); // // + 1 for the title fo Week. was 100 22 july 2022						
+			var intYForStats = 100; //dc.getHeight() - intHeightForStatsForWeek  +20 ; //  added 2 cause it was too high
 
 			
 			// dc.getWidth()/2;
@@ -657,7 +655,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			try {
 			// loop through the 7 day history on the watch			    
 			for( var i = 0; i < dailyHistoryArr.size(); i++ ) { 
-				if( i < intNumberOfDaysHistoryToShow ) { // i only want to show 4 days history plus today				
+				if( i < intNumberOfDaysHistoryToShow ) { // i only want to show x days history plus today				
 				    // System.println("Previous: " + i + " day" +  dailyHistoryArr[i].steps + " steps / ");  // print the previous sample
 				    // System.println("Previous: " + dailyHistoryArr[i].distance + " d");  // print the previous sample
 						
@@ -782,8 +780,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 	function DrawKMTravelledAndMoveBar(dc) {
 	// draw how far we have gone today and show move bar if we haven[t moved much
-		var xForStepsAndKms = 30 ;
-	    var yForStepsKMAndMoveNumber = dc.getHeight()-43; // was 69
+		var xForStepsAndKms = 50 ; //10
+	    var yForStepsKMAndMoveNumber = dc.getHeight()-53; // was 43
 		
 	    var strKMMoved = 0;
 		//var dblKMMoved = GetTodaysDistanceKMDbl();
@@ -795,16 +793,22 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	    
 	   // does not work on forerunner 235! it's not a cq2 device! var strActiveMinutes = ActivityMonitor.getInfo().activeMinutesDay; 
 	    
-	    var strStepsAndKms = convertToThousandsShorthand(strSteps) + "k stps/" + strKMMoved + " kms";
+	    var strStepsAndKmsWords =   "k stps/" + strKMMoved + "kms";
+		var strStepsNumber = convertToThousandsShorthand(strSteps);
 
 		var intWidthForTotals = dc.getWidth()-10;
 		var intHeightForTotals = dc.getHeight()/5;
 
+
+		// draw numbers in larger text for instinct
+
+		dc.drawText(xForStepsAndKms, yForStepsKMAndMoveNumber-5, Gfx.FONT_NUMBER_MILD, strStepsNumber, Gfx.TEXT_JUSTIFY_RIGHT);
+
 	    dc.drawText(
-				xForStepsAndKms, 
-				yForStepsKMAndMoveNumber, 
+				xForStepsAndKms+2, 
+				yForStepsKMAndMoveNumber+5, 
 				Gfx.FONT_SMALL, 
-				Graphics.fitTextToArea(strStepsAndKms, Gfx.FONT_SMALL, intWidthForTotals, intHeightForTotals, true), 
+				Graphics.fitTextToArea(strStepsAndKmsWords, Gfx.FONT_SMALL, intWidthForTotals, intHeightForTotals, true), 
 				Gfx.TEXT_JUSTIFY_LEFT);
 	    
    	    // =====================================================================
