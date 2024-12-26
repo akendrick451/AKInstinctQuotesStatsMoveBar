@@ -14,7 +14,7 @@ var customFontSmall = null; // esp for fenix style watches.
 var gNumAPIMajorVersion = 0; // will be major version, usual 1, 2, or 3. 1 cannot have battery stats. 
 var gStrDeviceName = ""; //default to blank - set to 235 later
 
-class AKGarminQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
+class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace {
 
     var strVersion = "v2.3x"; //nipple on left 11/12/2021. Fix short day name eg Thur
     // added battery yellow colour and red and background color for battery AND BIG BATTERY -- move battery up and left
