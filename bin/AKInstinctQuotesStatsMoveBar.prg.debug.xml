@@ -676,8 +676,8 @@
 <entry endPc="268439984" name="blPrint" stackId="10" startPc="268439264"/>
 <entry arg="true" endPc="268440258" name="dc" stackId="1" startPc="268439986"/>
 <entry endPc="268440257" name="mySettings" stackId="2" startPc="268439990"/>
-<entry endPc="268440257" name="version" stackId="3" startPc="268439990"/>
-<entry endPc="268440257" name="versionString" stackId="4" startPc="268439990"/>
+<entry endPc="268440257" name="apiversion" stackId="3" startPc="268439990"/>
+<entry endPc="268440257" name="apiversionString" stackId="4" startPc="268439990"/>
 <entry endPc="268440299" name="dblCentimetersMoved" stackId="1" startPc="268440263"/>
 <entry arg="true" endPc="268440918" name="dc" stackId="1" startPc="268440300"/>
 <entry arg="true" endPc="268440918" name="intXBodyBattery" stackId="2" startPc="268440300"/>

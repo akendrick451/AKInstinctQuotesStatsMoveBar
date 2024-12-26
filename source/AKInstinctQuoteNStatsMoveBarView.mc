@@ -60,7 +60,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v3.i5"; // i for instinct version;// 
+    var strVersion = "v1.0g"; // i for instinct version;// 
 	
 	
 	// 3.3g minor fixes to minutes etc. 
@@ -135,10 +135,10 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
 
 		// check which api/sdk version this device supports
-			var version = mySettings.monkeyVersion;
-			var versionString = Lang.format("$1$.$2$.$3$", version);
-			System.println(versionString); //e.g. 2.2.5
-		    gNumAPIMajorVersion = version[0];
+			var apiversion = mySettings.monkeyVersion;
+			var apiversionString = Lang.format("$1$.$2$.$3$", apiversion);
+			System.println(apiversionString); //e.g. 2.2.5
+		    gNumAPIMajorVersion = apiversion[0];
      		System.println(gNumAPIMajorVersion); //e.g. 2 or 1
     }
 

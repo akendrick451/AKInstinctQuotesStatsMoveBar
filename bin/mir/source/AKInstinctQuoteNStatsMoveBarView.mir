@@ -70,7 +70,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace{
     <init> {
     }
     [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc"; @line = 63; @position = 8; ]
-    var strVersion = "v3.i5";
+    var strVersion = "v1.0g";
     [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc"; @line = 102; @position = 5; ]
     var customFontLarge = null;
     [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc"; @line = 103; @position = 8; ]
@@ -150,26 +150,26 @@ D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStats
         invoke %tmp.22 %tmp.23(%tmp.29);
 [ "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc" 138 3 ]
         [ "D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStatsMoveBarView_mc_125_26_143_4_start" "D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStatsMoveBarView_mc_125_26_143_4_stop" ]
-        %version.2 = local;
+        %apiversion.2 = local;
         %tmp.30 = lgetv %mySettings.1;
         %tmp.31 = getv %tmp.30 :monkeyVersion;
-        lputv %version.2 %tmp.31;
+        lputv %apiversion.2 %tmp.31;
 [ "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc" 139 3 ]
         [ "D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStatsMoveBarView_mc_125_26_143_4_start" "D_AKProgramming_GitHub_AKInstinctQuotesStatsMoveBar_source_AKInstinctQuoteNStatsMoveBarView_mc_125_26_143_4_stop" ]
-        %versionString.3 = local;
+        %apiversionString.3 = local;
         %tmp.32 = getm $.Toybox.Lang;
         %tmp.33 = getv function %tmp.32 :format;
         %tmp.34 = "$1$.$2$.$3$";
-        %tmp.36 = lgetv %version.2;
+        %tmp.36 = lgetv %apiversion.2;
         %tmp.37 = invoke %tmp.32 %tmp.33(%tmp.34, %tmp.36);
-        lputv %versionString.3 %tmp.37;
+        lputv %apiversionString.3 %tmp.37;
 [ "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc" 140 3 ]
         %tmp.38 = getm $.Toybox.System;
         %tmp.39 = getv function %tmp.38 :println;
-        %tmp.41 = lgetv %versionString.3;
+        %tmp.41 = lgetv %apiversionString.3;
         invoke %tmp.38 %tmp.39(%tmp.41);
 [ "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc" 141 6 ]
-        %tmp.43 = lgetv %version.2;
+        %tmp.43 = lgetv %apiversion.2;
         %tmp.44 = 0;
         %tmp.45 = agetv %tmp.43 %tmp.44;
         putv self :gNumAPIMajorVersion %tmp.45;
