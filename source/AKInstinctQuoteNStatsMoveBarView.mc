@@ -60,8 +60,9 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v1.1"; // i for instinct version;// 
+    var strVersion = "v1.2"; // i for instinct version;// 
 	
+	// v1.2 2/1/2025 bug fixes of hourly steps
 	// v1.1 2/01/2025 Add print out last hour and htis hour every 4 minutes
 	// v1.0k - trying to save steps every 2 hours. 
 	// 3.3g minor fixes to minutes etc. 
@@ -293,9 +294,13 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//if (hour == 18 && minute == 17) {			ClearHourlySteps();		}
 
 
-		 if (minute == 59 && hour > 8 && hour < 23 && hour % 2 != 0) {
+		 if (minute == 59 && hour > 6 && hour < 23 && hour % 2 != 0) {
 			// eg at 9:59, 11:59 etc
-			SaveHourlyAnd2HourlySteps();
+			Save2HourlySteps();
+		 }
+
+		 if (minute == 59 && hour > 6 && hour < 23 ) {
+			SaveHourlySteps();
 		 }
 
 		//if (  (minute > 10 && minute < 20)|| ( minute > 40 && minute < 45) ) {
@@ -400,7 +405,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			dc.drawText(intX+125, intY+2*intYSizeAdjust, Gfx.FONT_TINY, intStepsForLastHour, Gfx.TEXT_JUSTIFY_RIGHT);
 
 			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
-		    dc.drawText(intX, intY+3*intYSizeAdjust, Gfx.FONT_TINY, "2 Hours: " , Gfx.TEXT_JUSTIFY_LEFT);
+		    dc.drawText(intX, intY+3*intYSizeAdjust, Gfx.FONT_TINY, "Hour B4: " , Gfx.TEXT_JUSTIFY_LEFT);
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 			dc.drawText(intX+125, intY+3*intYSizeAdjust, Gfx.FONT_TINY, intStepsFor2HoursAgo, Gfx.TEXT_JUSTIFY_RIGHT);
 
@@ -455,7 +460,41 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 	} // draw 2 hourly steps
 
-	function SaveHourlyAnd2HourlySteps() {
+	function SaveHourlySteps() {
+	// try to get an idea of how much I move each hour or two
+			// would be called once every 2 hours say, 
+			// eg at 9:59am, 11:59am, 13:59, 15:59, 17:59. 
+			// based on time, calculate how many steps made since last save
+			
+			var	    strSteps = 0;
+	    	if ( ActivityMonitor.getInfo().steps != null) {
+	   	 		strSteps =  ActivityMonitor.getInfo().steps;
+	    	}
+			var intCurrentHourOfDay = getHourOfDay();
+			var strLabelOfLastStepsRecordedTotalHourly = "TotalStepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay);
+
+			var strLabelForThisStepsHourly = "StepsSavedFor" + (intCurrentHourOfDay) + "to" + (intCurrentHourOfDay+1);
+
+			var intTotalStepsRecordedLastTimeHourly = Application.Storage.getValue(strLabelOfLastStepsRecordedTotalHourly);
+			if (intTotalStepsRecordedLastTimeHourly == null) {
+				intTotalStepsRecordedLastTimeHourly = 0;
+			}
+
+			var strLabelOfThisStepsRecordedTotalHourly = "TotalStepsSavedFor" + (intCurrentHourOfDay) + "to" + (intCurrentHourOfDay+1);
+
+			// record total steps at moment
+			Application.Storage.setValue(strLabelOfThisStepsRecordedTotalHourly, strSteps);
+
+			var intCurrent1HourSteps = strSteps  - intTotalStepsRecordedLastTimeHourly;
+			Application.Storage.setValue(strLabelForThisStepsHourly, intCurrent1HourSteps);
+
+			System.println("Hourly1StepsTotal: Labels are for hour " + intCurrentHourOfDay + " - " + strLabelForThisStepsHourly + " " + intCurrent1HourSteps  + " and " + strLabelOfThisStepsRecordedTotalHourly + " " + strSteps); 
+
+
+
+	} // end function save hourly steps
+
+	function Save2HourlySteps() {
 			// try to get an idea of how much I move each hour or two
 			// would be called once every 2 hours say, 
 			// eg at 9:59am, 11:59am, 13:59, 15:59, 17:59. 
@@ -466,47 +505,28 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	   	 		strSteps =  ActivityMonitor.getInfo().steps;
 	    	}
 			var strLabelOfLastStepsRecorded = "StepsSavedFor8to10";
-			var strLabelOfLastStepsRecordedHourly = "StepsSavedFor8to9"; //eg 
 			var intCurrentHourOfDay = getHourOfDay();
 		
 			strLabelOfLastStepsRecorded = "StepsSavedFor" + (intCurrentHourOfDay-1) +"to" + (intCurrentHourOfDay+1);
-			strLabelOfLastStepsRecordedHourly = "StepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay);
 			var strLabelOfLastStepsRecordedTotal = "TotalStepsSavedFor" + (intCurrentHourOfDay-3) + "to" + (intCurrentHourOfDay-1);
-			var strLabelOfLastStepsRecordedTotalHourly = "TotalStepsSavedFor" + (intCurrentHourOfDay-2) + "to" + (intCurrentHourOfDay-1);
 
 			System.println("HourlySteps: Hour is " + intCurrentHourOfDay); //e.g. 2 or 1)
 			System.println("HourlySteps: Save with label " + strLabelOfLastStepsRecorded); 
 			var strLabelForThisSteps = "StepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay+1);
-			var strLabelForThisStepsHourly = "StepsSavedFor" + (intCurrentHourOfDay) + "to" + (intCurrentHourOfDay+1);
 
-			
 			var intTotalStepsRecordedLastTime = Application.Storage.getValue(strLabelOfLastStepsRecordedTotal);
 			if (intTotalStepsRecordedLastTime == null) {
 				intTotalStepsRecordedLastTime = 0;
 			}
 
-			var intTotalStepsRecordedLastTimeHourly = Application.Storage.getValue(strLabelOfLastStepsRecordedTotalHourly);
-			if (intTotalStepsRecordedLastTimeHourly == null) {
-				intTotalStepsRecordedLastTimeHourly = 0;
-			}
-
 			var strLabelOfThisStepsRecordedTotal = "TotalStepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay+1);
-			var strLabelOfThisStepsRecordedTotalHourly = "TotalStepsSavedFor" + (intCurrentHourOfDay) + "to" + (intCurrentHourOfDay+1);
-
 			// record total steps at moment
 			Application.Storage.setValue(strLabelOfThisStepsRecordedTotal, strSteps);
-			Application.Storage.setValue(strLabelOfThisStepsRecordedTotalHourly, strSteps);
+
 
 			var intCurrent2HoursSteps = strSteps  - intTotalStepsRecordedLastTime;
-			var intCurrent1HourSteps = strSteps  - intTotalStepsRecordedLastTimeHourly;
 
 			Application.Storage.setValue(strLabelForThisSteps, intCurrent2HoursSteps);
-			Application.Storage.setValue(strLabelForThisStepsHourly, intCurrent1HourSteps);
-
-			System.println("HourlySteps: This steps to save " + intCurrent2HoursSteps); 
-			System.println("HourlySteps: Total Steps " + strSteps); 
-			System.println("HourlyStepsTotal: Labels are " + strLabelForThisSteps + " " + intCurrent2HoursSteps  + " and " + strLabelOfThisStepsRecordedTotal + " " + strSteps); 
-
 
 
 	} // end Save2HourlySteps
