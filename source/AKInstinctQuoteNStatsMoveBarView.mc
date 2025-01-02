@@ -60,9 +60,10 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v1.0g"; // i for instinct version;// 
+    var strVersion = "v1.1"; // i for instinct version;// 
 	
-	
+	// v1.1 2/01/2025 Add print out last hour and htis hour every 4 minutes
+	// v1.0k - trying to save steps every 2 hours. 
 	// 3.3g minor fixes to minutes etc. 
     // 25/7/2023 ATK -  v3.3a made seconds larger as I cant even see them on my watch
 	// v3.3 change time internval between stats and words to 1 minute     var intChangeWordsToStatsIntervalMin = 1;
@@ -112,12 +113,15 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
     var gTinyFont = null;
 	
 	var myInputDelegate = new InputDelegate();
-
+ var cloud;
+ var heartIcon;
 
  public function initialize() {
         WatchFace.initialize();
 		myInputDelegate.initialize();
-        
+        cloud = new WatchUi.Bitmap({:rezId=>Rez.Drawables.cloud,:locX=>120,:locY=>23});
+		heartIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.heart,:locX=>123,:locY=>6});
+
 		//Session.start();
 		}
 
@@ -164,19 +168,24 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
         		hour = 12;
         	}
         } // end if
-  	 	var intStartDateLocationY=dc.getHeight()-50;
-		var intXForHR = dc.getWidth()-11;
-    	DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
+  	 	var intStartDateLocationY=dc.getHeight()-48;
 
-        DrawWatchBatteryStats(dc, intXForHR, intYForTime);
+
+		var intXForHR = dc.getWidth()-22;
+    	DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
 
 		DrawHeartRateAndBodyBattery(dc,intXForHR, intYForTime);
 
-		DrawWeeksMovementOrQuotes(dc, hour, minute, second);
+		DrawWatchBatteryStats(dc, intXForHR, intYForTime);
+
+		DrawWeeksMovementOrQuotesOrHourlySteps(dc, hour, minute, second);
 
 		DrawCurrentDate(dc, intStartDateLocationY);
 	 
 	    DrawKMTravelledAndMoveBar(dc);
+
+		 cloud.draw(dc);
+         heartIcon.draw(dc);
 	    	      	    	    
 	} // end onUpdate
 
@@ -205,7 +214,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//	if(gStrDeviceName.equals("Forerunner235")) {
 		//		dateStartYBatteryAndDate = dateStartYBatteryAndDate + 4;
 		//	}
-			dc.drawText(dc.getWidth()-48, intDateStartYBatteryAndDate+27, Gfx.FONT_AUX1, dateStr , Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(dc.getWidth()-56, intDateStartYBatteryAndDate+27, Gfx.FONT_AUX1, dateStr , Gfx.TEXT_JUSTIFY_RIGHT);
 		} catch( ex ) {
 		// Code to catch all execeptions
 			System.println("exception is 76 : " + ex.getErrorMessage());
@@ -220,22 +229,11 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//  draw  heart rate
 		//  ==================================================
 		// just beneath version, print heart rate
-		var gIntYForHR = intYForTime+26;// 33;
+		var intYForHR = intYForTime;// 33;
 		
-		
-		// get a HeartRateIterator object; oldest sample first
-		var intHeartRate = 0; 
-		intHeartRate = getHeartRateAndSetColours(); //set gStrHRBackColor and gStrHRFontColor;
-		if (intHeartRate != 0){
-		
-			dc.setColor(gStrHRFontColour,gStrHRBackColour);
-			dc.drawText(intXForHR, gIntYForHR, Gfx.FONT_TINY, "HR:" + intHeartRate, Gfx.TEXT_JUSTIFY_RIGHT);
-			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
-		} //  print  heart  rate if not zerro
-
-	// get body battery if available
-	     gIntYForBodyBattery = intYForTime-5;
-		 var gIntXForBodyBattery = intXForHR-20;
+		// get body battery if available
+	     gIntYForBodyBattery = intYForTime+17;
+		 var gIntXForBodyBattery = intXForHR-5;
 		var dblBodyBatteryNumber = 0.0;
 		dblBodyBatteryNumber = getBodyBatteryPercentAndSetColours();
 		//var intDiffDesiredAndActualBodyBattery = gintDesiredBodyBattery - dblBodyBatteryNumber;
@@ -244,23 +242,34 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		if(gintDesiredBodyBattery<0 ) {
 			gintDesiredBodyBattery= 0;
 		}
-		
 		if (dblBodyBatteryNumber!=0.0) {
 			dc.setColor(gStrBBFontColour, gStrBBBackColour);
-			dc.drawText(gIntXForBodyBattery,gIntYForBodyBattery , Gfx.FONT_SYSTEM_NUMBER_MILD, "B" + dblBodyBatteryNumber.format("%.0f") , Gfx.TEXT_JUSTIFY_CENTER); //+ "(" + gintDesiredBodyBattery.format("%.0f") + ")"
+			dc.drawText(gIntXForBodyBattery+7,gIntYForBodyBattery , Gfx.FONT_SYSTEM_NUMBER_MILD, "" + dblBodyBatteryNumber.format("%.0f") , Gfx.TEXT_JUSTIFY_CENTER); //+ "(" + gintDesiredBodyBattery.format("%.0f") + ")"
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		}	else {
-			dc.drawText(gIntXForBodyBattery, gIntYForBodyBattery, Gfx.FONT_TINY, "B? (" + gintDesiredBodyBattery.format("%.0f") + ")" , Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(gIntXForBodyBattery, gIntYForBodyBattery, Gfx.FONT_TINY, "? (" + gintDesiredBodyBattery.format("%.0f") + ")" , Gfx.TEXT_JUSTIFY_RIGHT);
 		}
 		// also print the expected body battery at this time
 		
 		
 		
+		// get a HeartRateIterator object; oldest sample first
+		var intHeartRate = 0; 
+		intHeartRate = getHeartRateAndSetColours(); //set gStrHRBackColor and gStrHRFontColor;
+		if (intHeartRate != 0){
+		
+			dc.setColor(gStrHRFontColour,gStrHRBackColour);
+			dc.drawText(intXForHR, intYForHR, Gfx.FONT_TINY, "" + intHeartRate, Gfx.TEXT_JUSTIFY_CENTER);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+		} //  print  heart  rate if not zerro
+
+	
+		
 		// ====================end draw bb ===============================
 
 	} // end function drawHeartRateAndBodyBattery
 
-	function DrawWeeksMovementOrQuotes(dc, hour, minute, second ) {
+	function DrawWeeksMovementOrQuotesOrHourlySteps(dc, hour, minute, second ) {
 
 			  // dc.drawText(dc.getWidth()-50, 150, Gfx.FONT_TINY, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
 	    // dc.drawText(dc.getWidth()-50, 200, Gfx.FONT_MEDIUM, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
@@ -274,14 +283,35 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//System.println("min is : " + minute); 
 		// 24/2 removed hour criteria here ((hour == 7)||(hour == 12) || (hour ==16) ||
 
+		if (hour == 1 && minute == 1) {
+			// clear days' steps
+			ClearHourlySteps();
+
+		}
+
+		// atk temp only REMOVE 1/1/2025
+		//if (hour == 18 && minute == 17) {			ClearHourlySteps();		}
+
+
+		 if (minute == 59 && hour > 8 && hour < 23 && hour % 2 != 0) {
+			// eg at 9:59, 11:59 etc
+			SaveHourlyAnd2HourlySteps();
+		 }
 
 		//if (  (minute > 10 && minute < 20)|| ( minute > 40 && minute < 45) ) {
-		if (minute % 2 == 0) {
+		if (minute % 4 == 0 ) {
+			DrawCurrentHourAndLastHourSteps(dc, hour);
+		} else if (minute % 3 == 0) {
 			// show weeks movement history
 			 DrawWeeksMovementHistory(dc);
 			System.println("do weeks movement");
+		} else if (minute % 2 == 0) {
+
+				// draw hourly steps for day
+				Draw2HourlyStepsForDay(dc);
 		
 		} else {
+			
 			// only want to redraw quote every hour or so???? Dn't want to change every second
 			//var hourMod2 = hour % 2;
 			// only change quote every odd hour and if the minute is 0 
@@ -290,6 +320,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 				SetNewQuote();
 				GetQuoteSizeAndDraw(dc);
 		}
+
 			DrawQuote(dc);
 		
 				
@@ -297,6 +328,188 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 	} // end functin draw weeks movement or quotest
 
+	function ClearHourlySteps() {
+		//  clear both 2 hour and 1 hour
+		var intHour = 0;
+		var strLabel = "";
+
+		var strEndOfLabelHours = "";
+		var strLabel2 = "";
+		for (intHour = 6; intHour<23; intHour+=2) {
+			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
+			strLabel = "StepsSavedFor" + strEndOfLabelHours;
+			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+			Application.Storage.setValue(strLabel, 0);
+		    Application.Storage.setValue(strLabel2, 0);
+
+		} // end for
+
+		for (intHour = 6; intHour<23; intHour++) {
+			strEndOfLabelHours = "" + intHour + "to" + (intHour+1);
+			strLabel = "StepsSavedFor" + strEndOfLabelHours;
+			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+			Application.Storage.setValue(strLabel, 0);
+		    Application.Storage.setValue(strLabel2, 0);
+		} // end for
+
+	} // clear ak save of hourly steps
+
+
+	function DrawCurrentHourAndLastHourSteps(dc, intCurrentHour) {
+			dc.drawText(10, 30, Gfx.FONT_SYSTEM_TINY, "Steps recent", Gfx.TEXT_JUSTIFY_LEFT);
+
+			var strEndOfLabelHours = "" + (intCurrentHour-1) + "to" + intCurrentHour;
+			var strLabelLastHour = "StepsSavedFor" + strEndOfLabelHours;
+			var intStepsForLastHour = Application.Storage.getValue(strLabelLastHour);
+			if (intStepsForLastHour==null) {
+				intStepsForLastHour =0;
+			}
+
+			var strEndOfLabel2HoursAgo = "" + (intCurrentHour-2) + "to" + (intCurrentHour-1);
+			var strLabel2HoursAgo = "StepsSavedFor" + strEndOfLabel2HoursAgo;
+			var intStepsFor2HoursAgo = Application.Storage.getValue(strLabel2HoursAgo);
+			if (intStepsFor2HoursAgo==null) {
+				intStepsFor2HoursAgo =0;
+			}
+
+			var strLabelLastHourTotal = "TotalStepsSavedFor" + strEndOfLabelHours;
+			var intTotalStepsAtLastHour = Application.Storage.getValue(strLabelLastHourTotal);
+			if (intTotalStepsAtLastHour==null) {
+				intTotalStepsAtLastHour = 0;
+			}
+
+			var	  intStepsTotalRightNow = 0;
+	    	if ( ActivityMonitor.getInfo().steps != null) {
+	   	 		intStepsTotalRightNow =  ActivityMonitor.getInfo().steps;
+	    	}
+			var intStepsThisHour = intStepsTotalRightNow - intTotalStepsAtLastHour;
+			var intX = 20;
+			var intY = 50;
+			var intYSizeAdjust =17;
+			
+
+			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
+		    dc.drawText(intX, intY+1*intYSizeAdjust, Gfx.FONT_TINY, "This Hour: " , Gfx.TEXT_JUSTIFY_LEFT);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+			dc.drawText(intX+125, intY+1*intYSizeAdjust, Gfx.FONT_TINY, intStepsThisHour, Gfx.TEXT_JUSTIFY_RIGHT);
+
+
+			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
+		    dc.drawText(intX, intY+2*intYSizeAdjust, Gfx.FONT_TINY, "Last Hour: " , Gfx.TEXT_JUSTIFY_LEFT);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+			dc.drawText(intX+125, intY+2*intYSizeAdjust, Gfx.FONT_TINY, intStepsForLastHour, Gfx.TEXT_JUSTIFY_RIGHT);
+
+			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
+		    dc.drawText(intX, intY+3*intYSizeAdjust, Gfx.FONT_TINY, "2 Hours: " , Gfx.TEXT_JUSTIFY_LEFT);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+			dc.drawText(intX+125, intY+3*intYSizeAdjust, Gfx.FONT_TINY, intStepsFor2HoursAgo, Gfx.TEXT_JUSTIFY_RIGHT);
+
+
+	} // end function draw current hour and last hour steps
+
+
+	function Draw2HourlyStepsForDay (dc) {
+
+		// get all the hours and print them
+		//eg StepsSavedFor18to20
+		var intHour = 0;
+		var strLabel = "";
+		var intStepsFor2Hours = 0;
+		var strEndOfLabelHours = "";
+		dc.drawText(10, 30, Gfx.FONT_SYSTEM_TINY, "Steps / 2 hours", Gfx.TEXT_JUSTIFY_LEFT);
+		var intLineNumber=0;
+		var intX = 20;
+		var strPrintLabel = "";
+		
+		for (intHour = 6; intHour<22; intHour+=2) {
+			intLineNumber = intLineNumber + 1;
+			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
+			strLabel = "StepsSavedFor" + strEndOfLabelHours;
+			intStepsFor2Hours = Application.Storage.getValue(strLabel);
+
+			if (strEndOfLabelHours.length()==4) {
+				strEndOfLabelHours = "06to08";
+			}
+
+			if (strEndOfLabelHours.length()== 5) {
+				strEndOfLabelHours="08to10" ; // pad for formatting
+			}
+			if(intStepsFor2Hours==null) {
+				intStepsFor2Hours = 0;
+			}
+			if (intStepsFor2Hours>0) {
+				intStepsFor2Hours=intStepsFor2Hours; //yays
+			}
+			if (intHour == 14) {
+				intX = 96;
+				intLineNumber = 1;
+			}
+			strPrintLabel = strEndOfLabelHours.substring(0,2);
+			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
+		    dc.drawText(intX, 30+intLineNumber*18, Gfx.FONT_SYSTEM_TINY, strPrintLabel , Gfx.TEXT_JUSTIFY_LEFT);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+			dc.drawText(intX+60, 30+intLineNumber*18, Gfx.FONT_SYSTEM_TINY, intStepsFor2Hours, Gfx.TEXT_JUSTIFY_RIGHT);
+			System.println("HourlySteps: Get and print for hour " + strLabel + " with value" + intStepsFor2Hours); 
+
+		}
+
+	} // draw 2 hourly steps
+
+	function SaveHourlyAnd2HourlySteps() {
+			// try to get an idea of how much I move each hour or two
+			// would be called once every 2 hours say, 
+			// eg at 9:59am, 11:59am, 13:59, 15:59, 17:59. 
+			// based on time, calculate how many steps made since last save
+			
+			var	    strSteps = 0;
+	    	if ( ActivityMonitor.getInfo().steps != null) {
+	   	 		strSteps =  ActivityMonitor.getInfo().steps;
+	    	}
+			var strLabelOfLastStepsRecorded = "StepsSavedFor8to10";
+			var strLabelOfLastStepsRecordedHourly = "StepsSavedFor8to9"; //eg 
+			var intCurrentHourOfDay = getHourOfDay();
+		
+			strLabelOfLastStepsRecorded = "StepsSavedFor" + (intCurrentHourOfDay-1) +"to" + (intCurrentHourOfDay+1);
+			strLabelOfLastStepsRecordedHourly = "StepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay);
+			var strLabelOfLastStepsRecordedTotal = "TotalStepsSavedFor" + (intCurrentHourOfDay-3) + "to" + (intCurrentHourOfDay-1);
+			var strLabelOfLastStepsRecordedTotalHourly = "TotalStepsSavedFor" + (intCurrentHourOfDay-2) + "to" + (intCurrentHourOfDay-1);
+
+			System.println("HourlySteps: Hour is " + intCurrentHourOfDay); //e.g. 2 or 1)
+			System.println("HourlySteps: Save with label " + strLabelOfLastStepsRecorded); 
+			var strLabelForThisSteps = "StepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay+1);
+			var strLabelForThisStepsHourly = "StepsSavedFor" + (intCurrentHourOfDay) + "to" + (intCurrentHourOfDay+1);
+
+			
+			var intTotalStepsRecordedLastTime = Application.Storage.getValue(strLabelOfLastStepsRecordedTotal);
+			if (intTotalStepsRecordedLastTime == null) {
+				intTotalStepsRecordedLastTime = 0;
+			}
+
+			var intTotalStepsRecordedLastTimeHourly = Application.Storage.getValue(strLabelOfLastStepsRecordedTotalHourly);
+			if (intTotalStepsRecordedLastTimeHourly == null) {
+				intTotalStepsRecordedLastTimeHourly = 0;
+			}
+
+			var strLabelOfThisStepsRecordedTotal = "TotalStepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay+1);
+			var strLabelOfThisStepsRecordedTotalHourly = "TotalStepsSavedFor" + (intCurrentHourOfDay) + "to" + (intCurrentHourOfDay+1);
+
+			// record total steps at moment
+			Application.Storage.setValue(strLabelOfThisStepsRecordedTotal, strSteps);
+			Application.Storage.setValue(strLabelOfThisStepsRecordedTotalHourly, strSteps);
+
+			var intCurrent2HoursSteps = strSteps  - intTotalStepsRecordedLastTime;
+			var intCurrent1HourSteps = strSteps  - intTotalStepsRecordedLastTimeHourly;
+
+			Application.Storage.setValue(strLabelForThisSteps, intCurrent2HoursSteps);
+			Application.Storage.setValue(strLabelForThisStepsHourly, intCurrent1HourSteps);
+
+			System.println("HourlySteps: This steps to save " + intCurrent2HoursSteps); 
+			System.println("HourlySteps: Total Steps " + strSteps); 
+			System.println("HourlyStepsTotal: Labels are " + strLabelForThisSteps + " " + intCurrent2HoursSteps  + " and " + strLabelOfThisStepsRecordedTotal + " " + strSteps); 
+
+
+
+	} // end Save2HourlySteps
 
 	function DrawWatchBatteryStats(dc, intXBodyBattery, intTimeY) {
 
@@ -311,12 +524,12 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//System.println(myStats.totalMemory);
 		var strBatteryPercent = Lang.format("$1$",[myStats.battery.format("%02d")])+ "%";	    
 		
-		var batteryX = intXBodyBattery-28;
+		var batteryX = intXBodyBattery-15;
 		var batteryHeight = 9; // was 14
 		
 		var batteryWidth = 18;
 	
-		var batteryY = intTimeY+50; //+4
+		var batteryY = intTimeY+55; //+4
 		//var intNippleMid = batteryHeight/2;
 		var intNippleHeight = batteryHeight/2;
 		var intNippleY = batteryY + intNippleHeight/2;
@@ -538,6 +751,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		var intHeartRate =0; // default to 0
 
 		intHeartRate = Activity.getActivityInfo().currentHeartRate;
+
+
 		if (intHeartRate == null ) { 
 			intHeartRate = 0;
 			System.println("getHeartRate: heart rate from getActivityInfo().currentHeartRate was null" );  
@@ -565,17 +780,17 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		} // IF HEART RATE IS 0 TRY ANOTHER WAY
 	
 		if (intHeartRate > 110) {
-			gStrHRBackColour = Gfx.COLOR_RED;
+			gStrHRBackColour = Gfx.COLOR_WHITE;
 			gStrHRFontColour = Gfx.COLOR_BLACK;
 		} else if (intHeartRate >= 100) {
-			gStrHRBackColour = Gfx.COLOR_BLACK;
-			gStrHRFontColour = Gfx.COLOR_RED;
+			gStrHRBackColour = Gfx.COLOR_WHITE;
+			gStrHRFontColour = Gfx.COLOR_BLACK;
 		} else if (intHeartRate >= 80) {
 			gStrHRBackColour = Gfx.COLOR_BLACK;
-			gStrHRFontColour = Gfx.COLOR_PINK;
+			gStrHRFontColour = Gfx.COLOR_LT_GRAY;
 		} else if (intHeartRate > 30 && intHeartRate <60) {
 			gStrHRBackColour = Gfx.COLOR_BLACK;
-			gStrHRFontColour = Gfx.COLOR_GREEN;
+			gStrHRFontColour = Gfx.COLOR_WHITE;
 		} else {
 			gStrHRBackColour = Gfx.COLOR_BLACK;
 			gStrHRFontColour = Gfx.COLOR_WHITE;
@@ -781,7 +996,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	function DrawKMTravelledAndMoveBar(dc) {
 	// draw how far we have gone today and show move bar if we haven[t moved much
 		var xForStepsAndKms = 50 ; //10
-	    var yForStepsKMAndMoveNumber = dc.getHeight()-53; // was 43
+	    var yForStepsKMAndMoveNumber = dc.getHeight()-47; // was 53
 		
 	    var strKMMoved = 0;
 		//var dblKMMoved = GetTodaysDistanceKMDbl();
@@ -855,7 +1070,6 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 		 if (ActivityMonitor.getInfo().moveBarLevel > 0) {
 		    dc.setColor(Gfx.COLOR_BLACK,Gfx.COLOR_WHITE); // just in case we changed it 	     
-		    var startXForMoveBarValue = dc.getWidth()/2;
 		   // not enough room for the number! dc.drawText(startXForMoveBarValue-40+myMoveBarLevel*10, yForStepsKMAndMoveNumber-10- myMoveBarLevel*2, Gfx.FONT_SMALL,ActivityMonitor.getInfo().moveBarLevel , Gfx.TEXT_JUSTIFY_RIGHT);	    	    
 	   }
 
@@ -1093,7 +1307,8 @@ function getRandomQuote() {
 		} // will default to large
 		return myFont; 
 	} // end ChooseFontBasedOnLengthAndSetColorFenix5
-   
+
+
    function GetKMMovedDbl(dblDistanceInCentimeters) {
 		
 		//eg return  1.456788
