@@ -60,7 +60,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v1.2"; // i for instinct version;// 
+    var strVersion = "v1.7"; // i for instinct version;// 
 	
 	// v1.2 2/1/2025 bug fixes of hourly steps
 	// v1.1 2/01/2025 Add print out last hour and htis hour every 4 minutes
@@ -114,16 +114,17 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
     var gTinyFont = null;
 	
 	var myInputDelegate = new InputDelegate();
- var cloud;
- var heartIcon;
+ 	var cloud;
+ 	var heartIcon;
 
  public function initialize() {
         WatchFace.initialize();
 		myInputDelegate.initialize();
         cloud = new WatchUi.Bitmap({:rezId=>Rez.Drawables.cloud,:locX=>120,:locY=>23});
 		heartIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.heart,:locX=>123,:locY=>6});
-
+	//	SetHourlyStepsDummyData(11);
 		//Session.start();
+		//SetTotalStepsAtHour(9, 200);
 		}
 
     // Load your resources here
@@ -183,7 +184,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 		DrawCurrentDate(dc, intStartDateLocationY);
 	 
-	    DrawKMTravelledAndMoveBar(dc);
+	    DrawKMTravelledAndMoveBar(dc, hour); // and this hour steps
 
 		 cloud.draw(dc);
          heartIcon.draw(dc);
@@ -284,9 +285,11 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//System.println("min is : " + minute); 
 		// 24/2 removed hour criteria here ((hour == 7)||(hour == 12) || (hour ==16) ||
 
-		if (hour == 1 && minute == 1) {
+		if (hour == 6  && minute == 1) { //atk debug only temp 3/1/2025
+		//if (hour == 1 && minute == 1) {
+
 			// clear days' steps
-			ClearHourlySteps();
+			ClearHourlyStepsAfterCurrentHour(hour);
 
 		}
 
@@ -296,7 +299,9 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 		 if (minute == 59 && hour > 6 && hour < 23 && hour % 2 != 0) {
 			// eg at 9:59, 11:59 etc
+			//ClearHourlyStepsAfterCurrentHour(hour);
 			Save2HourlySteps();
+
 		 }
 
 		 if (minute == 59 && hour > 6 && hour < 23 ) {
@@ -313,7 +318,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		} else if (minute % 2 == 0) {
 
 				// draw hourly steps for day
-				Draw2HourlyStepsForDay(dc);
+				Draw2HourlyStepsForDay(dc, hour);
 		
 		} else {
 			
@@ -333,29 +338,86 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 	} // end functin draw weeks movement or quotest
 
-	function ClearHourlySteps() {
+	function SetTotalStepsAtHour(intHour, intSteps) {
+			// not correct for totals unless it's the first hour
+			var strLabel = "StepsSavedFor" + (intHour-1) + "to" + intHour;
+			var strLabel2 = "TotalStepsSavedFor" +  (intHour-1) + "to" + intHour;;
+			Application.Storage.setValue(strLabel, intSteps);
+		    Application.Storage.setValue(strLabel2, intSteps);
+
+	} // end function
+
+	function SetHourlyStepsDummyData(intCurrentHour) {
+		var intHour = 0;
+		var strLabel = "";
+
+		var strEndOfLabelHours = "";
+		var strLabel2 = "";
+
+		var intStepsPerHour =  Mt.rand() % 900 + 100; //Random number between 100 and 1000 (900+100)
+		var intTotalStepsAtHour = 0;
+
+		for (intHour = 6; intHour<intCurrentHour; intHour+=2) {
+			
+			intStepsPerHour =  Mt.rand() % 900 + 100; //Random number between 100 and 1000 (900+100)
+			intTotalStepsAtHour= intTotalStepsAtHour + intStepsPerHour;
+			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
+			strLabel = "StepsSavedFor" + strEndOfLabelHours;
+			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+			Application.Storage.setValue(strLabel, intStepsPerHour);
+		    Application.Storage.setValue(strLabel2, intTotalStepsAtHour);
+			System.println("DummyData2hours: Set for labels " + strLabel + " and " + strLabel2); 
+		} // end for
+
+
+		for (intHour = 6; intHour<23; intHour++) {
+			intStepsPerHour =  Mt.rand() % 900 + 100; //Random number between 100 and 1000 (900+100)
+			intTotalStepsAtHour= intTotalStepsAtHour + intStepsPerHour;
+			strEndOfLabelHours = "" + intHour + "to" + (intHour+1);
+			strLabel = "StepsSavedFor" + strEndOfLabelHours;
+			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+			Application.Storage.setValue(strLabel, intStepsPerHour);
+		    Application.Storage.setValue(strLabel2, intTotalStepsAtHour);
+			System.println("DummyData1hours: Set for labels " + strLabel + " and " + strLabel2); 
+		} // end for
+	} // end function SetHourlyStepsDummyData
+
+
+	function ClearHourlyStepsAfterCurrentHour(intHourToClearFrom) {
 		//  clear both 2 hour and 1 hour
 		var intHour = 0;
 		var strLabel = "";
 
 		var strEndOfLabelHours = "";
 		var strLabel2 = "";
-		for (intHour = 6; intHour<23; intHour+=2) {
-			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
-			strLabel = "StepsSavedFor" + strEndOfLabelHours;
-			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
-			Application.Storage.setValue(strLabel, 0);
-		    Application.Storage.setValue(strLabel2, 0);
 
-		} // end for
-
-		for (intHour = 6; intHour<23; intHour++) {
+		for (intHour = intHourToClearFrom; intHour<23; intHour++) {
 			strEndOfLabelHours = "" + intHour + "to" + (intHour+1);
 			strLabel = "StepsSavedFor" + strEndOfLabelHours;
 			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
 			Application.Storage.setValue(strLabel, 0);
 		    Application.Storage.setValue(strLabel2, 0);
+			System.println("ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
+
 		} // end for
+
+
+		if (intHourToClearFrom % 2 != 0){
+			intHourToClearFrom = intHourToClearFrom + 1;
+		}
+
+		for (intHour = intHourToClearFrom; intHour<23; intHour+=2) {
+			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
+			strLabel = "StepsSavedFor" + strEndOfLabelHours;
+			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+			Application.Storage.setValue(strLabel, 0);
+		    Application.Storage.setValue(strLabel2, 0);
+			System.println("ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
+
+
+		} // end for
+
+		
 
 	} // clear ak save of hourly steps
 
@@ -412,8 +474,27 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 	} // end function draw current hour and last hour steps
 
+	function GetStepsThisHour(intCurrentHour) {
 
-	function Draw2HourlyStepsForDay (dc) {
+			
+			var strLabelLastHourTotal = "TotalStepsSavedFor" +  "" + (intCurrentHour-1) + "to" + intCurrentHour;
+			var intTotalStepsAtLastHour = Application.Storage.getValue(strLabelLastHourTotal);
+			if (intTotalStepsAtLastHour==null) {
+				intTotalStepsAtLastHour = 0;
+			}
+
+			var	  intStepsTotalRightNow = 0;
+	    	if ( ActivityMonitor.getInfo().steps != null) {
+	   	 		intStepsTotalRightNow =  ActivityMonitor.getInfo().steps;
+	    	}
+			var intStepsThisHour = intStepsTotalRightNow - intTotalStepsAtLastHour;
+			System.println("GetThisHoursSteps ("+intCurrentHour+"): " + intStepsThisHour + "  (" + intStepsTotalRightNow + " - " + intTotalStepsAtLastHour +")"); 
+
+			return intStepsThisHour;
+
+	} // end function GetStepsThisHour()
+
+	function Draw2HourlyStepsForDay (dc, intCurrentHour) {
 
 		// get all the hours and print them
 		//eg StepsSavedFor18to20
@@ -421,12 +502,18 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		var strLabel = "";
 		var intStepsFor2Hours = 0;
 		var strEndOfLabelHours = "";
-		dc.drawText(10, 30, Gfx.FONT_SYSTEM_TINY, "Steps / 2 hours", Gfx.TEXT_JUSTIFY_LEFT);
+		var intYFor2HourlySteps = 30;
+		dc.drawText(10, intYFor2HourlySteps, Gfx.FONT_SYSTEM_TINY, "Steps / 2 hours", Gfx.TEXT_JUSTIFY_LEFT);
+		 intYFor2HourlySteps = intYFor2HourlySteps + 3;
 		var intLineNumber=0;
 		var intX = 20;
 		var strPrintLabel = "";
-		
-		for (intHour = 6; intHour<22; intHour+=2) {
+		var intCharacterHeight = 18;
+		var intStepsThisHour=0;
+		var intStepsLastHour = 0;
+
+
+		for (intHour = 6; intHour<20; intHour+=2) {
 			intLineNumber = intLineNumber + 1;
 			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
 			strLabel = "StepsSavedFor" + strEndOfLabelHours;
@@ -448,12 +535,22 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			if (intHour == 14) {
 				intX = 96;
 				intLineNumber = 1;
+				intYFor2HourlySteps = intYFor2HourlySteps + intCharacterHeight;
+			}
+
+			if (intStepsFor2Hours==0 && intCurrentHour == intHour) { // eg 12
+				intStepsThisHour = GetStepsThisHour(intCurrentHour);
+				intStepsFor2Hours = intStepsThisHour;
+			} else if (intStepsFor2Hours==0 && (intCurrentHour -1) == intHour) { // eg at 13, we get steps for 13 and 12
+				intStepsThisHour = GetStepsThisHour(intCurrentHour);
+				intStepsLastHour = GetStepsThisHour(intCurrentHour-1);
+				intStepsFor2Hours = intStepsThisHour + intStepsLastHour;
 			}
 			strPrintLabel = strEndOfLabelHours.substring(0,2);
 			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
-		    dc.drawText(intX, 30+intLineNumber*18, Gfx.FONT_SYSTEM_TINY, strPrintLabel , Gfx.TEXT_JUSTIFY_LEFT);
+		    dc.drawText(intX, intYFor2HourlySteps + (intLineNumber*intCharacterHeight), Gfx.FONT_SYSTEM_TINY, strPrintLabel , Gfx.TEXT_JUSTIFY_LEFT);
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
-			dc.drawText(intX+60, 30+intLineNumber*18, Gfx.FONT_SYSTEM_TINY, intStepsFor2Hours, Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(intX+60, intYFor2HourlySteps+ (intLineNumber*intCharacterHeight), Gfx.FONT_SYSTEM_TINY, intStepsFor2Hours, Gfx.TEXT_JUSTIFY_RIGHT);
 			System.println("HourlySteps: Get and print for hour " + strLabel + " with value" + intStepsFor2Hours); 
 
 		}
@@ -872,7 +969,6 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			 // eg 6 = friday
 
 			System.println("Today is " + 	GetShortDayNameFromNumber(intDayOfWeekToday));
-			var intHeightForStatsForWeek = intHeightOfText*(intNumberOfDaysHistoryToShow); // // + 1 for the title fo Week. was 100 22 july 2022						
 			var intYForStats = 100; //dc.getHeight() - intHeightForStatsForWeek  +20 ; //  added 2 cause it was too high
 
 			
@@ -1013,7 +1109,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		return strDayNameShort;
 	} //GetShortName
 
-	function DrawKMTravelledAndMoveBar(dc) {
+	function DrawKMTravelledAndMoveBar(dc, intCurrentHour) {
 	// draw how far we have gone today and show move bar if we haven[t moved much
 		var xForStepsAndKms = 50 ; //10
 	    var yForStepsKMAndMoveNumber = dc.getHeight()-47; // was 53
@@ -1028,8 +1124,9 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	    
 	   // does not work on forerunner 235! it's not a cq2 device! var strActiveMinutes = ActivityMonitor.getInfo().activeMinutesDay; 
 	    
-	    var strStepsAndKmsWords =   "k stps/" + strKMMoved + "kms";
 		var strStepsNumber = convertToThousandsShorthand(strSteps);
+		var strStepsWords = "k (" + convertToThousandsShorthand(GetStepsThisHour(intCurrentHour)) + "this hr)";
+	    var strStepsAndKmsWords =   "k stps/" + strKMMoved + "kms";
 
 		var intWidthForTotals = dc.getWidth()-10;
 		var intHeightForTotals = dc.getHeight()/5;
@@ -1037,15 +1134,19 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 		// draw numbers in larger text for instinct
 
+
+
 		dc.drawText(xForStepsAndKms, yForStepsKMAndMoveNumber-5, Gfx.FONT_NUMBER_MILD, strStepsNumber, Gfx.TEXT_JUSTIFY_RIGHT);
 
 	    dc.drawText(
 				xForStepsAndKms+2, 
 				yForStepsKMAndMoveNumber+5, 
 				Gfx.FONT_SMALL, 
-				Graphics.fitTextToArea(strStepsAndKmsWords, Gfx.FONT_SMALL, intWidthForTotals, intHeightForTotals, true), 
+				Graphics.fitTextToArea(strStepsWords, Gfx.FONT_SMALL, intWidthForTotals, intHeightForTotals, true), 
 				Gfx.TEXT_JUSTIFY_LEFT);
 	    
+		dc.drawText(xForStepsAndKms+2, yForStepsKMAndMoveNumber-2, $.customFontSmall, "steps", Gfx.TEXT_JUSTIFY_LEFT);
+
    	    // =====================================================================
 	    // add move bar - red
 	    // =====================================================================
