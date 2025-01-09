@@ -60,7 +60,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v1.9"; // i for instinct version;// 
+    var strVersion = "v2.0"; // i for instinct version;// 
 	
 	// v1.2 2/1/2025 bug fixes of hourly steps
 	// v1.1 2/01/2025 Add print out last hour and htis hour every 4 minutes
@@ -177,6 +177,13 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
         } // end if
   	 	var intStartDateLocationY=dc.getHeight()-48;
 
+       if (hour < 17  && minute %2 == 0) { // this might not work if watch face is asleep at 601, so change to < 14
+		//if (hour == 1 && minute == 1) {
+
+			// clear days' steps
+			ClearHourlyStepsAfterCurrentHour(hour); // does this also clear 2 hourly steps?
+
+		}
 
 		var intXForHR = dc.getWidth()-22;
     	DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
@@ -292,15 +299,6 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//System.println("hour is : " + hour); 
 		//System.println("min is : " + minute); 
 		// 24/2 removed hour criteria here ((hour == 7)||(hour == 12) || (hour ==16) ||
-
-
-		if ((hour < 17  && minute == 0) || (hour == 14 && minute == 12)){ // this might not work if watch face is asleep at 601, so change to < 14
-		//if (hour == 1 && minute == 1) {
-
-			// clear days' steps
-			ClearHourlyStepsAfterCurrentHour(hour); // does this also clear 2 hourly steps?
-
-		}
 
 		// atk temp only REMOVE 1/1/2025
 		//if (hour == 18 && minute == 17) {			ClearHourlySteps();		}
@@ -749,7 +747,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	} // end Save2HourlySteps
 
 	function DrawWatchBatteryStats(dc, intXBodyBattery, intTimeY) {
-
+       
 
 	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK); // just in case we changed it 
 	
@@ -759,14 +757,15 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		var myStats = System.getSystemStats();
 		//System.println(myStats.battery);
 		//System.println(myStats.totalMemory);
-		var strBatteryPercent = Lang.format("$1$",[myStats.battery.format("%02d")])+ "%";	    
+		var strBatteryPercent = Lang.format("$1$",[myStats.battery.format("%02d")]);
+		var intBatteryNumber = myStats.battery;	    
 		
 		var batteryX = intXBodyBattery-15;
-		var batteryHeight = 9; // was 14
+		var batteryHeight = 10; // was 14
 		
 		var batteryWidth = 18;
 	
-		var batteryY = intTimeY+55; //+4
+		var batteryY = intTimeY+52; //+4 0,0 is bottom left. So adding to y moves it up. adding to x moves it right. 
 		//var intNippleMid = batteryHeight/2;
 		var intNippleHeight = batteryHeight/2;
 		var intNippleY = batteryY + intNippleHeight/2;
@@ -775,11 +774,23 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		var backColor="";
 		var intBatteryWarning = 10;
 		var intBatterySevere = 5;
-		// set the colour for the battery if it is low what about making it red if the battery is less than 15%?
+		
+
+		//if battery is charging, set an orange dot or something - a z
+		// battery charging stas only availabe after?  version 3
+		System.println(gNumAPIMajorVersion); //e.g. 2 or 1)
+		if (gNumAPIMajorVersion>= 3) {
+		
+			if (myStats.charging) {
+			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_BLACK);
+			dc.drawText(batteryX+3, batteryY-9 ,  Gfx.FONT_XTINY, "z" , Gfx.TEXT_JUSTIFY_LEFT);
+			} // end if charging
+		} // if version > 3
+
 		if (myStats.battery < intBatterySevere ) { 	
 		 	// make the battery bolder, ie thicker 
 		 	System.println("Drawing red and thicker");
-		 	textColor = Gfx.COLOR_WHITE;
+		 	textColor = Gfx.COLOR_BLACK;
 		 	lineColor = Gfx.COLOR_WHITE;
 		 	backColor = Gfx.COLOR_WHITE;
 		 	//dc.drawRoundedRectangle(batteryX, batteryY, batteryWidth, batteryHeight,1 );
@@ -788,21 +799,10 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		 	lineColor = Gfx.COLOR_LT_GRAY; //should be yello
 		 	backColor = Gfx.COLOR_DK_GRAY;
 		 } else {
-			textColor = Gfx.COLOR_WHITE;
+			textColor = Gfx.COLOR_BLACK;
 		 	lineColor = Gfx.COLOR_WHITE;
 		 	backColor = Gfx.COLOR_WHITE;
 		 }
-
-		//if battery is charging, set an orange dot or something - a z
-		// battery charging stas only availabe after?  version 3
-		System.println(gNumAPIMajorVersion); //e.g. 2 or 1)
-		if (gNumAPIMajorVersion>= 3) {
-		
-			if (!myStats.charging) {
-			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_BLACK);
-			dc.drawText(batteryX+3, batteryY-9 ,  Gfx.FONT_XTINY, "z" , Gfx.TEXT_JUSTIFY_LEFT);
-			} // end if chargin
-		} // if version > 3
 		 
 // Gfx.getVectorFont("#BionicBold:12,Roboto");
          dc.setColor(textColor,backColor);		 	
@@ -818,13 +818,28 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		 var i =0;
 		 var intBatteryPercent = strBatteryPercent.toNumber();		 
 		 for (i=1;i<intBatteryPercent/5;i++) {
-			dc.fillRectangle(batteryX+i, batteryY, 1, batteryHeight );	 
+			dc.fillRectangle(batteryX-2+i, batteryY, 1, batteryHeight );	 
 		 }      	
 	     // draw the battery nipple - just the nipple     
 		 //dc.drawRoundedRectangle(x, y, width, height, radius)
 	   //  dc.drawRoundedRectangle(batteryX-5, batteryY+9, 4, 12, 2);
 		   dc.drawRoundedRectangle(batteryX-5, intNippleY, 4, intNippleHeight, 2);
 		 
+		
+
+		 // set the colour for the battery if it is low what about making it red if the battery is less than 15%?
+		var objFont = $.customFontSmall;
+ 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK); //foreground, background
+		if (intBatteryNumber < 10 ) {
+			objFont = Gfx.FONT_XTINY; 
+			batteryY = batteryY-5; // move higher to see the bigger font
+		}
+
+		if (intBatteryNumber< 35) {
+			dc.drawText(batteryX+5, batteryY-2 ,  objFont, strBatteryPercent , Gfx.TEXT_JUSTIFY_LEFT); // draw percentage. it will be overwritten when battery is > 50%
+		} 
+		
+
 	}  // end function DrawWatchBatteryStats
 
 	function DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second) {
