@@ -125,8 +125,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		heartIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.heart,:locX=>123,:locY=>6});
 		
 		
-		var clockTime = System.getClockTime();
-        var hour = clockTime.hour;
+		//var clockTime = System.getClockTime();
+        //var hour = clockTime.hour;
 
 		Mt.srand(System.getTimer()) ;
 		//ClearHourlyStepsAfterCurrentHour(1);
@@ -185,11 +185,17 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
         } // end if
   	 	var intStartDateLocationY=dc.getHeight()-48;
 
+		var now = Time.now();
+		var info = Gregorian.info(now, Time.FORMAT_LONG);
+		var infoShort = Gregorian.info(now, Time.FORMAT_SHORT); // for a shorter day, eg Thu instead of Thurs
+		var strCurrentDate;
+		strCurrentDate = Lang.format("$1$ $2$$3$", [GetShortDayNameFromNumber(infoShort.day_of_week), info.month, info.day]); // I think the format looks like: Mon JAN22
+
        if (hour < 17  && minute %2 == 0) { // this might not work if watch face is asleep at 601, so change to < 14
 		//if (hour == 1 && minute == 1) {
 
 			// clear days' steps
-			ClearHourlyStepsAfterCurrentHour(hour); // does this also clear 2 hourly steps?
+			ClearHourlyStepsIfNotClearredForDay(strCurrentDate); // does this also clear 2 hourly steps?
 
 		}
 
@@ -202,7 +208,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 		DrawWeeksMovementOrQuotesOrHourlySteps(dc, hour, minute, second);
 
-		DrawCurrentDate(dc, intStartDateLocationY);
+		DrawCurrentDate(dc, intStartDateLocationY, strCurrentDate);
 	 
 	    DrawKMTravelledAndMoveBar(dc, hour); // and this hour steps
 
@@ -219,7 +225,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	// can we also return the difference from ideal eg 70% (-10)
 	// ==================================================================
 
-	function DrawCurrentDate(dc, intDateStartYBatteryAndDate) {
+	function DrawCurrentDate(dc, intDateStartYBatteryAndDate, strDate) {
 	// reset color
 	     dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
 	    
@@ -227,11 +233,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	    // Put the date	    
 		// =====================================================================	
 
-		var now = Time.now();
-		var info = Gregorian.info(now, Time.FORMAT_LONG);
-		var infoShort = Gregorian.info(now, Time.FORMAT_SHORT); // for a shorter day, eg Thu instead of Thurs
-		var dateStr;
-		dateStr = Lang.format("$1$ $2$$3$", [GetShortDayNameFromNumber(infoShort.day_of_week), info.month, info.day]);
+	
+		
 		
 		//	dateStartYBatteryAndDate = 200;
 		try {
@@ -239,7 +242,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//	if(gStrDeviceName.equals("Forerunner235")) {
 		//		dateStartYBatteryAndDate = dateStartYBatteryAndDate + 4;
 		//	}
-			dc.drawText(dc.getWidth()-56, intDateStartYBatteryAndDate+27, Gfx.FONT_AUX1, dateStr , Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(dc.getWidth()-56, intDateStartYBatteryAndDate+27, Gfx.FONT_AUX1, strDate , Gfx.TEXT_JUSTIFY_RIGHT);
 		} catch( ex ) {
 		// Code to catch all execeptions
 			System.println("exception is 76 : " + ex.getErrorMessage());
@@ -426,40 +429,68 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	} // end function SetHourlyStepsDummyData
 
 
-	function ClearHourlyStepsAfterCurrentHour(intHourToClearFrom) {
+	function ClearHourlyStepsIfNotClearredForDay( strCurrentDate ) {
 		//  clear both 2 hour and 1 hour
 		var intHour = 0;
 		var strLabel = "";
 
 		var strEndOfLabelHours = "";
 		var strLabel2 = "";
-			System.println("ClearSteps: Start clear steps function for " + intHourToClearFrom); 
+			System.println("ClearSteps: Start clear steps function" ); 
+		var strCurrentValueStored=0;
 
-		for (intHour = intHourToClearFrom; intHour<23; intHour++) {
+		// maybe don't check for 12 hours if already checked in last 12 hours? Will save us from getting storage too much???
+		var strLastClearedDate =  (Application.Storage.getValue("LastCleared"));
+		if (strLastClearedDate == null || strLastClearedDate != strCurrentDate) {
+			// if we haven't cleared for the whole day, then we need to clear everything, eg if we wake up at 11am, we still need to clear 6-11 as well as later
+			Application.Storage.setValue("LastCleared", strCurrentDate);
+			for (intHour = 5; intHour<23; intHour++) {
 			strEndOfLabelHours = "" + intHour + "to" + (intHour+1);
 			strLabel = "StepsSavedFor" + strEndOfLabelHours;
 			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
-			Application.Storage.setValue(strLabel, 0);
-		    Application.Storage.setValue(strLabel2, 0);
+			// as setvalue is more time intensive, check first if zero
+			strCurrentValueStored = Application.Storage.getValue(strLabel);
+			if (strCurrentValueStored == null || strCurrentValueStored != 0) {
+				Application.Storage.setValue(strLabel, 0);
+			}
+			strCurrentValueStored = Application.Storage.getValue(strLabel2);
+			if ( strCurrentValueStored == null || strCurrentValueStored != 0) {
+			 Application.Storage.setValue(strLabel2, 0);	
+			}
+
+		   	
 			System.println("ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
 
 		} // end for
 
+		for (intHour = 6; intHour<23; intHour+=2) {
+			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
+			strLabel = "StepsSavedFor" + strEndOfLabelHours;
+			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+			strCurrentValueStored = Application.Storage.getValue(strLabel);
+			if (strCurrentValueStored == null || strCurrentValueStored != 0) {
+				Application.Storage.setValue(strLabel, 0);
+			}
+			strCurrentValueStored = Application.Storage.getValue(strLabel2);
+			if ( strCurrentValueStored == null || strCurrentValueStored != 0) {
+			 Application.Storage.setValue(strLabel2, 0);	
+			}
+
+			System.println("ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
+
+
+		} // end for
+
+	} // end if
+
+		
+/*
 
 		if (intHourToClearFrom % 2 != 0){
 			intHourToClearFrom = intHourToClearFrom + 1;
 		}
-
-		for (intHour = intHourToClearFrom; intHour<23; intHour+=2) {
-			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
-			strLabel = "StepsSavedFor" + strEndOfLabelHours;
-			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
-			Application.Storage.setValue(strLabel, 0);
-		    Application.Storage.setValue(strLabel2, 0);
-			System.println("ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
-
-
-		} // end for
+*/
+		
 		
 		
 
@@ -1262,7 +1293,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		
 	    var strKMMoved = 0;
 		//var dblKMMoved = GetTodaysDistanceKMDbl();
-	    strKMMoved = GetTodaysDistanceKMStr();
+	   // strKMMoved = GetTodaysDistanceKMStr();
 		var	    intCurrentTotalSteps = 0;
 	    if ( ActivityMonitor.getInfo().steps != null) {
 	   	 intCurrentTotalSteps =  ActivityMonitor.getInfo().steps;
