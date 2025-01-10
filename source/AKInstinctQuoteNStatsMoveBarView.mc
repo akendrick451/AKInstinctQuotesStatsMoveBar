@@ -1351,7 +1351,16 @@ function getRandomQuote() {
 		arrQuotes[4]=  "Running! There's no activity happier, more exhilarating, more nourishing to the imagination. Oates";
 		arrQuotes[5]=  "Running (and God) is my therapy.";
 		arrQuotes[6]=  "Fitness starts now!";	
-		
+
+arrQuotes = arrQuotes.add("Assume people like you.");
+
+arrQuotes = arrQuotes.add("Assume relationships are good.");
+
+arrQuotes = arrQuotes.add("Assuminteractions will go well.");
+
+arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if nearby.");
+
+
 	//	var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var r;	
 		r = Mt.rand() % arrQuotes.size(); //Random number			
