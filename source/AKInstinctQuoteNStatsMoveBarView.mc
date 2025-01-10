@@ -102,6 +102,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
     			// added battery yellow colour and red and background color for battery AND BIG BATTERY -- move battery up and left
 	
 	var customFontLarge = null;
+	var customFontMedium = null;
     var intChangeWordsToStatsIntervalMin = 2; // do a mod 3 on the time to change... 
     var gNumberOfLinesToPrint=5;
     var gXForTextLoc = 5;
@@ -126,16 +127,23 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
 		var clockTime = System.getClockTime();
         var hour = clockTime.hour;
+
+		Mt.srand(System.getTimer()) ;
 		//ClearHourlyStepsAfterCurrentHour(1);
 		//SetHourlyStepsDummyData(hour);
 		//Session.start();
 		//SetTotalStepsAtHour(9, 200);
+
+			
+
 		}
 
     // Load your resources here
     function onLayout(dc) {
      customFontSmall = Ui.loadResource(Rez.Fonts.akSmallFont);
      customFontLarge = Ui.loadResource(Rez.Fonts.customFontLarge);
+     customFontMedium = Ui.loadResource(Rez.Fonts.customFontMedium);
+
      gTinyFont = Gfx.FONT_XTINY; //customFontSmall;
      var mySettings = System.getDeviceSettings();
 		gStrPartNumberDevice = mySettings.partNumber;
@@ -1056,6 +1064,9 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 
 	function SetNewQuote() {
 		gStrCurrentQuote = getRandomQuote();
+		if (gStrCurrentQuote.equals("Happiness is an inside job.")) {
+			System.println("Happiness is an inside job!");
+		}
 	}
 	
 	function getBodyBatteryIterator() {
@@ -1072,8 +1083,8 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 
 	function GetQuoteSizeAndDraw(dc) {  // no longer used?
 	
-		var strQuote = getRandomQuote();
-		drawTextOverMultiLines( dc, strQuote );
+		//var strQuote = getRandomQuote();
+		drawTextOverMultiLines( dc, gStrCurrentQuote );
 	
 	} // end GetQouteSizeAndDraw
 	
@@ -1343,14 +1354,16 @@ function getRandomQuote() {
 	
 		// I'll change it to get teh quote based on the date. Otherwise it changes waaaay too much. 
 		
-		var arrQuotes =  new [7];		
+		var arrQuotes =  new [8];		
 		arrQuotes[0]=  "Run the race to the finish. Dean Karnazes";
 		arrQuotes[1]=  "God      Loves       Me";
-		arrQuotes[2]=  "I RUN THIS BODY";
+		arrQuotes[2]=  "I RUN         THIS BODY";
 		arrQuotes[3]=  "I'll be happy if running and I can grow old together. Haruki Murakami";
 		arrQuotes[4]=  "Running! There's no activity happier, more exhilarating, more nourishing to the imagination. Oates";
 		arrQuotes[5]=  "Running (and God) is my therapy.";
-		arrQuotes[6]=  "Fitness starts now!";	
+		arrQuotes[6]=  "Fitness    starts         now!";	
+		arrQuotes[7]=  "Happiness is an inside job.";	
+		arrQuotes =  arrQuotes.add("Two wolves... which ever one you feed.");
 		
 	//	var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var r;	
@@ -1358,7 +1371,7 @@ function getRandomQuote() {
 		//r = today.day_of_week-1; // get based on day of week,n ot random
 		//Sys.println(r); //To check the result
 		if(gBlDebug == true) {
-		  r=4; // debug retun the long one to see what's going on. 
+		  r=7; // debug retun the long one to see what's going on. 
 		}
 		return arrQuotes[r]; 
 			
@@ -1376,7 +1389,7 @@ function getRandomQuote() {
 		var rowHeight = $.gRowHeight; // check row height... do variables work? Globals?		
 		//Sys.println(strText);
 		var oneCharWidth=dc.getTextWidthInPixels("AbCdEfGhIj",myFont)/10;
-		var intCharsPerLine= dc.getWidth()/oneCharWidth-2; // was -2 to make it look nicer ie not to edge, rmeoved by ak for fenix 5 to fit more
+		var intCharsPerLine= dc.getWidth()/oneCharWidth;
 		
 		if (gStrDeviceName.equals("Forerunner235")) {
 			intCharsPerLine = intCharsPerLine +2;
@@ -1446,6 +1459,7 @@ function getRandomQuote() {
 		//var intLocOfLastSpace=0;
 		var intLinesNeeded=0;
 		var intLenLeftToPrint = strText.length();
+		var blFirstWordDoneYet = false;
 		// print out the words on multiple lines
 		//Sys.println("Starting to get each line...");
 		do {
@@ -1455,7 +1469,12 @@ function getRandomQuote() {
 		   intLastSpaceLoc = findLastSpaceBeforeLineLength( strText, intCharsPerLine );
 //Sys.println("Last Space loc = " + intLastSpaceLoc);		   
 		   if (intLastSpaceLoc == -1) {
+			   if (blFirstWordDoneYet==false) {
+				intLastSpaceLoc = intCharsPerLine;
+				blFirstWordDoneYet= true;
+			   } else {
 		    	intLastSpaceLoc = intLenLeftToPrint;
+			   }
 		   }		   		   
 		   var strPrintThis = strText.substring(0, intLastSpaceLoc); // need to fix this to find first " " before end
 		   //intLocOfLastSpace = strPrintThis.find( 
@@ -1558,12 +1577,12 @@ function getRandomQuote() {
 					
 		} else if ( intQuoteLength > 27 ){
 		gRowHeight = 30;
-		  myFont = Gfx.FONT_LARGE;
+		  myFont = customFontMedium;
 		  Sys.println( "font size is large. Length is " + strQuote.length());
 		  Sys.println( strQuote );
 		  } else {
 		  myFont = customFontLarge;
-		  gRowHeight = 40;
+		  gRowHeight = 30;
 		   dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLACK);
 		 Sys.println( "font size is xlarge");
 		  
