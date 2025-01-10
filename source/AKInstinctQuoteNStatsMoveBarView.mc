@@ -1354,16 +1354,23 @@ function getRandomQuote() {
 	
 		// I'll change it to get teh quote based on the date. Otherwise it changes waaaay too much. 
 		
-		var arrQuotes =  new [8];		
+		var arrQuotes =  new [7];		
 		arrQuotes[0]=  "Run the race to the finish. Dean Karnazes";
 		arrQuotes[1]=  "God      Loves       Me";
 		arrQuotes[2]=  "I RUN         THIS BODY";
 		arrQuotes[3]=  "I'll be happy if running and I can grow old together. Haruki Murakami";
 		arrQuotes[4]=  "Running! There's no activity happier, more exhilarating, more nourishing to the imagination. Oates";
 		arrQuotes[5]=  "Running (and God) is my therapy.";
-		arrQuotes[6]=  "Fitness    starts         now!";	
-		arrQuotes[7]=  "Happiness is an inside job.";	
+		arrQuotes[6]=  "Fitness starts now!";	
+	arrQuotes =  arrQuotes.add("Happiness is an inside job.");	
 		arrQuotes =  arrQuotes.add("Two wolves... which ever one you feed.");
+		arrQuotes = arrQuotes.add("Assume people like you.");
+
+arrQuotes = arrQuotes.add("Assume relationships are good.");
+
+arrQuotes = arrQuotes.add("Assuminteractions will go well.");
+
+arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if nearby.");
 		
 	//	var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var r;	
