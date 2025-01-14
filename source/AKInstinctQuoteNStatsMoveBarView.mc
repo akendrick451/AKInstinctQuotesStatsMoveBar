@@ -13,6 +13,15 @@ using Toybox.SensorHistory;
 using Toybox.System;
 using Toybox;
 
+
+//========================================================================
+      var       gBlDebug   =       true;
+	  var gDebugCurrentFunctionNames = new [1] ; // array for storing function names we may vurrently be debugging
+	  //gDebugCurrentFunctionNames.add();
+		
+	  // works with DebugAK fucntion
+//=========================================================================
+
 var gIntStartOfDayHour = 6; //6am start of day
 var gIntFinishOfDayHour = 23; //10pm finish day
 	
@@ -30,9 +39,6 @@ var gStrHRFontColour=Gfx.COLOR_WHITE;
 var gStrBBBackColour=Gfx.COLOR_BLACK;
 var gStrBBFontColour=Gfx.COLOR_WHITE;		
 
-//========================================================================
-      var       gBlDebug   =       false;
-//=========================================================================
 
 //======================================================================
 // notes by ATK
@@ -49,8 +55,8 @@ class InputDelegate extends Ui.BehaviorDelegate {
 		 }
 		
     	function onKey(keyEvent) {
-			System.println(keyEvent.getKey());  // e.g. KEY_MENU = 7
-			System.println(keyEvent.getType()); // e.g. PRESS_TYPE_DOWN = 0
+			DebugPrintAK( strFunctionName, keyEvent.getKey());  // e.g. KEY_MENU = 7
+			DebugPrintAK( strFunctionName, keyEvent.getType()); // e.g. PRESS_TYPE_DOWN = 0
 			return true;
    	 }
 }// end class
@@ -60,8 +66,9 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v2.0"; // i for instinct version;// 
+    var strVersion = "v2.1"; // i for instinct version;// 
 	
+	// 2.1 - ATK 14/01/2025 added DebugPrintAK as new way to debug without too much info being shown. 
 	// v1.2 2/1/2025 bug fixes of hourly steps
 	// v1.1 2/01/2025 Add print out last hour and htis hour every 4 minutes
 	// v1.0k - trying to save steps every 2 hours. 
@@ -121,33 +128,34 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
  public function initialize() {
         WatchFace.initialize();
 		myInputDelegate.initialize();
+		gDebugCurrentFunctionNames[0] = "ClearHourlyStepsIfNotClearredForDay";
+		gDebugCurrentFunctionNames.add("SetHourlyStepsDummyData");
         cloud = new WatchUi.Bitmap({:rezId=>Rez.Drawables.cloud,:locX=>120,:locY=>23});
 		heartIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.heart,:locX=>123,:locY=>6});
 		
-		
-		//var clockTime = System.getClockTime();
-        //var hour = clockTime.hour;
+		/*
+			// Some debug stuff on vs code. 13/01/2025
+			var clockTime = System.getClockTime();
+			var hour = clockTime.hour;
+			SetHourlyStepsDummyData(hour);
+			Application.Storage.setValue("LastCleared", "");
+			// end debug stuff 
+		*/
 
-		Mt.srand(System.getTimer()) ;
-		//ClearHourlyStepsAfterCurrentHour(1);
-		//SetHourlyStepsDummyData(hour);
-		//Session.start();
-		//SetTotalStepsAtHour(9, 200);
-
-			
-
-		}
+			Mt.srand(System.getTimer()) ;
+	} // end function initialize
 
     // Load your resources here
     function onLayout(dc) {
-     customFontSmall = Ui.loadResource(Rez.Fonts.akSmallFont);
-     customFontLarge = Ui.loadResource(Rez.Fonts.customFontLarge);
-     customFontMedium = Ui.loadResource(Rez.Fonts.customFontMedium);
+		var strFunctionName ="onLayout";
+     	customFontSmall = Ui.loadResource(Rez.Fonts.akSmallFont);
+     	customFontLarge = Ui.loadResource(Rez.Fonts.customFontLarge);
+     	customFontMedium = Ui.loadResource(Rez.Fonts.customFontMedium);
 
-     gTinyFont = Gfx.FONT_XTINY; //customFontSmall;
-     var mySettings = System.getDeviceSettings();
+     	gTinyFont = Gfx.FONT_XTINY; //customFontSmall;
+     	var mySettings = System.getDeviceSettings();
 		gStrPartNumberDevice = mySettings.partNumber;
-		Sys.println("Part number is '" + gStrPartNumberDevice + "'");
+		DebugPrintAK( strFunctionName, "Part number is '" + gStrPartNumberDevice + "'");
 		// fenix 5 =006-B3110-00, fs = 006-B2544-00
 		// forerunner 235 = 006-B2431-00
 	
@@ -156,10 +164,10 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		// check which api/sdk version this device supports
 			var apiversion = mySettings.monkeyVersion;
 			var apiversionString = Lang.format("$1$.$2$.$3$", apiversion);
-			System.println(apiversionString); //e.g. 2.2.5
+			DebugPrintAK( strFunctionName, apiversionString); //e.g. 2.2.5
 		    gNumAPIMajorVersion = apiversion[0];
-     		System.println(gNumAPIMajorVersion); //e.g. 2 or 1
-    }
+     		DebugPrintAK( strFunctionName, gNumAPIMajorVersion); //e.g. 2 or 1
+    } // end function onLayout
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
@@ -191,13 +199,18 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		var strCurrentDate;
 		strCurrentDate = Lang.format("$1$ $2$$3$", [GetShortDayNameFromNumber(infoShort.day_of_week), info.month, info.day]); // I think the format looks like: Mon JAN22
 
-       if (hour < 17  && minute %2 == 0) { // this might not work if watch face is asleep at 601, so change to < 14
+       if (hour < 17  && minute % 5 == 0) { // this might not work if watch face is asleep at 601, so change to < 14
 		//if (hour == 1 && minute == 1) {
 
 			// clear days' steps
 			ClearHourlyStepsIfNotClearredForDay(strCurrentDate); // does this also clear 2 hourly steps?
 
 		}
+		/* debug stuff
+		if (hour < 17 && minute == 47 ) {
+			SetHourlyStepsDummyData(hour);
+		} */
+
 
 		var intXForHR = dc.getWidth()-22;
     	DrawTimeAndVersion(dc, intXForTime, intYForTime, clockTime, hour, minute, second);
@@ -227,6 +240,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 	function DrawCurrentDate(dc, intDateStartYBatteryAndDate, strDate) {
 	// reset color
+		var strFunctionName ="DrawCurrentDate";
 	     dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK);
 	    
 	   	// =====================================================================	    
@@ -245,7 +259,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			dc.drawText(dc.getWidth()-56, intDateStartYBatteryAndDate+27, Gfx.FONT_AUX1, strDate , Gfx.TEXT_JUSTIFY_RIGHT);
 		} catch( ex ) {
 		// Code to catch all execeptions
-			System.println("exception is 76 : " + ex.getErrorMessage());
+			DebugPrintAK( strFunctionName, "exception is 76 : " + ex.getErrorMessage());
 		}
 		
 
@@ -298,6 +312,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	} // end function drawHeartRateAndBodyBattery
 
 	function DrawWeeksMovementOrQuotesOrHourlySteps(dc, hour, minute, second ) {
+		var strFunctionName = "DrawWeeksMovementOrQuotesOrHourlySteps";
 
 			  // dc.drawText(dc.getWidth()-50, 150, Gfx.FONT_TINY, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
 	    // dc.drawText(dc.getWidth()-50, 200, Gfx.FONT_MEDIUM, strVersion, Gfx.TEXT_JUSTIFY_RIGHT);
@@ -307,8 +322,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		// =====================================================================
 		// if the move bar is cleared, then buzz
 		// if the hour is 11am or 4pm show our weekly stat
-		//System.println("hour is : " + hour); 
-		//System.println("min is : " + minute); 
+		//DebugPrintAK( strFunctionName, "hour is : " + hour); 
+		//DebugPrintAK( strFunctionName, "min is : " + minute); 
 		// 24/2 removed hour criteria here ((hour == 7)||(hour == 12) || (hour ==16) ||
 
 		// atk temp only REMOVE 1/1/2025
@@ -319,7 +334,6 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			// eg at 9:59, 11:59 etc
 			//ClearHourlyStepsAfterCurrentHour(hour);
 			Save2HourlySteps();
-
 		 }
 
 		 if (minute == 59 && hour > 6 && hour < 23 ) {
@@ -331,10 +345,11 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		//if (  (minute > 10 && minute < 20)|| ( minute > 40 && minute < 45) ) {
 		if (minute % 4 == 0 ) {
 			DrawCurrentHourAndLastHourSteps(dc, hour);
+
 		} else if (minute % 3 == 0) {
 			// show weeks movement history
 			 DrawWeeksMovementHistory(dc);
-			System.println("do weeks movement");
+			DebugPrintAK( strFunctionName, "do weeks movement");
 		} else if (minute % 2 == 0) {
 
 				// draw hourly steps for day
@@ -349,13 +364,13 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			if (  ((minute == 31) || (minute == 0)) && (second <= 10)) {
 				SetNewQuote();
 				GetQuoteSizeAndDraw(dc);
-		}
+			}
 
 			DrawQuote(dc);
 		
 				
-		} // end if hour - 7	  
-
+		} // end if  minute % 4
+/*
 	/*
 		//atk debug 6/1/2025 always draw 2 hourly steps
 		ClearMainPartOfScreen(dc);
@@ -390,6 +405,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	} // end function
 
 	function SetHourlyStepsDummyData(intCurrentHour) {
+		var strFunctionName = "SetHourlyStepsDummyData";
 		var intHour = 0;
 		var strTotalSteps = "";
 
@@ -411,7 +427,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			strTotalSteps = "TotalStepsSavedFor" + strEndOfLabelHours;
 			Application.Storage.setValue(strThisHourSteps, intStepsPerHour);
 		    Application.Storage.setValue(strTotalSteps, intTotalStepsAtHour);
-			System.println("DummyData1hours:  " + strThisHourSteps + " " + intStepsPerHour + " and " + strTotalSteps + " " + intTotalStepsAtHour); 
+			DebugPrintAK( strFunctionName, "DummyData1hours:  " + strThisHourSteps + " " + intStepsPerHour + " and " + strTotalSteps + " " + intTotalStepsAtHour); 
 
 			// set the 2 hour totals also
 			if (intHour %2 != 0) { // eg 13
@@ -421,68 +437,90 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 				intStepsPerHour = intStepsPerHour + intStepsPreviousHour;
 				Application.Storage.setValue(strThisHourSteps, intStepsPerHour);
 				Application.Storage.setValue(strTotalSteps, intTotalStepsAtHour);
-				System.println("DummyData2hours:  " + strThisHourSteps + " " + intStepsPerHour + " and " + strTotalSteps + " " + intTotalStepsAtHour); 
+				DebugPrintAK( strFunctionName, "DummyData2hours:  " + strThisHourSteps + " " + intStepsPerHour + " and " + strTotalSteps + " " + intTotalStepsAtHour); 
 
 			}			
 
 		} // end for
 	} // end function SetHourlyStepsDummyData
 
+	function DebugPrintAK(strFunctionName, strMessage ) {
+		
+		if (gBlDebug == true) {		
+			var myTime = System.getClockTime(); // ClockTime object
+			var strDate = myTime.hour.format("%02d") + ":" +
+    					   myTime.min.format("%02d") + ":" +
+    					   myTime.sec.format("%02d");
+			if (gDebugCurrentFunctionNames.indexOf(strFunctionName) != -1 )	{
+				if (strFunctionName.length() > 11) {
+					strFunctionName = strFunctionName.substring(0,11) + "...";
+				}
+				System.println(  strDate + " " + strFunctionName + ":" + strMessage ); 
+			}
+		}
+	} // end function debug print ak
 
 	function ClearHourlyStepsIfNotClearredForDay( strCurrentDate ) {
+		var strFunctionName = "ClearHourlyStepsIfNotClearredForDay";
 		//  clear both 2 hour and 1 hour
 		var intHour = 0;
 		var strLabel = "";
 
 		var strEndOfLabelHours = "";
 		var strLabel2 = "";
-			System.println("ClearSteps: Start clear steps function" ); 
+		DebugPrintAK( strFunctionName, "ClearSteps: Start clear steps function 0" );
+		
 		var strCurrentValueStored=0;
 
 		// maybe don't check for 12 hours if already checked in last 12 hours? Will save us from getting storage too much???
-		var strLastClearedDate =  (Application.Storage.getValue("LastCleared"));
-		if (strLastClearedDate == null || strLastClearedDate != strCurrentDate) {
+		var strLastClearedDate =  Application.Storage.getValue("LastCleared");
+		
+		if (strLastClearedDate == null || !strLastClearedDate.equals(strCurrentDate)) {
 			// if we haven't cleared for the whole day, then we need to clear everything, eg if we wake up at 11am, we still need to clear 6-11 as well as later
+			
+			DebugPrintAK( strFunctionName, "1. strLastClearedDate "  + strLastClearedDate + " and strCurrentDate=" +strCurrentDate);
 			Application.Storage.setValue("LastCleared", strCurrentDate);
+			DebugPrintAK( strFunctionName, "ClearSteps Debug 2");
 			for (intHour = 5; intHour<23; intHour++) {
-			strEndOfLabelHours = "" + intHour + "to" + (intHour+1);
-			strLabel = "StepsSavedFor" + strEndOfLabelHours;
-			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
-			// as setvalue is more time intensive, check first if zero
-			strCurrentValueStored = Application.Storage.getValue(strLabel);
-			if (strCurrentValueStored == null || strCurrentValueStored != 0) {
-				Application.Storage.setValue(strLabel, 0);
-			}
-			strCurrentValueStored = Application.Storage.getValue(strLabel2);
-			if ( strCurrentValueStored == null || strCurrentValueStored != 0) {
-			 Application.Storage.setValue(strLabel2, 0);	
-			}
+				DebugPrintAK( strFunctionName, "ClearSteps Debug 3s");
+				strEndOfLabelHours = "" + intHour + "to" + (intHour+1);
+				strLabel = "StepsSavedFor" + strEndOfLabelHours;
+				strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+				// as setvalue is more time intensive, check first if zero
+				strCurrentValueStored = Application.Storage.getValue(strLabel);
+				if (strCurrentValueStored == null || strCurrentValueStored != 0) {
+					Application.Storage.setValue(strLabel, 0);
+				}
+				strCurrentValueStored = Application.Storage.getValue(strLabel2);
+				if ( strCurrentValueStored == null || strCurrentValueStored != 0) {
+				Application.Storage.setValue(strLabel2, 0);	
+				}
 
-		   	
-			System.println("ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
+				
+				DebugPrintAK( strFunctionName, "ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
 
-		} // end for
+			} // end for
+			DebugPrintAK( strFunctionName, "ClearSteps Debug 4");
+			for (intHour = 6; intHour<23; intHour+=2) {
+				DebugPrintAK( strFunctionName, "ClearSteps Debug 5s");
+				strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
+				strLabel = "StepsSavedFor" + strEndOfLabelHours;
+				strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
+				strCurrentValueStored = Application.Storage.getValue(strLabel);
+				if (strCurrentValueStored == null || strCurrentValueStored != 0) {
+					Application.Storage.setValue(strLabel, 0);
+				}
+				strCurrentValueStored = Application.Storage.getValue(strLabel2);
+				if ( strCurrentValueStored == null || strCurrentValueStored != 0) {
+					Application.Storage.setValue(strLabel2, 0);	
+				}
 
-		for (intHour = 6; intHour<23; intHour+=2) {
-			strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
-			strLabel = "StepsSavedFor" + strEndOfLabelHours;
-			strLabel2 = "TotalStepsSavedFor" + strEndOfLabelHours;
-			strCurrentValueStored = Application.Storage.getValue(strLabel);
-			if (strCurrentValueStored == null || strCurrentValueStored != 0) {
-				Application.Storage.setValue(strLabel, 0);
-			}
-			strCurrentValueStored = Application.Storage.getValue(strLabel2);
-			if ( strCurrentValueStored == null || strCurrentValueStored != 0) {
-			 Application.Storage.setValue(strLabel2, 0);	
-			}
+				DebugPrintAK( strFunctionName, "ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
 
-			System.println("ClearSteps: Clear for labels " + strLabel + " and " + strLabel2); 
-
-
-		} // end for
-
-	} // end if
-
+			} // end for
+		DebugPrintAK( strFunctionName, "ClearSteps Debug 6");
+		} // end if
+	DebugPrintAK( strFunctionName, "ClearSteps Debug 7");
 		
 /*
 
@@ -492,11 +530,10 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 */
 		
 		
-		
-
 	} // clear ak save of hourly steps
 
 	function DebugPrintHourlySavedSteps() {
+		var strFunctionName = "DebugPrintHourlySavedSteps";
 		var intHour = 0;
 		var strEndOfLabelHours = "";
 		var strTotalAtHourLabel = "";
@@ -510,13 +547,13 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			strTotalAtHourLabel = "TotalStepsSavedFor" + strEndOfLabelHours;
 			intTotalAtHour = Application.Storage.getValue(strTotalAtHourLabel);
 		  //  Application.Storage.getValue(strLabel);
-			System.println("PrintStepsX: " + strTotalAtHourLabel + " = " + intTotalAtHour); 
+			DebugPrintAK( strFunctionName, "PrintStepsX: " + strTotalAtHourLabel + " = " + intTotalAtHour); 
 
 			if (intHour % 2 == 0){
 				strEndOfLabelHours = "" + intHour + "to" + (intHour+2);
 				strTotalAt2HourLabel = "TotalStepsSavedFor" + strEndOfLabelHours;
 				intTotalAt2Hour = Application.Storage.getValue(strTotalAt2HourLabel);
-				System.println("PrintStepsX: " + strTotalAt2HourLabel + " = " + intTotalAt2Hour); 
+				DebugPrintAK( strFunctionName, "PrintStepsX: " + strTotalAt2HourLabel + " = " + intTotalAt2Hour); 
 			}
 		} // end for
 
@@ -524,6 +561,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	function DrawCurrentHourAndLastHourSteps(dc, intCurrentHour) {
+			var strFunctionName = "DrawCurrentHourAndLastHourSteps";
 			dc.drawText(10, 30, Gfx.FONT_SYSTEM_TINY, "Steps recent", Gfx.TEXT_JUSTIFY_LEFT);
 
 			var strEndOfLabelHours = "" + (intCurrentHour-1) + "to" + intCurrentHour;
@@ -558,12 +596,12 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			var intY = 50;
 			var intYSizeAdjust =17;
 			
-			System.println("Draw3Hours ("+intCurrentHour+ ")"+strLabelLastHour +":" + 
+			DebugPrintAK( strFunctionName, "Draw3Hours ("+intCurrentHour+ ")"+strLabelLastHour +":" + 
 				intStepsForLastHour + " " + strLabel2HoursAgo + ":" + 
 					intStepsFor2HoursAgo + " intStepsTotalRightNow:" + 
 						intStepsTotalRightNow + " intTotalStepsAtLastHour("+strLabelLastHourTotal+"):" + intTotalStepsAtLastHour); 
 
-System.println("Draw3Hours therefore - intStepsThisHour=" + intStepsThisHour);
+DebugPrintAK( strFunctionName, "Draw3Hours therefore - intStepsThisHour=" + intStepsThisHour);
 
 			dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
 		    dc.drawText(intX, intY+1*intYSizeAdjust, Gfx.FONT_TINY, "This Hour: " , Gfx.TEXT_JUSTIFY_LEFT);
@@ -585,36 +623,38 @@ System.println("Draw3Hours therefore - intStepsThisHour=" + intStepsThisHour);
 	} // end function draw current hour and last hour steps
 
 	function GetStepsAtHour(intCurrentHour) {
+		var strFunctionName = "GetStepsAtHour";
 
-			var strLabelLastHourTotal = "TotalStepsSavedFor" +  "" + (intCurrentHour-1) + "to" + intCurrentHour;
-			var intTotalStepsAtLastHour = Application.Storage.getValue(strLabelLastHourTotal);
-			if (intTotalStepsAtLastHour==null) {
-				intTotalStepsAtLastHour = 0;
-			}
+		var strLabelLastHourTotal = "TotalStepsSavedFor" +  "" + (intCurrentHour-1) + "to" + intCurrentHour;
+		var intTotalStepsAtLastHour = Application.Storage.getValue(strLabelLastHourTotal);
+		if (intTotalStepsAtLastHour==null) {
+			intTotalStepsAtLastHour = 0;
+		}
 
-			var	  intStepsTotalRightNow = 0;
-	    	if ( ActivityMonitor.getInfo().steps != null) {
-	   	 		intStepsTotalRightNow =  ActivityMonitor.getInfo().steps;
-	    	}
-			if (intStepsTotalRightNow< intTotalStepsAtLastHour) {
-				intStepsTotalRightNow = intTotalStepsAtLastHour + 100;
-				System.println("GetStepsThisHour Debug fudge YYYYYY - as total steps now less than last hour, will add 100");
-			}
-			var intStepsThisHour = intStepsTotalRightNow - intTotalStepsAtLastHour;
+		var	  intStepsTotalRightNow = 0;
+		if ( ActivityMonitor.getInfo().steps != null) {
+			intStepsTotalRightNow =  ActivityMonitor.getInfo().steps;
+		}
+		if (intStepsTotalRightNow< intTotalStepsAtLastHour) {
+			intStepsTotalRightNow = intTotalStepsAtLastHour + 100;
+			DebugPrintAK( strFunctionName, "GetStepsThisHour Debug fudge YYYYYY - as total steps now less than last hour, will add 100");
+		}
+		var intStepsThisHour = intStepsTotalRightNow - intTotalStepsAtLastHour;
 
-			System.println("GetStepsThisHour("+ intCurrentHour +"):  " 
-				+ strLabelLastHourTotal + ":"+ intTotalStepsAtLastHour
-				+ " intStepsTotalRightNow" + ":"+ intStepsTotalRightNow
-				+ " Therefore steps current hour is " +  intStepsThisHour
-				); 
-			
+		DebugPrintAK( strFunctionName, "GetStepsThisHour("+ intCurrentHour +"):  " 
+			+ strLabelLastHourTotal + ":"+ intTotalStepsAtLastHour
+			+ " intStepsTotalRightNow" + ":"+ intStepsTotalRightNow
+			+ " Therefore steps current hour is " +  intStepsThisHour
+			); 
+		
 
 
-			return intStepsThisHour;
+		return intStepsThisHour;
 
 	} // end function GetStepsAtHour()
 
 	function Draw2HourlyStepsForDay (dc, intCurrentHour) {
+		var strFunctionName = "Draw2HourlyStepsForDay";
 
 		// get all the hours and print them
 		//eg StepsSavedFor18to20
@@ -672,7 +712,7 @@ System.println("Draw3Hours therefore - intStepsThisHour=" + intStepsThisHour);
 		    dc.drawText(intX, intYFor2HourlySteps + (intLineNumber*intCharacterHeight), Gfx.FONT_SYSTEM_TINY, strPrintLabel , Gfx.TEXT_JUSTIFY_LEFT);
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 			dc.drawText(intX+60, intYFor2HourlySteps+ (intLineNumber*intCharacterHeight), Gfx.FONT_SYSTEM_TINY, intStepsFor2Hours, Gfx.TEXT_JUSTIFY_RIGHT);
-			System.println("HourlySteps: Get and print for hour " + strLabel + " with value" + intStepsFor2Hours); 
+			DebugPrintAK( strFunctionName, "HourlySteps: Get and print for hour " + strLabel + " with value" + intStepsFor2Hours); 
 
 			/*var strStepsCalculation = "Hr(" + intCurrentHour +")=" + intStepsThisHour + "+"+ intStepsLastHour;
 			dc.drawText(10, dc.getHeight()-40, Gfx.FONT_SYSTEM_TINY , strStepsCalculation, Gfx.TEXT_JUSTIFY_LEFT);
@@ -683,6 +723,7 @@ System.println("Draw3Hours therefore - intStepsThisHour=" + intStepsThisHour);
 	} // draw 2 hourly steps
 
 	function SaveHourlySteps() {
+			var strFunctionName = "SaveHourlySteps";
 	// try to get an idea of how much I move each hour or two
 			// would be called once every 2 hours say, 
 			// eg at 9:59am, 11:59am, 13:59, 15:59, 17:59. 
@@ -695,9 +736,9 @@ System.println("Draw3Hours therefore - intStepsThisHour=" + intStepsThisHour);
 	    	while ( intSteps == null && intCounter<100) {
 	   	 		intSteps =  ActivityMonitor.getInfo().steps;
 				intCounter = intCounter + 1; // maybe we don't get the steps sometimes?
-				System.println("Hourly1StepsTotal debug5 Trying to get steps value again!ies!!!!! DODGYGGGGGGGGG");
+				DebugPrintAK( strFunctionName, "Hourly1StepsTotal debug5 Trying to get steps value again!ies!!!!! DODGYGGGGGGGGG");
 				if (intCounter == 99) {
-					System.println("Hourly1StepsTotal debug5 We coudn't get activity monitor after 99 tries!!!!! DODGYGGGGGGGGG");
+					DebugPrintAK( strFunctionName, "Hourly1StepsTotal debug5 We coudn't get activity monitor after 99 tries!!!!! DODGYGGGGGGGGG");
 				}
 	    	}
 			if (intSteps == 0) {
@@ -723,18 +764,18 @@ System.println("Draw3Hours therefore - intStepsThisHour=" + intStepsThisHour);
 			var intCurrent1HourSteps = intSteps  - intTotalStepsRecordedLastTimeHourly;
 			Application.Storage.setValue(strLabelForThisStepsHourly, intCurrent1HourSteps);
 
-			System.println("Hourly1StepsTotal debug5: Labels are for hour " +
+			DebugPrintAK( strFunctionName, "Hourly1StepsTotal debug5: Labels are for hour " +
 			 intCurrentHourOfDay + " - " + 
 			 strLabelForThisStepsHourly +  " " + intCurrent1HourSteps  + 
 			 " and " + strLabelOfThisStepsRecordedTotalHourly + " " + intSteps + 
 			 " and " + strLabelOfLastStepsRecordedTotalHourly + " " + intTotalStepsRecordedLastTimeHourly 
 			 ); 
 			if (intTotalStepsRecordedLastTimeHourly == 0) {
-System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXXXXXX last total is 0! XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXXXXXX last total is 0! XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 			}
 			if (intSteps == 0 ) {
-		System.println("Hourly1StepsTotal" + intCurrentHourOfDay+" XXXXXXXXXXXXXXXXXXXX this hour total is 0! XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+		DebugPrintAK( strFunctionName, "Hourly1StepsTotal" + intCurrentHourOfDay+" XXXXXXXXXXXXXXXXXXXX this hour total is 0! XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 		
 			}
 			
@@ -743,6 +784,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	} // end function save hourly steps
 
 	function Save2HourlySteps() {
+		var strFunctionName = "Save2HourlySteps";
 			// try to get an idea of how much I move each hour or two
 			// would be called once every 2 hours say, 
 			// eg at 9:59am, 11:59am, 13:59, 15:59, 17:59. 
@@ -758,8 +800,8 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 			strLabelOfLastStepsRecorded = "StepsSavedFor" + (intCurrentHourOfDay-1) +"to" + (intCurrentHourOfDay+1);
 			var strLabelOfLastStepsRecordedTotal = "TotalStepsSavedFor" + (intCurrentHourOfDay-3) + "to" + (intCurrentHourOfDay-1);
 
-			System.println("2HourlyStepsSave: Hour is " + intCurrentHourOfDay); //e.g. 2 or 1)
-			System.println("2HourlyStepsSave: Save with label " + strLabelOfLastStepsRecorded); 
+			DebugPrintAK( strFunctionName, "2HourlyStepsSave: Hour is " + intCurrentHourOfDay); //e.g. 2 or 1)
+			DebugPrintAK( strFunctionName, "2HourlyStepsSave: Save with label " + strLabelOfLastStepsRecorded); 
 
 			var strLabelForThisSteps = "StepsSavedFor" + (intCurrentHourOfDay-1) + "to" + (intCurrentHourOfDay+1);
 
@@ -775,7 +817,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		
 
 			var intCurrent2HoursSteps = intTotalSteps  - intTotalStepsRecordedLastTime;
-	System.println("2HourlyStepsSave"  
+	DebugPrintAK( strFunctionName, "2HourlyStepsSave"  
 			+ "Total last hours " + strLabelOfLastStepsRecordedTotal +":" + intTotalStepsRecordedLastTime
 				+ strLabelOfThisStepsRecordedTotal + ":"  +intTotalSteps
 					+ strLabelForThisSteps + ":"  +intCurrent2HoursSteps
@@ -786,7 +828,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	} // end Save2HourlySteps
 
 	function DrawWatchBatteryStats(dc, intXBodyBattery, intTimeY) {
-       
+       var strFunctionName = "DrawWatchBatteryStats";
 
 	    dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK); // just in case we changed it 
 	
@@ -794,8 +836,8 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	    // Put some battery stats	    
 		// =====================================================================	    
 		var myStats = System.getSystemStats();
-		//System.println(myStats.battery);
-		//System.println(myStats.totalMemory);
+		//DebugPrintAK( strFunctionName, myStats.battery);
+		//DebugPrintAK( strFunctionName, myStats.totalMemory);
 		var strBatteryPercent = Lang.format("$1$",[myStats.battery.format("%02d")]);
 		var intBatteryNumber = myStats.battery;	    
 		
@@ -817,7 +859,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 
 		//if battery is charging, set an orange dot or something - a z
 		// battery charging stas only availabe after?  version 3
-		System.println(gNumAPIMajorVersion); //e.g. 2 or 1)
+		DebugPrintAK( strFunctionName, gNumAPIMajorVersion); //e.g. 2 or 1)
 		if (gNumAPIMajorVersion>= 3) {
 		
 			if (myStats.charging) {
@@ -828,7 +870,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 
 		if (myStats.battery < intBatterySevere ) { 	
 		 	// make the battery bolder, ie thicker 
-		 	System.println("Drawing red and thicker");
+		 	DebugPrintAK( strFunctionName, "Drawing red and thicker");
 		 	textColor = Gfx.COLOR_BLACK;
 		 	lineColor = Gfx.COLOR_WHITE;
 		 	backColor = Gfx.COLOR_WHITE;
@@ -921,6 +963,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	}
 
 	function getBodyBatteryPercentAndSetColours() {
+		var strFunctionName = "getBodyBatteryPercentAndSetColours";
 		//trying to change this to minutes.. but failing9:09am 28 March 2023
 		var dblBodyBatteryPercent = 0.0;
 		var objABodyBattery=null;
@@ -929,10 +972,10 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		 objABodyBattery = bbIterator.next();                         // get the body battery data
 		}
 		if (objABodyBattery != null) {
-			System.println("Sample: " + objABodyBattery.data);           // print the current sample
+			DebugPrintAK( strFunctionName, "Sample: " + objABodyBattery.data);           // print the current sample
 			dblBodyBatteryPercent = objABodyBattery.data;
 		} else {
-						System.println("getBodyBatteryPercentAndSetColours: objABodyBattery is NULL!!!!");           // print the current sample
+						DebugPrintAK( strFunctionName, "getBodyBatteryPercentAndSetColours: objABodyBattery is NULL!!!!");           // print the current sample
 
 		}
 
@@ -956,8 +999,8 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 			//var duration1 = momentNow.subtract(tomorrow);
 			//var duration2 = tomorrow.subtract(today);
 
-			//System.println(duration1.value()); // 86400, or one day
-			//System.println(duration2.value()); // 86400, or one day
+			//DebugPrintAK( strFunctionName, duration1.value()); // 86400, or one day
+			//DebugPrintAK( strFunctionName, duration2.value()); // 86400, or one day
 
 		var intHoursLeftInDay = gIntFinishOfDayHour-intCurrentHourOfDay;
 			
@@ -1014,7 +1057,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		
 		var intMinutes = today.min;
 		return intMinutes;
-		//System.println(dateString); // e.g. "16:28:32 Wed 1 Mar 2017"
+		//DebugPrintAK( strFunctionName, dateString); // e.g. "16:28:32 Wed 1 Mar 2017"
 	}
 	function getHourOfDay () {
 
@@ -1033,12 +1076,12 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		);*/
 		var intHour = today.hour;
 		return intHour;
-		//System.println(dateString); // e.g. "16:28:32 Wed 1 Mar 2017"
+		//DebugPrintAK( strFunctionName, dateString); // e.g. "16:28:32 Wed 1 Mar 2017"
 	}
 
 
     function getHeartRateAndSetColours() {
-
+		var strFunction = "getHeartRateAndSetColours";
 		var intHeartRate =0; // default to 0
 
 		intHeartRate = Activity.getActivityInfo().currentHeartRate;
@@ -1046,7 +1089,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 
 		if (intHeartRate == null ) { 
 			intHeartRate = 0;
-			System.println("getHeartRate: heart rate from getActivityInfo().currentHeartRate was null" );  
+			DebugPrintAK( strFunction, "heart rate from getActivityInfo().currentHeartRate was null" );  
 		}
 		if (intHeartRate == 0) {
 			//TRY ANOTHER WAY :)
@@ -1054,16 +1097,16 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 			var blHasHR=(ActivityMonitor has :HeartRateIterator) ? true : false;
 			if (blHasHR==true) {
 				var hrIterator = ActivityMonitor.getHeartRateHistory(null, true);
-				System.println("getHeartRate: we have a heart rate iterator" );      
+				DebugPrintAK( strFunction, "we have a heart rate iterator" );      
 			//	var previous = hrIterator.next();                                   // get the previous HR
 			//	var lastSampleTime = null;        
 												// get the last
 				var heartRateObject = hrIterator.next();
 				if (null != heartRateObject) { 
-					System.println("getHeartRate: we have a heart rate objecdt" );                                                // null check
+					DebugPrintAK( strFunction, "we have a heart rate objecdt" );                                                // null check
 					if (heartRateObject.heartRate != ActivityMonitor.INVALID_HR_SAMPLE) {
-						System.println("getHeartRate: we have a valid heart rate object" );      
-						System.println("Heart Rate is : " + heartRateObject.heartRate);      // print the current sample
+						DebugPrintAK( strFunction, "we have a valid heart rate object" );      
+						DebugPrintAK( strFunction, "Heart Rate is : " + heartRateObject.heartRate);      // print the current sample
 						intHeartRate =  heartRateObject.heartRate;
 					}
 				}
@@ -1094,9 +1137,10 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	} // end function getHeartRate
 
 	function SetNewQuote() {
+		var strFunctionName = "SetNewQuote";
 		gStrCurrentQuote = getRandomQuote();
 		if (gStrCurrentQuote.equals("Happiness is an inside job.")) {
-			System.println("Happiness is an inside job!");
+			DebugPrintAK( strFunctionName, "Happiness is an inside job!");
 		}
 	}
 	
@@ -1130,22 +1174,23 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	// Maybe keep a counter and if not walking for 2 days and those days arent sat and sunday ask if you are tired
 	// ================================================================================================
 	function DrawWeeksMovementHistory(dc) {
+			var strFunctionName = "DrawWeeksMovementHistory";
 
 			
 			var intNumberOfDaysHistoryToShow = 3; // does this also change the total count? ie only use this nyumber of days?
 			var intHeightOfText = 17; //was 21 // is this the height of the font?
 			
 			var dailyHistoryArr = ActivityMonitor.getHistory(); //gets 7 days history
-			/* System.println("Draw previous history") print the previous sample
-			   System.println("history array size is " + dailyHistoryArr.size() );  // print the previous sample
+			/* DebugPrintAK( strFunctionName, "Draw previous history") print the previous sample
+			   DebugPrintAK( strFunctionName, "history array size is " + dailyHistoryArr.size() );  // print the previous sample
 			  */  
 			// GEt the current day eg Monday/Tuesday/Wednessay to work out what days we have			
 			var infoDateTimeNow = Gregorian.info(Time.now(), Time.FORMAT_SHORT); // 6= friday
-			 System.println(infoDateTimeNow.day_of_week);
+			 DebugPrintAK( strFunctionName, infoDateTimeNow.day_of_week);
 			 var intDayOfWeekToday = infoDateTimeNow.day_of_week; 
 			 // eg 6 = friday
 
-			System.println("Today is " + 	GetShortDayNameFromNumber(intDayOfWeekToday));
+			DebugPrintAK( strFunctionName, "Today is " + 	GetShortDayNameFromNumber(intDayOfWeekToday));
 			var intYForStats = 100; //dc.getHeight() - intHeightForStatsForWeek  +20 ; //  added 2 cause it was too high
 
 			
@@ -1164,8 +1209,8 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 			// loop through the 7 day history on the watch			    
 			for( var i = 0; i < dailyHistoryArr.size(); i++ ) { 
 				if( i < intNumberOfDaysHistoryToShow ) { // i only want to show x days history plus today				
-				    // System.println("Previous: " + i + " day" +  dailyHistoryArr[i].steps + " steps / ");  // print the previous sample
-				    // System.println("Previous: " + dailyHistoryArr[i].distance + " d");  // print the previous sample
+				    // DebugPrintAK( strFunctionName, "Previous: " + i + " day" +  dailyHistoryArr[i].steps + " steps / ");  // print the previous sample
+				    // DebugPrintAK( strFunctionName, "Previous: " + dailyHistoryArr[i].distance + " d");  // print the previous sample
 						
 						strDayOfReading = GetShortDayNameFromNumber(intDayOfWeekToday-1-i); // will accept negative numbers and convert to day of week. 
 						dblDistanceInKmsForDay = GetKMMovedDbl(dailyHistoryArr[i].distance);
@@ -1246,12 +1291,12 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 				// set colour back
 				dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 			} catch (exception) {
-				System.println("catch");
+				DebugPrintAK( strFunctionName, "catch");
 			}
 
 			finally
 			{
-				System.println("finally");
+				DebugPrintAK( strFunctionName, "finally");
 			}
 						
 
@@ -1287,11 +1332,12 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 	} //GetShortName
 
 	function DrawKMTravelledAndMoveBar(dc, intCurrentHour) {
+		var strFunctionName = "DrawKMTravelledAndMoveBar";
 	// draw how far we have gone today and show move bar if we haven[t moved much
 		var xForStepsAndKms = 50 ; //10
 	    var yForStepsKMAndMoveNumber = dc.getHeight()-47; // was 53
 		
-	    var strKMMoved = 0;
+	    //var strKMMoved = 0;
 		//var dblKMMoved = GetTodaysDistanceKMDbl();
 	   // strKMMoved = GetTodaysDistanceKMStr();
 		var	    intCurrentTotalSteps = 0;
@@ -1307,7 +1353,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		var strStepsWordsThisHourEtc = "k (" + strStepsWordsThisHour + "this hr)";
 
 		if (strStepsNumberTotal.equals(strStepsWordsThisHour )) {
-			System.println("DrawKMetc (hr=" +intCurrentHour+ ") - UMMMM why does this hour equal full total???? Value is" + strStepsNumberTotal);
+			DebugPrintAK( strFunctionName, "DrawKMetc (hr=" +intCurrentHour+ ") - UMMMM why does this hour equal full total???? Value is" + strStepsNumberTotal);
 		}
 		
 	   // var strStepsAndKmsWords =   "k stps/" + strKMMoved + "kms";
@@ -1342,10 +1388,10 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 		     }
 		   }
 	      gIntLastMoveBarLevel=intMoveBarLevelCurrent;
-	      Sys.println("-------------------- Move bar level ------------------------------");
-	      Sys.println("Move bar Last level = " + gIntLastMoveBarLevel + ", current level = " + intMoveBarLevelCurrent);
-	      Sys.println("Move bar - Number of hours moved = " + gIntNumberOfMovedHours);
-	      Sys.println("-------------------- Move bar level ------------------------------");
+	      DebugPrintAK( strFunctionName, "-------------------- Move bar level ------------------------------");
+	      DebugPrintAK( strFunctionName, "Move bar Last level = " + gIntLastMoveBarLevel + ", current level = " + intMoveBarLevelCurrent);
+	      DebugPrintAK( strFunctionName, "Move bar - Number of hours moved = " + gIntNumberOfMovedHours);
+	      DebugPrintAK( strFunctionName, "-------------------- Move bar level ------------------------------");
 	    var moveBarLength = ActivityMonitor.getInfo().moveBarLevel*25;	    	    
 	   // dc.drawLine(40, startY, 40+moveBarLength, startY);
 	   yForStepsKMAndMoveNumber = yForStepsKMAndMoveNumber+10;
@@ -1362,7 +1408,7 @@ System.println("Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "XXXXXXXXXXXXXXXX
 			intRectangleY = yForStepsKMAndMoveNumber-i*1;
 			intRectangleLength = 1;
 			intRectangleHeight = 1+i*1;
-			 Sys.println("- Rectangle x=" + intRectangleX + ", y=" + intRectangleY + " l=" + 
+			 DebugPrintAK( strFunctionName, "- Rectangle x=" + intRectangleX + ", y=" + intRectangleY + " l=" + 
 			 intRectangleLength + " height=" + intRectangleHeight);
 
 	      //dc.fillRectangle(intRectangleX, intRectangleY-1, intRectangleLength, intRectangleHeight);
@@ -1416,10 +1462,10 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 	} // Get Random Quote
 
 	function drawTextOverMultiLines( dc, strText ) {
-	
+		var strFunctionName = "drawTextOverMultiLines";
 	    if (strText=="") {
 			//just for debug
-			Sys.println("strText is blank for some reason - ! ");
+			DebugPrintAK( strFunctionName, "strText is blank for some reason - ! ");
 		}
 		// Choose a font size based on the length of the quote. 
 		var myFont = ChooseFontBasedOnLengthAndSetColorFenix5(strText, dc);
@@ -1441,44 +1487,44 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 			// just a line for debug
 		}
 
-	 	Sys.println("length is  " + strText.length() + " .Number of chars which can fit on line =" + intCharsPerLine);
+	 	DebugPrintAK( strFunctionName, "length is  " + strText.length() + " .Number of chars which can fit on line =" + intCharsPerLine);
 		var fltNumberOfLinesNeeded = (strText.length()*1.00)/(intCharsPerLine-0)*1.00; //-2 is a fudge because God loves me is going on 3 lines but this returns 2~!!!!!
 		var intNumberOfLinesNeeded = (fltNumberOfLinesNeeded + 0.9).toNumber(); //my strange roundUP function
-		//Sys.println("number of lines needed = " + intNumberOfLinesNeeded);
+		//DebugPrintAK( strFunctionName, number of lines needed = " + intNumberOfLinesNeeded);
 		var blPrint = false;
 	    intNumberOfLinesNeeded = PrintOrCountNumberOfLinesNeeded(dc, strText, intCharsPerLine, gYStartPositionForQuotes, myFont, blPrint);
 
 		
-		//Sys.println("intNumberOfLinesNeeded= "  + intNumberOfLinesNeeded + " yStartPosition is " + gYStartPositionForQuotes + " rowHeight is " + rowHeight);
+		//DebugPrintAK( strFunctionName, intNumberOfLinesNeeded= "  + intNumberOfLinesNeeded + " yStartPosition is " + gYStartPositionForQuotes + " rowHeight is " + rowHeight);
 		if (intNumberOfLinesNeeded == 1 ) {
 		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight; //- put it in the middleish!
-		   //Sys.println("1 lines exactly... put it in the middle!");
+		   //DebugPrintAK( strFunctionName, 1 lines exactly... put it in the middle!");
 		
 		} else if (intNumberOfLinesNeeded > 1 && intNumberOfLinesNeeded<2 ) {
 		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*1.2; //- put it in the middleish!
-		   //  Sys.println("1 lines needed ... put it in the 2iddle!");
+		   //  DebugPrintAK( strFunctionName, 1 lines needed ... put it in the 2iddle!");
 		
 		} else if (intNumberOfLinesNeeded >= 2 && intNumberOfLinesNeeded < 3) {
 		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*1.5; //- put it in the middleish!
-		   // Sys.println("2 lines... put it in the middle!");
+		   // DebugPrintAK( strFunctionName, 2 lines... put it in the middle!");
 		
 		} else if (intNumberOfLinesNeeded >= 3 && intNumberOfLinesNeeded < 4) {
 		       gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*2.3; //- put it in the middleish! was 2.1
 		      gYStartPositionForQuotes = dc.getHeight()/2-(rowHeight*intNumberOfLinesNeeded)*0.6;
-			 // Sys.println("3 lines... put it in the middle!");
+			 // DebugPrintAK( strFunctionName, 3 lines... put it in the middle!");
 		
 		} else  {
 			gYStartPositionForQuotes = dc.getHeight()/2-(rowHeight*intNumberOfLinesNeeded)*0.6;
-			//Sys.println("more than 3 lines and not less than 4 lines... put it in the middle!");
+			//DebugPrintAK( strFunctionName, more than 3 lines and not less than 4 lines... put it in the middle!");
 		}
 		
 		if (intCharsPerLine > strText.length() ) {
 				// if we all fit on one line... 
 		 gYStartPositionForQuotes = dc.getHeight()/2-rowHeight*0.8; //- put it in the middle!
-		     //Sys.println("Only 1 line.. try to put it in themiddle");
+		     //DebugPrintAK( strFunctionName, Only 1 line.. try to put it in themiddle");
 		}
 		
-		Sys.println("gYStartPositionForQuotes is " + gYStartPositionForQuotes + " rowHeightXXX is " + rowHeight);
+		DebugPrintAK( strFunctionName, "gYStartPositionForQuotes is " + gYStartPositionForQuotes + " rowHeightXXX is " + rowHeight);
 
 		if (gYStartPositionForQuotes < 25 ) { //we don't want to overwrite time
 			gYStartPositionForQuotes = 25;
@@ -1499,13 +1545,13 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 		var intLenLeftToPrint = strText.length();
 		var blFirstWordDoneYet = false;
 		// print out the words on multiple lines
-		//Sys.println("Starting to get each line...");
+		//DebugPrintAK( strFunctionName, Starting to get each line...");
 		do {
 		   
 		   // find last " " before the width allowed.
 		   intLinesNeeded = intLinesNeeded + 1;
 		   intLastSpaceLoc = findLastSpaceBeforeLineLength( strText, intCharsPerLine );
-//Sys.println("Last Space loc = " + intLastSpaceLoc);		   
+//DebugPrintAK( strFunctionName, Last Space loc = " + intLastSpaceLoc);		   
 		   if (intLastSpaceLoc == -1) {
 			   if (blFirstWordDoneYet==false) {
 				intLastSpaceLoc = intCharsPerLine;
@@ -1552,6 +1598,7 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 	} // GetTodaysDistanceKMStr
 
 		function convertToThousandsShorthand(aNumber) {
+			var strFunctionName = "convertToThousandsShorthand";
 			// returns a STRING
 	    // eg convert 11250 to 11.2 // I'm not getting the .2 though am i.. I want it. 
 	    var newNumber = aNumber / 1000.0;
@@ -1563,7 +1610,7 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 
 		var strNumber = newNumber.format("%0.1f");
 
-	    System.println(strNumber);
+	    DebugPrintAK( strFunctionName, strNumber);
 	    return strNumber;
 	} // convertToThousandsShorthand
 
@@ -1590,6 +1637,7 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 
 
 	 function ChooseFontBasedOnLengthAndSetColorFenix5( strQuote, dc ) { // passed in dc so i can change color!
+	 var strFunctionName = "ChooseFontBasedOnLengthAndSetColorFenix5";
 	var myFont = null; 
 	//var dblFontSizeFactor = 1;
 	var intQuoteLength = strQuote.length();
@@ -1597,32 +1645,32 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 	if (intQuoteLength > 250 ) {
 		
 			myFont = $.customFontSmall;
-		Sys.println( "font size is xtiny Length is " + strQuote.length());
+		DebugPrintAK( strFunctionName, "font size is xtiny Length is " + strQuote.length());
 		} else if (intQuoteLength > 65 ) {
 			gRowHeight = 20;			
 			myFont = Gfx.FONT_TINY;
-			Sys.println( "font size is tiny Length is " + strQuote.length());
+			DebugPrintAK( strFunctionName, "font size is tiny Length is " + strQuote.length());
 		
 		} else if ( intQuoteLength > 50 )  {
 			gRowHeight = 21;
 		   myFont = Gfx.FONT_SMALL;
-		 Sys.println( "font size is small Length is " + strQuote.length());
+		 DebugPrintAK( strFunctionName, "font size is small Length is " + strQuote.length());
 		
 		} else if ( intQuoteLength > 30 ) {
 			gRowHeight = 30;//33	
 			myFont  = Gfx.FONT_MEDIUM;
-		Sys.println( "font size is med  Length is " + strQuote.length());
+		DebugPrintAK( strFunctionName, "font size is med  Length is " + strQuote.length());
 					
 		} else if ( intQuoteLength > 27 ){
 		gRowHeight = 30;
 		  myFont = customFontMedium;
-		  Sys.println( "font size is large. Length is " + strQuote.length());
+		  DebugPrintAK( strFunctionName, "font size is large. Length is " + strQuote.length());
 		  Sys.println( strQuote );
 		  } else {
 		  myFont = customFontLarge;
 		  gRowHeight = 30;
 		   dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLACK);
-		 Sys.println( "font size is xlarge");
+		 DebugPrintAK( strFunctionName, "font size is xlarge");
 		  
 		  
 		} // will default to large
@@ -1659,16 +1707,16 @@ arrQuotes = arrQuotes.add("Go out of your way to say hello to an old friend if n
 			{
 				
 				index = index+ intLocOfSpace+1;   
-				//Sys.println("space found at  " + intLocOfSpace + " for '" + strSource +"'");  
+				//DebugPrintAK( strFunctionName, space found at  " + intLocOfSpace + " for '" + strSource +"'");  
 				// substring to only search rest
 				strSource = strSource.substring(intLocOfSpace+1, strSource.length());       
-				//Sys.println("new source '" + strSource + "'"); 
+				//DebugPrintAK( strFunctionName, new source '" + strSource + "'"); 
 			}
 			i++;
 			
 		}
 
-		//	Sys.println("last space is at " + index + " for " + strOriginalSource);
+		//	DebugPrintAK( strFunctionName, last space is at " + index + " for " + strOriginalSource);
     	return index-1;
 	} //lastIndexOf
 
