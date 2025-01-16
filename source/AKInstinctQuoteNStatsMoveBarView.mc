@@ -66,8 +66,9 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v2.1"; // i for instinct version;// 
+    var strVersion = "v2.2"; // i for instinct version;// 
 	
+	// 2.2 fix min api level to 3.2.7
 	// 2.1 - ATK 14/01/2025 added DebugPrintAK as new way to debug without too much info being shown. 
 	// v1.2 2/1/2025 bug fixes of hourly steps
 	// v1.1 2/01/2025 Add print out last hour and htis hour every 4 minutes
@@ -234,10 +235,6 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	} // end onUpdate
 
 	
-    // ==================================================================
-	// can we also return the difference from ideal eg 70% (-10)
-	// ==================================================================
-
 	function DrawCurrentDate(dc, intDateStartYBatteryAndDate, strDate) {
 	// reset color
 		var strFunctionName ="DrawCurrentDate";
@@ -278,6 +275,11 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		 var gIntXForBodyBattery = intXForHR-5;
 		var dblBodyBatteryNumber = 0.0;
 		dblBodyBatteryNumber = getBodyBatteryPercentAndSetColours();
+		
+    // ==================================================================
+	// can we also return the difference from ideal eg 70% (-10)
+	// ==================================================================
+
 		//var intDiffDesiredAndActualBodyBattery = gintDesiredBodyBattery - dblBodyBatteryNumber;
 		//var strDiffInBodyBattery = intDiffDesiredAndActualBodyBattery;
 
