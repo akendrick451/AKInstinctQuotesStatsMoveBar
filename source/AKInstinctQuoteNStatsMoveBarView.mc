@@ -15,7 +15,7 @@ using Toybox;
 
 
 //========================================================================
-      var       gBlDebug   =       true;
+      var       gBlDebug; // set in initialize function
 	  var gDebugCurrentFunctionNames = new [1] ; // array for storing function names we may vurrently be debugging
 	  //gDebugCurrentFunctionNames.add();
 		
@@ -24,7 +24,8 @@ using Toybox;
 
 var gIntStartOfDayHour = 6; //6am start of day
 var gIntFinishOfDayHour = 23; //10pm finish day
-	
+
+var gstrErrorPrintToWatch = ""; // used in body battery only at moment to show error data on actual watch
 var gRowHeight = 35; 
 var gIntYForBodyBattery = 31; //20
 var customFontSmall = null; // esp for fenix style watches.
@@ -66,8 +67,10 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v2.2"; // i for instinct version;// 
-	
+    var strVersion = "v2.3"; // i for instinct version;// 
+	// CHECK !!!! gBlDebug; // set in initialize function
+
+
 	// 2.2 fix min api level to 3.2.7
 	// 2.1 - ATK 14/01/2025 added DebugPrintAK as new way to debug without too much info being shown. 
 	// v1.2 2/1/2025 bug fixes of hourly steps
@@ -127,12 +130,15 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
  	var heartIcon;
 
  public function initialize() {
-        WatchFace.initialize();
-		myInputDelegate.initialize();
-		gDebugCurrentFunctionNames[0] = "ClearHourlyStepsIfNotClearredForDay";
-		gDebugCurrentFunctionNames.add("SetHourlyStepsDummyData");
-        cloud = new WatchUi.Bitmap({:rezId=>Rez.Drawables.cloud,:locX=>120,:locY=>23});
-		heartIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.heart,:locX=>123,:locY=>6});
+	gBlDebug   =       false; // decides whether or not we print out debug statements to debug console
+	gDebugCurrentFunctionNames[0] = "DrawHeartRateAndBodyBattery"; // add the funciont name to debug, without braces()
+	gDebugCurrentFunctionNames.add("getBodyBatteryPercentAndSetColours");
+
+    WatchFace.initialize();
+	myInputDelegate.initialize();
+		
+    cloud = new WatchUi.Bitmap({:rezId=>Rez.Drawables.cloud,:locX=>120,:locY=>23});
+	heartIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.heart,:locX=>123,:locY=>6});
 		
 		/*
 			// Some debug stuff on vs code. 13/01/2025
@@ -143,7 +149,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			// end debug stuff 
 		*/
 
-			Mt.srand(System.getTimer()) ;
+		Mt.srand(System.getTimer()) ;
 	} // end function initialize
 
     // Load your resources here
@@ -291,7 +297,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			dc.drawText(gIntXForBodyBattery+7,gIntYForBodyBattery , Gfx.FONT_SYSTEM_NUMBER_MILD, "" + dblBodyBatteryNumber.format("%.0f") , Gfx.TEXT_JUSTIFY_CENTER); //+ "(" + gintDesiredBodyBattery.format("%.0f") + ")"
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		}	else {
-			dc.drawText(gIntXForBodyBattery, gIntYForBodyBattery, Gfx.FONT_TINY, "? (" + gintDesiredBodyBattery.format("%.0f") + ")" , Gfx.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(gIntXForBodyBattery+7, gIntYForBodyBattery, Gfx.FONT_TINY, "? " + gstrErrorPrintToWatch, Gfx.TEXT_JUSTIFY_RIGHT);
+			//dc.drawText(gIntXForBodyBattery+7, gIntYForBodyBattery, Gfx.FONT_TINY, "? (" + gintDesiredBodyBattery.format("%.0f") + ")" , Gfx.TEXT_JUSTIFY_RIGHT);
 		}
 		// also print the expected body battery at this time
 		
@@ -970,14 +977,22 @@ DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "
 		var dblBodyBatteryPercent = 0.0;
 		var objABodyBattery=null;
 		var bbIterator = getBodyBatteryIterator();
+		
+
 		if (bbIterator!=null)  {
 		 objABodyBattery = bbIterator.next();                         // get the body battery data
+		} else {
+			DebugPrintAK( strFunctionName, "BodyBatteryIterator is NULL");  
+			gstrErrorPrintToWatch="BBI null";
+
 		}
+
 		if (objABodyBattery != null) {
 			DebugPrintAK( strFunctionName, "Sample: " + objABodyBattery.data);           // print the current sample
 			dblBodyBatteryPercent = objABodyBattery.data;
 		} else {
-						DebugPrintAK( strFunctionName, "getBodyBatteryPercentAndSetColours: objABodyBattery is NULL!!!!");           // print the current sample
+			gstrErrorPrintToWatch="BB=null";
+				DebugPrintAK( strFunctionName, "getBodyBatteryPercentAndSetColours: objABodyBattery is NULL!!!!, i will set to 0.0");           // print the current sample
 
 		}
 
@@ -1012,6 +1027,7 @@ DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "
 		if (intCurrentHourOfDay>5 && intCurrentHourOfDay <= 22) {
 		   gintDesiredBodyBattery = dblPercentOfDayLeftByMinutes;
 		} else {
+			DebugPrintAK( strFunctionName, "set desired body battery to 0 outside of 5am to 10pm:");   
 			gintDesiredBodyBattery = 0;
 
 		}
@@ -1147,14 +1163,14 @@ DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "
 	}
 	
 	function getBodyBatteryIterator() {
-
-	if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getBodyBatteryHistory)) {
-          // Set up the method with parameters
-          return Toybox.SensorHistory.getBodyBatteryHistory({});
-      } else {
-		System.print("getBodyBatteryIterator: Looks like we coudn't get body battery history from toybox. NOT GOOD. ");
-	  }
-      return null;
+		var obBBIterator=null;
+		if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getBodyBatteryHistory)) {
+			// Set up the method with parameters
+			obBBIterator =  Toybox.SensorHistory.getBodyBatteryHistory({});
+		} else {
+			System.print("getBodyBatteryIterator: Looks like we coudn't get body battery history from toybox. NOT GOOD. ");
+		}
+		return obBBIterator;
   }
 	
 
