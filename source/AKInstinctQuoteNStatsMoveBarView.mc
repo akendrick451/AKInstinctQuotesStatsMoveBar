@@ -67,7 +67,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v2.3"; // i for instinct version;// 
+    var strVersion = "v2.4"; // i for instinct version;// 
 	// CHECK !!!! gBlDebug; // set in initialize function
 
 
@@ -297,7 +297,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 			dc.drawText(gIntXForBodyBattery+7,gIntYForBodyBattery , Gfx.FONT_SYSTEM_NUMBER_MILD, "" + dblBodyBatteryNumber.format("%.0f") , Gfx.TEXT_JUSTIFY_CENTER); //+ "(" + gintDesiredBodyBattery.format("%.0f") + ")"
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		}	else {
-			dc.drawText(gIntXForBodyBattery+7, gIntYForBodyBattery, Gfx.FONT_TINY, "? " + gstrErrorPrintToWatch, Gfx.TEXT_JUSTIFY_RIGHT);
+		dc.drawText(gIntXForBodyBattery+14, gIntYForBodyBattery+4, Gfx.FONT_TINY, gstrErrorPrintToWatch, Gfx.TEXT_JUSTIFY_RIGHT);
 			//dc.drawText(gIntXForBodyBattery+7, gIntYForBodyBattery, Gfx.FONT_TINY, "? (" + gintDesiredBodyBattery.format("%.0f") + ")" , Gfx.TEXT_JUSTIFY_RIGHT);
 		}
 		// also print the expected body battery at this time
@@ -983,7 +983,7 @@ DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "
 		 objABodyBattery = bbIterator.next();                         // get the body battery data
 		} else {
 			DebugPrintAK( strFunctionName, "BodyBatteryIterator is NULL");  
-			gstrErrorPrintToWatch="BBI null";
+			gstrErrorPrintToWatch="!BBI";
 
 		}
 
@@ -991,7 +991,7 @@ DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "
 			DebugPrintAK( strFunctionName, "Sample: " + objABodyBattery.data);           // print the current sample
 			dblBodyBatteryPercent = objABodyBattery.data;
 		} else {
-			gstrErrorPrintToWatch="BB=null";
+			gstrErrorPrintToWatch="!BB";
 				DebugPrintAK( strFunctionName, "getBodyBatteryPercentAndSetColours: objABodyBattery is NULL!!!!, i will set to 0.0");           // print the current sample
 
 		}
