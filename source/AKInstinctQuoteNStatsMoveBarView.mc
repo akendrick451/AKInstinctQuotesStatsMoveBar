@@ -67,10 +67,11 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	// how to build in vs code - select View Command and then  Export
-    var strVersion = "v2.4"; // i for instinct version;// 
+    var strVersion = "v2.6c"; // i for instinct version;// 
 	// CHECK !!!! gBlDebug; // set in initialize function
 
-
+	// 2.6 March 2026 add breaths per minute
+	// 2.5 remove compiler hasCheck check
 	// 2.2 fix min api level to 3.2.7
 	// 2.1 - ATK 14/01/2025 added DebugPrintAK as new way to debug without too much info being shown. 
 	// v1.2 2/1/2025 bug fixes of hourly steps
@@ -128,6 +129,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 	var myInputDelegate = new InputDelegate();
  	var cloud;
  	var heartIcon;
+	var breathIcon;
+	var breathIconTop;
 
  public function initialize() {
 	gBlDebug   =       false; // decides whether or not we print out debug statements to debug console
@@ -139,6 +142,8 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
     cloud = new WatchUi.Bitmap({:rezId=>Rez.Drawables.cloud,:locX=>120,:locY=>23});
 	heartIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.heart,:locX=>123,:locY=>6});
+	breathIcon = new WatchUi.Bitmap({:rezId=>Rez.Drawables.breathicon,:locX=>160,:locY=>120});
+	breathIconTop = new WatchUi.Bitmap({:rezId=>Rez.Drawables.breathicon,:locX=>145,:locY=>25});
 		
 		/*
 			// Some debug stuff on vs code. 13/01/2025
@@ -237,6 +242,9 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 		 cloud.draw(dc);
          heartIcon.draw(dc);
+		 breathIconTop.draw(dc);
+		 breathIcon.draw(dc);
+
 	    	      	    	    
 	} // end onUpdate
 
@@ -270,6 +278,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 
 
 	function DrawHeartRateAndBodyBattery(dc, intXForHR, intYForTime) {
+		//AND BREATHS PER MINUTE
 			//  ==================================================
 		//  draw  heart rate
 		//  ==================================================
@@ -278,8 +287,22 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		
 		// get body battery if available
 	     gIntYForBodyBattery = intYForTime+17;
-		 var gIntXForBodyBattery = intXForHR-5;
+		 var gIntXForBodyBattery = intXForHR-20;
 		var dblBodyBatteryNumber = 0.0;
+		var xIntForBreathsPerMin = gIntXForBodyBattery+40;
+		var yIntForBreathsPerMin = gIntYForBodyBattery + 10;
+		// get a HeartRateIterator object; oldest sample first
+		var intHeartRate = 0; 
+		intHeartRate = getHeartRateAndSetColours(); //set gStrHRBackColor and gStrHRFontColor;
+		if (intHeartRate != 0){
+		
+			dc.setColor(gStrHRFontColour,gStrHRBackColour);
+			dc.drawText(intXForHR, intYForHR, Gfx.FONT_TINY, "" + intHeartRate, Gfx.TEXT_JUSTIFY_CENTER);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+		} //  print  heart  rate if not zerro
+
+
+
 		dblBodyBatteryNumber = getBodyBatteryPercentAndSetColours();
 		
     // ==================================================================
@@ -294,7 +317,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		}
 		if (dblBodyBatteryNumber!=0.0) {
 			dc.setColor(gStrBBFontColour, gStrBBBackColour);
-			dc.drawText(gIntXForBodyBattery+7,gIntYForBodyBattery , Gfx.FONT_SYSTEM_NUMBER_MILD, "" + dblBodyBatteryNumber.format("%.0f") , Gfx.TEXT_JUSTIFY_CENTER); //+ "(" + gintDesiredBodyBattery.format("%.0f") + ")"
+			dc.drawText(gIntXForBodyBattery+7,gIntYForBodyBattery , Gfx.FONT_TINY, "" + dblBodyBatteryNumber.format("%.0f") , Gfx.TEXT_JUSTIFY_CENTER); //+ "(" + gintDesiredBodyBattery.format("%.0f") + ")"
 			dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		}	else {
 		dc.drawText(gIntXForBodyBattery+14, gIntYForBodyBattery+4, Gfx.FONT_TINY, gstrErrorPrintToWatch, Gfx.TEXT_JUSTIFY_RIGHT);
@@ -303,17 +326,11 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace  {
 		// also print the expected body battery at this time
 		
 		
+		//Draw Breaths Per minute up top near the heart rate and body battery
+		var intBreathsPerMinute = null;
+		intBreathsPerMinute = GetBreathsPerMinute();
+		dc.drawText(xIntForBreathsPerMin, yIntForBreathsPerMin, Gfx.FONT_TINY, intBreathsPerMinute, Gfx.TEXT_JUSTIFY_RIGHT);
 		
-		// get a HeartRateIterator object; oldest sample first
-		var intHeartRate = 0; 
-		intHeartRate = getHeartRateAndSetColours(); //set gStrHRBackColor and gStrHRFontColor;
-		if (intHeartRate != 0){
-		
-			dc.setColor(gStrHRFontColour,gStrHRBackColour);
-			dc.drawText(intXForHR, intYForHR, Gfx.FONT_TINY, "" + intHeartRate, Gfx.TEXT_JUSTIFY_CENTER);
-			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
-		} //  print  heart  rate if not zerro
-
 	
 		
 		// ====================end draw bb ===============================
@@ -1349,6 +1366,20 @@ DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "
 		return strDayNameShort;
 	} //GetShortName
 
+	function GetBreathsPerMinute() {
+		var intBreathsPerMinute=null;
+		var info = ActivityMonitor.getInfo();
+    	if (info != null && info.respirationRate != null) {
+        var brpm = info.respirationRate;
+        	System.println("Current Respiration Rate: " + brpm + " BRPM");
+        	intBreathsPerMinute =  brpm;
+    	} else {
+    	    System.println("Respiration data not available");
+        	intBreathsPerMinute = null;
+	    }
+		return intBreathsPerMinute;
+	}
+
 	function DrawKMTravelledAndMoveBar(dc, intCurrentHour) {
 		var strFunctionName = "DrawKMTravelledAndMoveBar";
 	// draw how far we have gone today and show move bar if we haven[t moved much
@@ -1394,6 +1425,14 @@ DebugPrintAK( strFunctionName, "Hourly1StepsTotal hour=" +intCurrentHourOfDay+ "
 				Gfx.TEXT_JUSTIFY_LEFT);
 	    
 		dc.drawText(xForStepsAndKms+2, yForStepsKMAndMoveNumber-2, $.customFontSmall, "steps", Gfx.TEXT_JUSTIFY_LEFT);
+
+
+	    
+		var intBreathsPerMinute = null;
+		intBreathsPerMinute = GetBreathsPerMinute();
+		var xForBreathsPerMin = xForStepsAndKms+110;
+		dc.setColor(Gfx.COLOR_WHITE,Gfx.COLOR_BLACK); // just in case we changed it 	     
+		dc.drawText(xForBreathsPerMin, yForStepsKMAndMoveNumber-10, Gfx.FONT_SMALL, intBreathsPerMinute + "" , Gfx.TEXT_JUSTIFY_RIGHT);
 
    	    // =====================================================================
 	    // add move bar - red

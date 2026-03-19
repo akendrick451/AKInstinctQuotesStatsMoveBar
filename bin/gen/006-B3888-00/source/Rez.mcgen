@@ -8,12 +8,14 @@ module Rez {
     module Drawables {
         (:initialized) var cloud as ResourceId;
         (:initialized) var heart as ResourceId;
+        (:initialized) var breathicon as ResourceId;
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 
     module Fonts {
         (:initialized) var akSmallFont as ResourceId;
         (:initialized) var customFontLarge as ResourceId;
+        (:initialized) var customFontMedium as ResourceId;
     } // Fonts
 
     module Layouts {

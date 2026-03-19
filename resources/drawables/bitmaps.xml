@@ -2,4 +2,6 @@
     <bitmap id="LauncherIcon" filename="images/icon.png" />
     <bitmap id="cloud" filename="images/cloud.png" />
         <bitmap id="heart" filename="images/heart.png" />
+        <bitmap id="breathicon" filename="images/breathwhite.png" />
+
 </resources>

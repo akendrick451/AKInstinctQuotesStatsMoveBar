@@ -74,7 +74,7 @@ class AKInstinctQuotesStatsMoveBarView extends Toybox.WatchUi.WatchFace{
     <init> {
     }
     [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc"; @line = 70; @position = 8; ]
-    var strVersion = "v2.3";
+    var strVersion = "v2.5";
     [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc"; @line = 115; @position = 5; ]
     var customFontLarge = null;
     [ @file = "D:\AKProgramming\GitHub\AKInstinctQuotesStatsMoveBar\source\AKInstinctQuoteNStatsMoveBarView.mc"; @line = 116; @position = 5; ]
